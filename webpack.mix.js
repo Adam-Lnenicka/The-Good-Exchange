@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('dotenv').config();
 
 /*
  |--------------------------------------------------------------------------
@@ -10,10 +11,28 @@ const mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+if (!mix.inProduction()) {
+    mix.webpackConfig({
+        devtool: 'source-map'
+    })
+    .sourceMaps()
+}
 
-mix.js('resources/js/app.js', 'public/js')
+mix.react('resources/js/reactApp/index.jsx', 'public/js/app.js')
     .postCss('resources/css/app.css', 'public/css', [
         require('postcss-import'),
         require('tailwindcss'),
     ])
-    .webpackConfig(require('./webpack.config'));
+    .browserSync({
+        host: 'localhost',
+        port: 3000,
+        proxy: {
+            target: process.env.APP_URL
+        }
+    });
+// add versioning (creates mix.manifest.json)
+mix.version();
+
+
+
+    // .webpackConfig(require('./webpack.config'));

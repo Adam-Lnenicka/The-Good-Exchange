@@ -84,6 +84,9 @@
             }
         </style>
     </head>
+
+    
+
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
             @if (Route::has('login'))
@@ -141,9 +144,7 @@
     <footer>
         <div class = 'footer-columns'>
 
-
-        <p>The Good Foundation 2020</p>
-    </footer>
+ @livewire('footer')
 
 </body>
 </html>
