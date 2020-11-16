@@ -19,7 +19,7 @@ class CreateUserPostsTable extends Migration
             $table->text('uploadedm_photo_path')->nullable();
             $table->foreignId('locations_id')->nullable();//dont get in form but add to post.
             $table->foreignId('service_categories_id')->nullable() ;
-            $table->boolean('volunteer')->default(0);//question
+            $table->boolean('helpmate')->default(0);//question
             $table->string('cost' , 20 )->default('free');
             $table->boolean('status_of_post')->default('1');
             $table->text('description', 300);

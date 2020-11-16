@@ -51,8 +51,7 @@ class Handyhands extends Seeder
           foreach($data as $item){
 
             $u = new \App\Models\User;
-            $u->firstname = $item->firstname;
-            $u->lastname = $item->lastname;
+            $u->name = $item->name;
             $u->email = $item->email;
             $u->password = $item->password;
             $u->profile_photo_path = $item->profile_photo_path;
@@ -64,7 +63,7 @@ class Handyhands extends Seeder
               $id->user_id = $u->id;
               $id->description= $item->description;
               $id->uploadedm_photo_path= $item->uploadedm_photo_path;
-              $id->volunteer= $item->volunteer;
+              $id->helpmate= $item->volunteer;
               $id->status_of_post= $item->status_of_post;
               $id->save();
              
