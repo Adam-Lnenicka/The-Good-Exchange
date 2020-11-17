@@ -21,15 +21,17 @@ export default function PostForm(){
     return (
   <>
 
-  <form action="" method="post" encType="multipart/form-data">
+        <form action="" method="post" encType="multipart/form-data">
 
-    <DragnDrop />
-    <TextContent />
-    <Location />
-
-   <button type="submit" value="submit" onSubmit={}> Post </button>
-   
-  </form>
+              <DragnDrop />
+              <TextContent />
+              <Location />
+          
+          <br/>  
+          
+        <button type="submit" value="submit" > Post </button>
+        
+        </form>
 
   </>
 
