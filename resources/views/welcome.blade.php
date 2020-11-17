@@ -146,5 +146,7 @@
 
  @livewire('footer')
 
+
 </body>
+
 </html>
