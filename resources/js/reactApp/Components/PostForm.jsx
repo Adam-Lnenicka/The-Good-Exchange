@@ -21,7 +21,7 @@ export default function PostForm(){
     return (
   <>
 
-  <form action="" method="post">
+  <form action="" method="post" encType="multipart/form-data">
 
     <DragnDrop />
     <TextContent />
