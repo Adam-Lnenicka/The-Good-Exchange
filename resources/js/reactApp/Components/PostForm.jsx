@@ -8,7 +8,9 @@ import TextContent from './TextContent';
 
 export default function PostForm(){
   const [values, setValues] = useState({
-    
+     uploadFile: '',
+     text: '',
+     location:'',
   });
    
 
