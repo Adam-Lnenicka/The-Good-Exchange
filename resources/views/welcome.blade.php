@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>The Good Exchange</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -105,7 +105,9 @@
 
     <div class ='banner'>
         <div>
-            <h1>The Good Foundation</h1>
+            <h1>
+            <img src="{{ Croppa::url('/images/TGE.png', 600, null) }}" alt="Logo">
+            </h1>
             <a class ='btn' href="{{ route('register') }}">Join Us Now</a>
         </div>
     </div>

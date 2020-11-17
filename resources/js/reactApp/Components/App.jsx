@@ -1,13 +1,31 @@
 import React, {useState, useEffect} from 'react';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import DragnDrop from './DragnDrop.jsx';
+
+
+import PostForm from './PostForm';
+
+
 
 export default function App(){
     return (
   <>
+  {/* <Router>
 
- <DragnDrop />
 
+      <Switch> */}
+        
+           {/* <Route path="/createpost" children={<PostForm />} />
+           <Route path="/newpost" children={<ShowPost />} /> */}
+          
+
+           <PostForm />
+
+
+      {/* </Switch>
+
+
+ </Router> */}
   </>
 
     );
