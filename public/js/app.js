@@ -30176,14 +30176,18 @@ function DragnDrop() {
       Uploadfile = _useState2[0],
       setUploadfile = _useState2[1];
 
-  var onChange = function onChange(e) {};
+  var onChange = function onChange(e) {
+    setUploadfile({
+      value: e.target.value
+    });
+  };
 
   var handleChange = function handleChange(e) {};
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
     className: "form-group",
     action: "",
-    method: "",
+    method: "post",
     enctype: "multipart/form-data"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     "class": "mt-2 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md"
