@@ -12,6 +12,7 @@ class UserController extends Controller
         
         $users = User::get();
 
+
         if($users->count() === 0){
             return 'no users';
         }
@@ -21,7 +22,8 @@ class UserController extends Controller
 
     public function show($id)
     {
-        $users = User::findOrFail($id);
+        $users = User::findOrFail($id)->get();
+
 
         return view('users/show', compact('users'));
 

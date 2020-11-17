@@ -24,6 +24,7 @@ class CreateUsersTable extends Migration
             $table->text('profile_photo_path')->nullable();
             $table->timestamps();
             $table->unsignedInteger('handy_points')->nullable();
+            $table->string('user_id')->nullable();
         });
     }
 
