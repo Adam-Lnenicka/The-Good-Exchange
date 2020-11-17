@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Update profile {{ $users->name }}</h1>
 <h2>Tell us more about yourself</h2>
 
@@ -8,6 +9,25 @@
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
+=======
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            
+        </h2>
+    </x-slot>
+
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+               
+                        <div id="app"></div>
+
+
+            <script src="{{asset('js/app.js')}}"></script>
+            </div>
+        </div>
+>>>>>>> 5312aa229b9eda477960bde649a6602d1cd6d1f1
     </div>
 @endif
 
