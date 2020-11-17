@@ -47,6 +47,7 @@
             background-color:  rgb(218, 218, 218);
             padding: 0.3em 2em;
             border-radius: 1em;
+            margin: 2.8em 0;
         }
 
 
@@ -61,9 +62,8 @@
                 border-radius: 1em;
                 color:black;
                 font-size: 1rem;
-                margin: 1em;
+                margin: 1em 0;
                 border: none;
-            
         }
         </style>
     
@@ -75,31 +75,21 @@
         </div>
     </div>
 
-<h1>User Profile</h1>
-<div class="info">
-<h2>First Name: {{ $users->firstname }}</h2>
+</br>
+<h1>{{ $users->name }}</h1>
 
-<h2>Last Name: {{ $users->lastname }}</h2>
-
-<h2>Email: {{ $users->email }}</h2>
-
-<h2>Phone number: {{ $users->phone_number }}</h2>
-</div>
-<br/>
-
+<a href="#">I need help now!</a>
+<a href="#">I want to help!</a>
 
 <div class="info">
-<h2>About me: {{ $users->about }}</h2>
-<h2>What do I need help with?: {{ $users->need_help }}</h2>
-<h2>How can I help?: {{ $users->provide_help }}</h2>
-<h3>fdhsaiu</h3>
+    <h2>Email: {{ $users->email }}</h2>
+    <h2>Phone number: {{ $users->phone_number }}</h2>
+    <h2>About me: {{ $users->about }}</h2>
+    <h2>What do I need help with?: {{ $users->need_help }}</h2>
+    <h2>How can I help?: {{ $users->provide_help }}</h2>
 </div>
-
-
 
 <a href="{{ action('UserController@edit', [$users->id]) }}">Update Profile</a>
-
-
 
 <form action="{{ action('UserController@destroy', [$users->id]) }}" method="POST">
     @csrf
