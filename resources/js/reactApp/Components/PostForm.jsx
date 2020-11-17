@@ -8,9 +8,9 @@ import TextContent from './TextContent';
 
 export default function PostForm(){
   const [values, setValues] = useState({
-     uploadFile: '',
-     text: '',
-     location:'',
+      file: '',
+      text:'',
+      location: '',
   });
    
 
@@ -23,9 +23,12 @@ export default function PostForm(){
 
   <form action="" method="post">
 
+    <DragnDrop />
+    <TextContent />
+    <Location />
 
-
-
+   <button type="submit" value="submit" onSubmit={}> Post </button>
+   
   </form>
 
   </>

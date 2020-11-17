@@ -7,7 +7,7 @@ export default function DragnDrop(){
 
   
 const onChange = (e) =>{
-
+     setUploadfile({value : e.target.value}) ;
 }
 
 const handleChange = (e) =>{
@@ -16,7 +16,7 @@ const handleChange = (e) =>{
 
     return (
   <>
-<form className="form-group" action="" method=""  enctype="multipart/form-data" >
+<form className="form-group" action="" method="post"  enctype="multipart/form-data" >
    <div class="mt-2 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
           <div class="text-center">
                 <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
