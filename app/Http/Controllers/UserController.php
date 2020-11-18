@@ -10,7 +10,8 @@ class UserController extends Controller
     public function index()
     {
         
-        $users = User::get();
+        $users = User::orderBy('handy_points', 'desc')->get();
+
 
         if($users->count() === 0){
             return 'no users';
@@ -22,6 +23,7 @@ class UserController extends Controller
     public function show($id)
     {
         $users = User::findOrFail($id);
+
 
         return view('users/show', compact('users'));
 
