@@ -13,7 +13,7 @@
             <strong>{{ $message->text }}</strong>
 
             @if ($message->aUser)
-            <p>{{ $message->aUser->email }}</p>
+            <p>{{ $message->aUser->name }}</p>
             @endif
     </p>
 @endforeach
