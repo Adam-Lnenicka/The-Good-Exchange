@@ -35993,9 +35993,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function Location() {
-  var GrabLocation = function GrabLocation() {};
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 50
+  };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, "I will find you");
+  function success(pos) {
+    var crd = pos.coords;
+    console.log(crd);
+    console.log('Your current position is:');
+    console.log("Latitude : ".concat(crd.latitude));
+    console.log("Longitude: ".concat(crd.longitude));
+    console.log("More or less ".concat(crd.accuracy, " meters."));
+  }
+
+  function error(err) {
+    console.warn("ERROR(".concat(err.code, "): ").concat(err.message));
+  }
+
+  navigator.geolocation.getCurrentPosition(success, error, options);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null));
 }
 
 /***/ }),
@@ -36069,7 +36086,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function TextContent() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I need help getting to this beautiful Beach. I dont have alot of money but I am good company"));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    type: "textarea"
+  }));
 }
 
 /***/ }),

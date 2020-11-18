@@ -13,8 +13,17 @@ class UserPostController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {  
+         $allpost = UserPost::get();
+
+         return view('dashboard', compact('allpost'));
         //
+    }
+
+    public function helpmates(){
+        $helpmates = UserPost::where('handy_point', !null )->get();
+
+        return view('dashboard', compact('helpmates'));
     }
 
     /**
@@ -22,10 +31,11 @@ class UserPostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+    // public function create()
+    //create a post in react 
+    // {
+    //     //
+    // }
 
     /**
      * Store a newly created resource in storage.
