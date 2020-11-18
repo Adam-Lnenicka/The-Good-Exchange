@@ -82,6 +82,7 @@ class Handyhands extends Seeder
               $t->from_users_id = $u->id ;
               $t->to_users_id= $item->from;
               $t->text = $item->message_content ;
+              $t->post_id  = $item->postNumber;
               $t->save();
               
           }

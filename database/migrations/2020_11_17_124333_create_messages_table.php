@@ -16,6 +16,7 @@ class CreateMessagesTable extends Migration
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->integer('post_id')->references('id')->on('user_posts');
             $table->text('uploadedm_photo_path')->nullable();
             $table->foreignId('from_users_id')->references('id')->on('users');
             $table->integer('to_users_id')->references('id')->on('users'); 
