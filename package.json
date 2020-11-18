@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "google-maps-react": "^2.0.6",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-dropzone": "^11.2.4",
