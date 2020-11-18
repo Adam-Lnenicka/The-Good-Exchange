@@ -1,8 +1,6 @@
+@extends('layouts.app') 
+@section('content')
 <h1>Users Management</h1>
-
-
-
-        
 
         <table class="table-striped">
             <thead>
@@ -38,3 +36,4 @@
             </thead>
         </table>
     </p>
+    @endsection
