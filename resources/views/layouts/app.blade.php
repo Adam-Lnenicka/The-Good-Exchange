@@ -25,12 +25,10 @@
           
         </div>
 
-           
-       
-
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+
+                @yield('content')
             </main>
         </div>
 
@@ -39,7 +37,7 @@
         @livewireScripts
 
         <div>
-            @livewire('footer')
+        @livewire('footer')
         </div>
     </body>
 </html>

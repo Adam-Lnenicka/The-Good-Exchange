@@ -21,7 +21,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/users', 'UserController@index');
+Route::get('/users', 'UserController@index')->name('users');
 Route::get('/users/create', 'UserController@create');
 
 
@@ -35,6 +35,6 @@ Route::get('/users/{id}/delete', 'UserController@delete'); // will show message 
 Route::delete('/users/{id}', 'UserController@destroy');
 
 
-Route::get('/message', 'MessageController@index');
+Route::get('/message', 'MessageController@index')->name('messages');
 Route::post('/message', 'MessageController@store');
 Route::get('/home-redirect', function(){return redirect()->action('UserController@edit', Auth::id());});

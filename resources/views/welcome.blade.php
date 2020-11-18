@@ -3,19 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        
         <title>The Good Exchange</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-        </style>
-
         <style>
 
-            
+          
 
             h1{
                 text-transform:uppercase;
@@ -35,7 +31,7 @@
             }
 
             .banner{
-                background-color:grey;
+                 background-color:grey; 
                 display: flex;
                 height: 60vh;
                 justify-content:center;
@@ -81,16 +77,16 @@
                     padding:1em;
                     width:33%
                 }
-            }
+            } 
         </style>
     </head>
 
     
 
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+        <div class="  relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
             @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                <div class=" hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
                     @else
@@ -102,11 +98,13 @@
                     @endif
                 </div>
             @endif
+        </div>
 
-    <div class ='banner'>
+    <div class =' bg-image-logo'>
         <div>
             <h1>
-            <img src="{{ Croppa::url('/images/TGE.png', 600, null) }}" alt="Logo">
+            <img src="{{ Croppa::url('/images/TGE.png', 500, null) }}" alt="Logo">
+
             </h1>
             <a class ='btn' href="{{ route('register') }}">Join Us Now</a>
         </div>
@@ -144,11 +142,13 @@
     <!--footer-->
 
     <footer>
-        <div class = 'footer-columns'>
+<div class = 'footer-columns'>
 
  @livewire('footer')
 
+</div>
 
+</footer>
 </body>
 
 </html>
