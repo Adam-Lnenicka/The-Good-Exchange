@@ -8,7 +8,9 @@ import TextContent from './TextContent';
 
 export default function PostForm(){
   const [values, setValues] = useState({
-    
+      file: '',
+      text:'',
+      location: '',
   });
    
 
@@ -19,12 +21,17 @@ export default function PostForm(){
     return (
   <>
 
-  <form action="" method="post">
+        <form action="" method="post" encType="multipart/form-data">
 
-
-
-
-  </form>
+              <DragnDrop />
+              <TextContent />
+              <Location />
+          
+          <br/>  
+          
+        <button type="submit" value="submit" > Post </button>
+        
+        </form>
 
   </>
 

@@ -22,6 +22,7 @@
     <body class="font-sans antialiased">
         <div class=" bg-gray-100">
             @livewire('navigation-dropdown') 
+          
         </div>
 
            
