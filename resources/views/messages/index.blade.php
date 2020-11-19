@@ -8,6 +8,11 @@
     @csrf
     <label for="text">Type your message</label>
     <input type="text" name="text" id="text"/>
+
+    <label for="postId">Realted to Post </label>
+    <input type="number" name="post_id" id="post_id"/>
+  <button>reply</button>
+    {{-- for testing i am adding a post id  --}}
     <br/>
 </form>
 

@@ -8,6 +8,9 @@ import PostForm from './PostForm';
 
 
 export default function App(){
+
+
+
     return (
   <>
   {/* <Router>
@@ -19,7 +22,7 @@ export default function App(){
            <Route path="/newpost" children={<ShowPost />} /> */}
           
 
-           <PostForm />
+           <PostForm  />
 
 
       {/* </Switch>

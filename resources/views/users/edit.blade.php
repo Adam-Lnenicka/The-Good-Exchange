@@ -1,4 +1,6 @@
-<h1>Update profile {{ $users->name }}</h1>
+@extends('layouts.app')
+ @section('content')
+<h1 class="" >Update profile {{ $users->name }}</h1>
 <h2>Tell us more about yourself</h2>
 
 @if ($errors->any())
@@ -11,12 +13,12 @@
     </div>
 @endif
 
-<form action="{{ action('UserController@update', [$users->id]) }}" method="POST">
+<form class=""  action="{{ action('UserController@update', [$users->id]) }}" method="POST">
     @csrf
 
     @method('PUT')
     <div class="info">
-    <label for ="email">Name:</label>
+    <label for ="name">Name:</label>
     <input type="text" name="name" value="{{ $users->name }}"/>
     </br>
 
@@ -25,8 +27,8 @@
     <input type="text" name="email" value="{{ $users->email }}"/>
     </br>
 
-    <label for ="email">Phone number: </label>
-    <input type="text" name="phone_number" value="{{ $users->phone_number }}"/>
+    <label for ="phone">Phone number: </label>
+    <input type="telephone" name="phone_number" value="{{ $users->phone_number }}"/>
     </br>
 
     <label for ="email">Tell the community something about yourself. </label>
@@ -45,3 +47,5 @@
     </div>
 <br/>
 </form>
+
+@endsection

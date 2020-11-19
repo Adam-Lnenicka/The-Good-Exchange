@@ -4,20 +4,27 @@ import Dropzone, {useDropzone} from 'react-dropzone';
 
 
 
-export default function DragnDrop(){
+export default function DragnDrop({handleChange ,}){
+
+  
   const {acceptedFiles, getRootProps, getInputProps} = useDropzone();
 
   //files is the name of the target in the event so that is why you console.log files to check
-const test =( files) => {
-  console.log(files)
-}
+// const test =( files) => {
+//   const uploaded_file = files.name.value; 
+//   setImage(uploaded_file);
+
+
+//   console.log(uploaded_file);
+
+// }
 
 // In this example I used dropzone wrapper and put the on Drop function within the Dropzone component.
 //The entire component is also wrapped in curly brackets . 
    
 return (
               <>
-       <Dropzone onDrop={test }>
+       <Dropzone onDrop={onChange }>
 
             {/* This in a way setting the State is also wrapped around the entire component  */}
                 {({getRootProps, getInputProps}) => (
@@ -27,7 +34,8 @@ return (
                                {/* The div below has the rootprops and is set to prevent the default action of opening another window */}
                                       <div className="h-20 w-11/12 mx-3 pr-6"
                                         {...getRootProps({
-                                          onDrop: event => event.preventDefault()
+                                          onDrop: event => event.preventDefault();
+                                         
                                         })}
                                       >
                                         <svg className="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48">
@@ -36,7 +44,7 @@ return (
 
 
                                               {/* This get =>  getInputProps must be  in the input tag  */}
-                                                <input {...getInputProps()}  />
+                                                <input type="image"  name="uploadedm_photo_path" value={image.uploadedm_photo_path} {...getInputProps()}  />
                                                 <p class="text-center">Click or Drag 'n' Drop images </p>
 
                                                 

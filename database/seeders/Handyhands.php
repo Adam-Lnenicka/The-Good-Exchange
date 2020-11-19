@@ -59,16 +59,7 @@ class Handyhands extends Seeder
             $u->save();
 
 
-              $id = new \App\Models\UserPost;
-              $id->user_id = $u->id;
-              $id->description= $item->description;
-              $id->uploadedm_photo_path= $item->uploadedm_photo_path;
-              $id->helpmate= $item->volunteer;
-              $id->status_of_post= $item->status_of_post;
-              $id->save();
-             
-
-              $i = new \App\Models\Location;
+            $i = new \App\Models\Location;
 
               $i->lat  = $item->lat ;
               $i->flag  = $item->flag ;
@@ -76,15 +67,27 @@ class Handyhands extends Seeder
               $i->save();
 
 
-              $t = new \App\Models\Message;
-
-              $t->uploadedm_photo_path = $id->uploaded_photo_path;
-              $t->from_users_id = $u->id ;
-              $t->to_users_id= $item->from;
-              $t->text = $item->message_content ;
-              $t->post_id  = $item->postNumber;
-              $t->save();
+                $id = new \App\Models\UserPost;
+                $id->user_id = $u->id;
+                $id->locations_id = $i->id;
+                $id->description= $item->description;
+                $id->uploadedm_photo_path= $item->uploadedm_photo_path;
+                $id->helpmate= $item->volunteer;
+                $id->status_of_post= $item->status_of_post;
+                $id->save();
               
+
+              
+
+                    $t = new \App\Models\Message;
+
+                    $t->uploadedm_photo_path = $id->uploaded_photo_path;
+                    $t->from_users_id = $u->id ;
+                    $t->to_users_id= $item->from;
+                    $t->text = $item->message_content ;
+                    $t->post_id  = $item->postNumber;
+                    $t->save();
+                    
           }
     }
 }
