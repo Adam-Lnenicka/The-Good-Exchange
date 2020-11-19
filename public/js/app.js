@@ -36958,22 +36958,29 @@ function ShowPost(props) {
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     fetchPosts();
   }, []);
-  console.log(data);
-  var content = '';
-
-  if (loading) {
-    content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "message"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "loader"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null)), "Loading");
-  } else if (loaded) {
-    content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, data.map(function (user) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-        key: user.name
-      });
-    })));
-  }
+  console.log(data); // let content = '';
+  //     if (loading) {
+  //         content = (
+  //             <div className="message">
+  //                 <div className="loader"><div></div><div></div><div></div><div></div></div>
+  //                 Loading
+  //             </div>
+  //         )
+  //     } else if (loaded) {
+  //         content = (
+  //             <>
+  //                 <ul>
+  //                     {
+  //                         data.map(user_post => (
+  //                             <li key={ user_post.id }>
+  //                              { user_post.helpmate}
+  //                             </li>
+  //                         ))
+  //                     }
+  //                 </ul>
+  //             </>
+  //         )
+  //     }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, "show me");
 }
