@@ -13,8 +13,8 @@
 </br>
 <h1>{{ $users->name }}</h1>
 
-<a href="#">I need help now!</a>
-<a href="#">I want to help!</a>
+<a class ="link" href="#">I need help now!</a>
+<a class ="link" href="#">I want to help!</a>
 
 <div class="info">
     <h2>Email: {{ $users->email }}</h2>
@@ -24,15 +24,15 @@
     <h2>How can I help?: {{ $users->provide_help }}</h2>
 </div>
 
-<a href="{{ action('UserController@edit', [$users->id]) }}">Update Profile</a>
+<a class ="link" href="{{ action('UserController@edit', [$users->id]) }}">Update Profile</a>
 
 <form action="{{ action('UserController@destroy', [$users->id]) }}" method="POST">
     @csrf
     @method('DELETE')
-    <input type="submit" value="Delete profile">
+    <input class ="link" type="submit" value="Delete profile">
 </form>
 
-<a href="{{ action('UserController@index') }}">Back to index</a>
+<a class ="link" href="{{ action('UserController@index') }}">Back to index</a>
 </div>
 
 @endsection
