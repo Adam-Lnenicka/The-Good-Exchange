@@ -15,9 +15,12 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->string('text')->nullable();
-            $table->string('aUser')->nullable();
             $table->timestamps();
+            $table->integer('post_id')->references('id')->on('user_posts');
+            $table->text('uploadedm_photo_path')->nullable();
+            $table->foreignId('from_users_id')->references('id')->on('users');
+            $table->integer('to_users_id')->references('id')->on('users'); 
+            $table->longText('text'); 
         });
     }
 

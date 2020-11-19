@@ -35993,9 +35993,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function Location() {
-  var GrabLocation = function GrabLocation() {};
+  var options = {
+    enableHighAccuracy: true,
+    timeout: 50
+  };
 
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, "I will find you");
+  function success(pos) {
+    var crd = pos.coords;
+    console.log(crd);
+    console.log('Your current position is:');
+    console.log("Latitude : ".concat(crd.latitude));
+    console.log("Longitude: ".concat(crd.longitude));
+    console.log("More or less ".concat(crd.accuracy, " meters."));
+  }
+
+  function error(err) {
+    console.warn("ERROR(".concat(err.code, "): ").concat(err.message));
+  }
+
+  navigator.geolocation.getCurrentPosition(success, error, options);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null));
 }
 
 /***/ }),
@@ -36044,10 +36061,12 @@ function PostForm() {
   var handleSubmit = function handleSubmit(e) {};
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    className: " flex-1",
     action: "",
     method: "post",
     encType: "multipart/form-data"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DragnDrop__WEBPACK_IMPORTED_MODULE_1__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextContent__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Location__WEBPACK_IMPORTED_MODULE_2__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "bg-purple-400 m-3 w-11/12 p-2 rounded-xl ring-pink-100 ",
     type: "submit",
     value: "submit"
   }, " Post ")));
@@ -36069,7 +36088,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 function TextContent() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "I need help getting to this beautiful Beach. I dont have alot of money but I am good company"));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
+    cols: "20",
+    wrap: "hard",
+    placeholder: "Insert description here ",
+    className: "bg-orange-200 rounded-lg h-20 w-11/12 mx-3 break-words text-center pr-2"
+  }));
 }
 
 /***/ }),

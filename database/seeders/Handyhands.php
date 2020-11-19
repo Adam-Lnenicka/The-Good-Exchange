@@ -76,13 +76,14 @@ class Handyhands extends Seeder
               $i->save();
 
 
-              // $t = new \App\Models\Message;
+              $t = new \App\Models\Message;
 
-              // $t->uploadedm_photo_path = $id->uploaded_photo_path;
-              // $t->from_users_id = $u->id ;
-              // $t->to_users_id= $id->user_id;
-              // $t->message_content = $item->message_content ;
-              // $t->save();
+              $t->uploadedm_photo_path = $id->uploaded_photo_path;
+              $t->from_users_id = $u->id ;
+              $t->to_users_id= $item->from;
+              $t->text = $item->message_content ;
+              $t->post_id  = $item->postNumber;
+              $t->save();
               
           }
     }

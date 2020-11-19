@@ -15,4 +15,25 @@ class Message extends Model
         return $this->belongsTo(User::class, 'user_id', 'id');
 
     }
+
+    public function fromUser()
+    {
+        return $this->belongsTo(User::class, 'from_user_id', 'id');
+
+    }
+    public function toUser()
+    {
+        return $this->belongsTo(User::class, 'to_user_id', 'id');
+
+    }
+
+    public function UserPost()
+    {
+        return $this->belongsTo(UserPost::class);
+
+        // carry id of the user_poster  & person replying to message 
+
+    }
+
+    
 }

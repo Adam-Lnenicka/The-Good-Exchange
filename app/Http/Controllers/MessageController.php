@@ -20,12 +20,15 @@ class MessageController extends Controller
     {
 
     }
+
+    // takes user id of logged user and puts it to the database 
     public function store(Request $request)
     {
         $message = new Message;
         $message->text = $request->input('text');
-       // $message->user_id = Auth::id();
-       $message->user_id = 3;
+        $message->user_id = Auth::id();
+
+    //    $message->user_id = 3;
         
         $message->save();
 

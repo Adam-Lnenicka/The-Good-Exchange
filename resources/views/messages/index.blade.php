@@ -1,5 +1,8 @@
-<h1>Messages</h1>
 
+@extends('layouts.app')
+
+@section('content')
+<h1>Messages</h1>
 
 <form action="{{ action('MessageController@store') }}" method="POST">
     @csrf
@@ -17,3 +20,5 @@
             @endif
     </p>
 @endforeach
+@endsection
+
