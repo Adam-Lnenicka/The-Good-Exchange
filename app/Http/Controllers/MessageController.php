@@ -30,11 +30,22 @@ class MessageController extends Controller
 
         $message = new Message;
         $message->text = $request->input('text');
+<<<<<<< HEAD
         $message->post_id= $post->id;
         $message->from_users_id = Auth::id(); // ID of currently logged in user
         $message->to_users_id = $post->user_id; 
+=======
+<<<<<<< HEAD
+        $message->from_users_id = Auth::id();
+       //$message->user_id = 3;
+=======
+        $message->post_id= UserPost::id();
+        $message->from_users_id = Auth::id();
+        $message->to_users_id = Auth::id();
+>>>>>>> 96c0f4511292738991100b9d6f3d9e57405f751c
 
     //    $message->user_id = 3;
+>>>>>>> ac7024b37411d5bee3146be8988e84d774eefbba
         
         $message->save();
 
