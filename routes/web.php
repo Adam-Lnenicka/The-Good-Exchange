@@ -34,14 +34,9 @@ Route::put('/users/{id}', 'UserController@update');
 Route::get('/users/{id}/delete', 'UserController@delete'); // will show message "really want to delete?
 Route::delete('/users/{id}', 'UserController@destroy');
 
-<<<<<<< HEAD
 //Route::post('/register', 'Auth\RegisterController@store')->middleware(['guest']);
 
 
 Route::get('/message', 'MessageController@index');
-=======
-
-Route::get('/message', 'MessageController@index')->name('messages');
->>>>>>> 179ac283b5eaeaf7598f9a34386806aaffad2bdc
 Route::post('/message', 'MessageController@store');
 Route::get('/home-redirect', function(){return redirect()->action('UserController@edit', Auth::id());});
