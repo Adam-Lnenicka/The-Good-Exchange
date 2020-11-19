@@ -35,4 +35,35 @@ mix.version();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// {
+//     test: /\.(gif|png|jpg|svg)(\?.*$|$)/,
+//     use: [
+//       {
+//         loader: 'url-loader',
+//         options: {
+//           limit: 8192,
+//           name: '[name].[ext]',
+//           publicPath: 'assets/' // or whatever the path you're using for assets is
+//         },
+//       },
+//     ],
+//   },
+
+
+
 //.webpackConfig(require('./webpack.config'));

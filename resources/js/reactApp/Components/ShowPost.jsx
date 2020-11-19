@@ -27,6 +27,8 @@ const fetchPosts = async () => {
       data: data
   });
 
+  
+
   } 
 }
 useEffect(() => {
@@ -35,50 +37,50 @@ useEffect(() => {
 
 console.log(data);
 
-// let content = '';
+let content = '';
 
-//     if (loading) {
-//         content = (
-//             <div className="message">
-//                 <div className="loader"><div></div><div></div><div></div><div></div></div>
-//                 Loading
-//             </div>
-//         )
-//     } else if (loaded) {
-//         content = (
-//             <>
-//                 <ul>
-//                     {
-//                         data.map(user_post => (
-//                             <li key={ user_post.id }>
-                             
-//                              { user_post.helpmate}
-//                             </li>
-//                         ))
-//                     }
-//                 </ul>
-//             </>
-//         )
-//     }
+    if (loading) {
+        content = (
+            <div className="message">
+                <div className="animate-spin">
+                <svg className="animate-spin h-1 w-1 mr-3 ..." viewBox="0 0 24 24">
+                </svg>
+                Loading
+                </div>
+            </div>
+        )
+    } else if (loaded) {
+        content = (
+            <>
+                {
+                  data.map(id => (
+                    <div  className="bg-white overflow-hidden shadow-xl sm:rounded-lg p-2.5 m-2.5" key={id.id}>
+                    <img src={"id.uploadedm_photo_path"} alt="profile pic"/>
+                    <div>{id.description}</div>
+                     <span>Cost:{id.cost}</span>  
+                     <br/>
+                     <a class=" bg-purple-600 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"href="">Send a message</a> 
+                    </div>
+                  ))
+
+                  })
+                
+            </>
+        )
+    }
 
    return (
   <>
-{/* <div class="py-12">
-    <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+<div className="py-12 ">
+    <div className="max-w-xl mx-auto sm:px-6 lg:px-8">
+       
            
-           <img src="{}" alt=""/>  
+          {content}
 
-   <div>{}{}</div>
-
-            <div>{text}</div>
-
-            <a href="">Send a message</a>
-        </div>
+           
+        
     </div>
-</div>  */}
- show me 
-
+</div>  
 
 
   </>
