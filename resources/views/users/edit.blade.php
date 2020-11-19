@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -11,7 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <style>
+<style>
         *{
             font-family: Nunito;
             
@@ -65,7 +66,7 @@
                 margin: 1em 0;
                 border: none;
         }
-        </style>
+</style>
 
 
 <h1>Update profile {{ $users->name }}</h1>
@@ -118,3 +119,5 @@
 
 </body>
 </html>
+
+
