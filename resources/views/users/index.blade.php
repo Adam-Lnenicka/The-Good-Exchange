@@ -26,7 +26,7 @@
                             <td><img src="{{ $user->profile_photo_path }}"></td>
                             <td></td>
 
-                            <td><a href="{{ action('UserController@index', [$user->id]) }}">{{ $user->name }}</a></td>
+                            <td><a href="{{ action('UserController@show', [$user->id]) }}">{{ $user->name }}</a></td>
                             <td>{{ $user->handy_points }}</td>
                             <td>{{ $user->email }}</td>
 
