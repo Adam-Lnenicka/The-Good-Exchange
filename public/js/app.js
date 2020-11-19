@@ -36695,20 +36695,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-<<<<<<< HEAD
-/* harmony import */ var _PostForm__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PostForm */ "./resources/js/reactApp/Components/PostForm.jsx");
-=======
 /* harmony import */ var _ShowPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ShowPost */ "./resources/js/reactApp/Components/ShowPost.jsx");
 /* harmony import */ var _PostForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PostForm */ "./resources/js/reactApp/Components/PostForm.jsx");
 
->>>>>>> Hilenn
 
 
 
 function App() {
-<<<<<<< HEAD
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PostForm__WEBPACK_IMPORTED_MODULE_2__["default"], null));
-=======
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowPost__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
 }
 
@@ -36814,7 +36807,6 @@ function Location(props) {
 
   navigator.geolocation.getCurrentPosition(success, error, options);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
->>>>>>> Hilenn
 }
 
 /***/ }),
@@ -36824,11 +36816,7 @@ function Location(props) {
   !*** ./resources/js/reactApp/Components/PostForm.jsx ***!
   \*******************************************************/
 /*! exports provided: default */
-<<<<<<< HEAD
-/***/ (function(module, exports) {
-=======
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
->>>>>>> Hilenn
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -36970,22 +36958,29 @@ function ShowPost(props) {
   Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
     fetchPosts();
   }, []);
-  console.log(data);
-  var content = '';
-
-  if (loading) {
-    content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "message"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-      className: "loader"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null)), "Loading");
-  } else if (loaded) {
-    content = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", null, data.map(function (user) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
-        key: user.name
-      });
-    })));
-  }
+  console.log(data); // let content = '';
+  //     if (loading) {
+  //         content = (
+  //             <div className="message">
+  //                 <div className="loader"><div></div><div></div><div></div><div></div></div>
+  //                 Loading
+  //             </div>
+  //         )
+  //     } else if (loaded) {
+  //         content = (
+  //             <>
+  //                 <ul>
+  //                     {
+  //                         data.map(user_post => (
+  //                             <li key={ user_post.id }>
+  //                              { user_post.helpmate}
+  //                             </li>
+  //                         ))
+  //                     }
+  //                 </ul>
+  //             </>
+  //         )
+  //     }
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, "show me");
 }
@@ -37047,8 +37042,8 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\web\bootcamp\coding-exc\HelenAdam-HandyHands\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
-module.exports = __webpack_require__(/*! C:\web\bootcamp\coding-exc\HelenAdam-HandyHands\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\Web\TGE\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
+module.exports = __webpack_require__(/*! C:\Web\TGE\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })
