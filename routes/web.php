@@ -37,7 +37,7 @@ Route::delete('/users/{id}', 'UserController@destroy');
 //Route::post('/register', 'Auth\RegisterController@store')->middleware(['guest']);
 
 
-Route::get('/message', 'MessageController@index');
+Route::get('/message', 'MessageController@index')->name('messages');
 Route::post('/message', 'MessageController@store');
 Route::get('/home-redirect', function(){return redirect()->action('UserController@edit', Auth::id());});
 
