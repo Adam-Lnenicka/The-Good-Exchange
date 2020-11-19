@@ -1,22 +1,26 @@
 import React, {useState, useEffect} from 'react';
 
-export default function Location(){
+export default function Location(props){
+   
    
   
   var options = {
     enableHighAccuracy: true,
     timeout: 50,
   };
+
+
   
   function success(pos) {
-    var crd = pos.coords;
+    
 
-    console.log(crd)
+  const  lat =  pos.GeolocationCoordinates.latitude;
+   const long =  pos.GeolocationCoordinates.longitude;
+
+   console.log(lat);
+   console.log(long);
   
-    console.log('Your current position is:');
-    console.log(`Latitude : ${crd.latitude}`);
-    console.log(`Longitude: ${crd.longitude}`);
-    console.log(`More or less ${crd.accuracy} meters.`);
+    
   }
   
   function error(err) {
@@ -29,7 +33,7 @@ export default function Location(){
 
     return (
   <>
-  <div></div>
+ 
   </>
 
     );

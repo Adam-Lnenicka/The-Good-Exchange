@@ -40,3 +40,6 @@ Route::delete('/users/{id}', 'UserController@destroy');
 Route::get('/message', 'MessageController@index');
 Route::post('/message', 'MessageController@store');
 Route::get('/home-redirect', function(){return redirect()->action('UserController@edit', Auth::id());});
+
+Route::get('/newpost','UserPostController@create')->name('newpost');
+Route::get('/api','UserPostController@api');

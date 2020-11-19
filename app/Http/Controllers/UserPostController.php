@@ -31,11 +31,11 @@ class UserPostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function create()
+    public function create()
     //create a post in react 
-    // {
-    //     //
-    // }
+    {
+        return view('post.createpost');
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -91,5 +91,13 @@ class UserPostController extends Controller
     public function destroy(UserPost $userPost)
     {
         //
+    }
+    public function api(){
+        $postdata = UserPost::get();
+
+        $jsonData=  json_encode($postdata);
+
+        var_dump($jsonData);
+
     }
 }
