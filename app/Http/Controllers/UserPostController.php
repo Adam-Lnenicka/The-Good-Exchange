@@ -34,8 +34,14 @@ class UserPostController extends Controller
     public function create()
     //create a post in react 
     {
-        return view('post.createpost');
+        return view('post.reactApp');
     }
+
+
+    // public function showpost(){
+    //     return view('post.showpost');
+    // }
+
 
     /**
      * Store a newly created resource in storage.
@@ -95,9 +101,15 @@ class UserPostController extends Controller
     public function api(){
         $postdata = UserPost::get();
 
-        $jsonData=  json_encode($postdata);
+        return $postdata;
 
-        var_dump($jsonData);
+        // return view('api.postApi' , compact('jsonData'));
 
     }
+    // public function query(){
+    //      $data = UserPost::query()
+    //      ->// specfic quey parameters
+    // }
+
+    
 }
