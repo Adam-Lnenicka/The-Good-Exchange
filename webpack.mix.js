@@ -13,15 +13,15 @@ require('dotenv').config();
  */
 if (!mix.inProduction()) {
     mix.webpackConfig({
-        devtool: 'source-map'
+        devtool: 'source-map',
+        
     })
     .sourceMaps()
 }
 
 mix.react('resources/js/reactApp/index.jsx', 'public/js/app.js')
-    .postCss('resources/css/app.css', 'public/css', [
-        require('postcss-import'),
-        require('tailwindcss'),
+    .postCss('resources/css/app.css', 'public/css', 
+    [require('postcss-import'),require('tailwindcss'),
     ])
     .browserSync({
         host: 'localhost',
@@ -35,4 +35,4 @@ mix.version();
 
 
 
-    // .webpackConfig(require('./webpack.config'));
+//.webpackConfig(require('./webpack.config'));

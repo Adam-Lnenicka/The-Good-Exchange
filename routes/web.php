@@ -37,9 +37,15 @@ Route::delete('/users/{id}', 'UserController@destroy');
 //Route::post('/register', 'Auth\RegisterController@store')->middleware(['guest']);
 
 
-Route::get('/message', 'MessageController@index')->name('messages');
-Route::post('/message', 'MessageController@store');
+Route::get('/post/{post_id}/message', 'MessageController@index')->name('messages');
+Route::post('/post/{post_id}/message', 'MessageController@store');
 Route::get('/home-redirect', function(){return redirect()->action('UserController@edit', Auth::id());});
 
+
+
+//-------React Application --------------------
 Route::get('/newpost','UserPostController@create')->name('newpost');
+Route::get('/post','UserPostController@create')->name('post');
+
+
 Route::get('/api','UserPostController@api');

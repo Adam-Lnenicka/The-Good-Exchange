@@ -34,7 +34,7 @@ return (
                                {/* The div below has the rootprops and is set to prevent the default action of opening another window */}
                                       <div className="h-20 w-11/12 mx-3 pr-6"
                                         {...getRootProps({
-                                          onDrop: event => event.preventDefault();
+                                          onDrop: event => event.preventDefault()
                                          
                                         })}
                                       >

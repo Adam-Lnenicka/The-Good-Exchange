@@ -71,7 +71,7 @@
 
     <div class="background">
         <div class="picture">
-            <h2>Profile picture</h2>
+            <img src="{{ $users->profile_photo_path }}">
         </div>
     </div>
 
