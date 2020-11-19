@@ -12,17 +12,14 @@ class MessageController extends Controller
     //
     public function index($post_id)
     {
-    
+       
         $messages = Message::where('post_id', $post_id)->with('fromUser')->get();
         //dd($messages);
         return view('messages/index', compact('post_id', 'messages'));
     }
 
-    public function create()
-    {
-
-    }
-
+    
+//with('fromUser')->get();
     // takes user id of logged user and puts it to the database 
     public function store($post_id, Request $request)
     {

@@ -17,12 +17,10 @@ export default function App(){
 
 
       <Switch>
-        
-          {/* <Route path="/createpost" children={<PostForm />} />
-          <Route path="/newpost" children={<ShowPost />} /> */}
-          
 
-          <ShowPost />
+          <Route exact path="/newpost" children={<ShowPost />} /> 
+          <Route path="/createpost" children={<PostForm />} />
+         
        </Switch>
 
 

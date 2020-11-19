@@ -99,9 +99,14 @@ class UserPostController extends Controller
         //
     }
     public function api(){
+
+        //with location data and service category info 
         $postdata = UserPost::get();
 
-        return $postdata;
+
+
+        $data = json_encode($postdata);
+        return $data;
 
         // return view('api.postApi' , compact('jsonData'));
 
