@@ -13,7 +13,7 @@
         </div>
     </div>
     <form action ="upload.php" method="post" enctype="multipart/form-data">
-        <input class="link profile-img-btn" type="file" name="profile-img" style="display:none">
+        <input class="link profile-img-btn" type="file" name="profile-img" style="">
     </form> 
 </br>
 
