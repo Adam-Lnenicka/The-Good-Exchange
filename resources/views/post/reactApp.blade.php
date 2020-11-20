@@ -7,8 +7,13 @@
                     <div id="app"></div>
 
 
-        <script src="{{asset('js/app.js')}}"></script>
-        </div>
+       
+       
+                    <script src="{{asset('js/app.js')}}"></script>
+        
+                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZUsMAE6-pDVlWR_vyGJj-N_B_0HLFoks&callback=initMap"
+                    type="text/javascript"></script>
+                </div>
     </div>
 </div>
 @endsection
