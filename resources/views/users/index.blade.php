@@ -1,9 +1,9 @@
 @extends('layouts.app') 
 @section('content')
-<h1>Users Management</h1>
-
+<div class = "profile">
+    <h1>Top Helpmates</h1>
         <table class="table-striped">
-            <thead>
+  
                 <th>
                     <td>
                         User Image
@@ -19,12 +19,14 @@
                     </td>
 
                 </th>
+
                 <tbody>
                     @foreach ($users as $user)
                     
                         <tr>
-                            <td><img src="{{ $user->profile_photo_path }}"></td>
                             <td></td>
+                            <td><img src="{{ $user->profile_photo_path }}"></td>
+                            
 
                             <td><a class="link" href="{{ action('UserController@show', [$user->id]) }}">{{ $user->name }}</a></td>
                             <td>{{ $user->handy_points }}</td>
@@ -35,5 +37,5 @@
                 </tbody>
             </thead>
         </table>
-    </p>
+</div>
     @endsection

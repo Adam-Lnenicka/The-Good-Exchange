@@ -5,13 +5,17 @@
 
     <div class="background">
         <div class="picture">
-        <img src="{{ $users->profile_photo_path }}">
-            
+        <img src="{{ $users->profile_photo_path }}"> 
         </div>
     </div>
-
+    <form action ="upload.php" method="post" enctype="multipart/form-data">
+        <input class="link profile-img-btn" type="file" name="profile-img" style="display:none">
+    </form> 
 </br>
+
 <h1>{{ $users->name }}</h1>
+
+
 
 <a class ="link" href="#">I need help now!</a>
 <a class ="link" href="#">I want to help!</a>

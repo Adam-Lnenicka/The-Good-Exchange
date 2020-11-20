@@ -17,34 +17,35 @@
     @csrf
 
     @method('PUT')
-    <div class="info">
-    <label for ="name">Name:</label>
-    <input type="text" name="name" value="{{ $users->name }}"/>
-    </br>
+    <main>
+        <div class="info">
+        <label for ="name">Name:</label>
+        <input type="text" name="name" value="{{ $users->name }}"/>
+        </br>
 
-    </br>
-    <label for ="email">Email</label>
-    <input type="text" name="email" value="{{ $users->email }}"/>
-    </br>
+        <label for ="email">Email</label>
+        <input type="text" name="email" value="{{ $users->email }}"/>
+        </br>
 
-    <label for ="phone">Phone number: </label>
-    <input type="telephone" name="phone_number" value="{{ $users->phone_number }}"/>
-    </br>
+        <label for ="phone">Phone number: </label>
+        <input type="telephone" name="phone_number" value="{{ $users->phone_number }}"/>
+        </br>
 
-    <label for ="email">Tell the community something about yourself. </label>
-    <input type="text" name="about" value="{{ $users->about }}"/>
-    </br>
+        <label for ="email">Tell the community something about yourself. </label>
+        <input type="text" name="about" value="{{ $users->about }}"/>
+        </br>
 
-    <label for ="email">What do I need help with? </label>
-    <input type="text" name="need_help" value="{{ $users->need_help }}"/>
-    </br>
+        <label for ="email">What do I need help with? </label>
+        <input type="text" name="need_help" value="{{ $users->need_help }}"/>
+        </br>
 
-    <label for ="email">How can I help? </label>
-    <input type="text" name="provide_help" value="{{ $users->provide_help }}"/>
-    </br>
+        <label for ="email">How can I help? </label>
+        <input type="text" name="provide_help" value="{{ $users->provide_help }}"/>
+        </br>
 
-    <input type="submit" value="submit">
-    </div>
+        <input class="link" type="submit" value="submit">
+        </div>
+    </main>
 <br/>
 </form>
 
