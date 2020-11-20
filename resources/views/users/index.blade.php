@@ -29,7 +29,10 @@
                             
 
                             <td><a class="link" href="{{ action('UserController@show', [$user->id]) }}">{{ $user->name }}</a></td>
+
                             <td>{{ $user->handy_points }}</td>
+                            <td>{{ $user->hopefuls_helpmates }}</td>
+                            <td>{{ $user->service}}</td>
                             <td>{{ $user->email }}</td>
 
                         </tr>
