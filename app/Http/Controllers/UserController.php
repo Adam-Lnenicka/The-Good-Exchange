@@ -24,6 +24,10 @@ class UserController extends Controller
     {
         $users = User::findOrFail($id);
 
+   //     if($file = $request->file('profile-img')) {
+     //       $file->storeAs('profile-imgs', $file->getClientOriginalName(), 'uploads');
+       // }
+
 
         return view('users/show', compact('users'));
 

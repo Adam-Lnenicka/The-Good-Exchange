@@ -35,9 +35,7 @@ Route::get('/users/{id}/delete', 'UserController@delete'); // will show message 
 Route::delete('/users/{id}', 'UserController@destroy');
 
 
-Route::get('/post/{post_id}/message', 'MessageController@index')->name('messages');
-Route::get('/post/{user_id}/message', 'MessageController@indexx', Auth::id())->name('Authmessages');
-Route::post('/post/{post_id}/message', 'MessageController@store');
+Route::get('/message', 'MessageController@index')->name('messages');
 Route::get('/home-redirect', function(){return redirect()->action('UserController@edit', Auth::id());});
 
 
