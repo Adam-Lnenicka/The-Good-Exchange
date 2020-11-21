@@ -4,27 +4,25 @@ import Dropzone, {useDropzone} from 'react-dropzone';
 
 
 
-export default function DragnDrop({handleChange ,}){
+export default function DragnDrop({handleFile}){
 
   
   const {acceptedFiles, getRootProps, getInputProps} = useDropzone();
 
-  //files is the name of the target in the event so that is why you console.log files to check
-// const test =( files) => {
-//   const uploaded_file = files.name.value; 
-//   setImage(uploaded_file);
+  // files is the name of the target in the event so that is why you console.log files to check
+const GetFile =( files) => {
+  const file = files.name.value; 
+  
+  console.log(file);
 
-
-//   console.log(uploaded_file);
-
-// }
+}
 
 // In this example I used dropzone wrapper and put the on Drop function within the Dropzone component.
-//The entire component is also wrapped in curly brackets . 
-   
+// The entire component is also wrapped in curly brackets . 
+
 return (
               <>
-       <Dropzone onDrop={onChange }>
+       <Dropzone onDrop={handleFile }  >
 
             {/* This in a way setting the State is also wrapped around the entire component  */}
                 {({getRootProps, getInputProps}) => (

@@ -27,7 +27,7 @@
     "dependencies": {
         "google-maps-react": "^2.0.6",
         "react": "^17.0.1",
-        "react-dom": "^17.0.1",
+        "react-dom": "^16.14.0",
         "react-dropzone": "^11.2.4",
         "react-router-dom": "^5.2.0"
     }

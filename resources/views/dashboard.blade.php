@@ -1,15 +1,21 @@
-@extends('layouts.app') 
- @section('content')
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            
-        </h2>
-    </x-slot>
-     
-    <div id="app"></div>
+@extends('layouts.app')
+@section('content')
+<div class="py-12">
+    <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
+        <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+           
+        <div id="app"></div>
 
-<h1> Coming Soon </h1>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(255, 255, 255); display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+
+        <script src="{{asset('js/app.js')}}"></script>
+        </div>
+    </div>
+</div>
+@endsection
+    
+
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgb(255, 255, 255); display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
         <g>
           <circle cx="60" cy="50" r="4" fill="#e15b64">
             <animate attributeName="cx" repeatCount="indefinite" dur="1s" values="95;35" keyTimes="0;1" begin="-0.67s"></animate>
@@ -37,5 +43,4 @@
        <script src="{{asset('js/app.js')}}" ></script>
 
    
-
-@endsection  
+ 
