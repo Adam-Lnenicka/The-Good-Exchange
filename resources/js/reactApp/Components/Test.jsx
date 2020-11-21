@@ -22,6 +22,8 @@ export default function ShowLocation(props){
             }}
           >
            <Marker
+           lat={11.0168}
+           lng={76.9558}
             onClick={data.onMarkerClick}
             name={'This is test name'}
           />

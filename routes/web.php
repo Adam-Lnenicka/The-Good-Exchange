@@ -30,15 +30,17 @@ Route::get('/users/{id}', 'UserController@show')->name('profile');
 
 
 Route::get('/users/{id}/edit', 'UserController@edit');
-Route::put('/users?{id}', 'UserController@update');
+Route::put('/users/{id}', 'UserController@update');
 Route::get('/users/{id}/delete', 'UserController@delete'); // will show message "really want to delete?
 Route::delete('/users/{id}', 'UserController@destroy');
 
-
 Route::get('/post/{post_id}/message', 'MessageController@index')->name('messages');
 Route::get('/post/{user_id}/message', 'MessageController@indexx', Auth::id())->name('Authmessages');
+// Route::get('/message', 'MessageController@index')->name('messages');
 Route::post('/post/{post_id}/message', 'MessageController@store');
 Route::get('/home-redirect', function(){return redirect()->action('UserController@edit', Auth::id());});
+
+
 
 
 

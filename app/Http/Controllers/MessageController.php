@@ -31,10 +31,7 @@ class MessageController extends Controller
         $message->from_users_id = Auth::id(); // ID of currently logged in user
         $message->to_users_id = $post->user_id; 
 
-    //    $message->user_id = 3;
-        
         $message->save();
-
-        return redirect(action('MessageController@index', $post_id));
+      return redirect(action('MessageController@index', $post_id));
     }
 }

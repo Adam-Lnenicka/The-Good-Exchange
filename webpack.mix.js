@@ -20,9 +20,10 @@ if (!mix.inProduction()) {
 }
 
 mix.react('resources/js/reactApp/index.jsx', 'public/js/app.js')
-    .postCss('resources/css/app.css', 'public/css', 
+    .postCss('resources/css/app.css', 'public/css',
     [require('postcss-import'),require('tailwindcss'),
     ])
+    .postCss('resources/css/welcomePage.css', 'public/css/welcomePage.css')
     .browserSync({
         host: 'localhost',
         port: 3000,

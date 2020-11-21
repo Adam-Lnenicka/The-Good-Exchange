@@ -11,8 +11,8 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
-
-        <style>
+        <link rel="stylesheet" href="{{ asset('css/welcomePage.css') }}">
+    <style>
 
           
 

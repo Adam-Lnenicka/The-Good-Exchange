@@ -1,26 +1,23 @@
 import React, {useState, useEffect} from 'react';
 
-export default function Location(props){
-   
-   
-  
+export default function Location({handlePosition}){
+
   var options = {
     enableHighAccuracy: true,
     timeout: 50,
   };
 
-
-  
   function success(pos) {
     
 
-  const  lat =  pos.GeolocationCoordinates.latitude;
-   const long =  pos.GeolocationCoordinates.longitude;
+  const  lat =  pos.coords.latitude;
+  const  lng =  pos.coords.longitude;
 
+
+  handlePosition(lat, lng);
    console.log(lat);
-   console.log(long);
-  
-    
+   console.log(lng);
+   
   }
   
   function error(err) {
@@ -29,9 +26,7 @@ export default function Location(props){
   
   navigator.geolocation.getCurrentPosition(success, error, options);
 
-
-
-    return (
+  return (
   <>
  
   </>

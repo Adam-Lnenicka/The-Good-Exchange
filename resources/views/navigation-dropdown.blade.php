@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <nav x-data="{ open: false }" class="bg-indigo-300 h-24 border-b border-gray-400">
+=======
+<nav x-data="{ open: false }" class="bg-indigo-300  h-24 border-b border-gray-400">
+>>>>>>> b329453e601d3261a7d5ffd7f04845ab2cd8d1a6
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between   h-16">

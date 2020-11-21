@@ -19,6 +19,14 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+
+            $table->string('phone_number')->nullable();
+            $table->string('about')->nullable();
+            $table->string('need_help')->nullable();
+            $table->string('provide_help')->nullable();
+            $table->string('hopefuls_helpmates')->nullable();
+            $table->string('service')->nullable();
+
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
             $table->text('profile_photo_path')->nullable();
@@ -27,6 +35,9 @@ class CreateUsersTable extends Migration
             $table->string('user_id')->nullable();
         });
     }
+
+
+
 
     /**
      * Reverse the migrations.
