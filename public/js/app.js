@@ -37056,8 +37056,8 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Web\TGE\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
-module.exports = __webpack_require__(/*! C:\Web\TGE\resources\css\app.css */"./resources/css/app.css");
+__webpack_require__(/*! C:\web\bootcamp\coding-exc\HelenAdam-HandyHands\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
+module.exports = __webpack_require__(/*! C:\web\bootcamp\coding-exc\HelenAdam-HandyHands\resources\css\app.css */"./resources/css/app.css");
 
 
 /***/ })
