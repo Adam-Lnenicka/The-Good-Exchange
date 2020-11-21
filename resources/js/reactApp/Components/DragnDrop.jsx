@@ -42,7 +42,7 @@ return (
 
 
                                               {/* This get =>  getInputProps must be  in the input tag  */}
-                                                <input type="image"  name="uploadedm_photo_path" value={image.uploadedm_photo_path} {...getInputProps()}  />
+                                                <input type="file"  name="uploadedm_photo_path" value={ } {...getInputProps()}  />
                                                 <p class="text-center">Click or Drag 'n' Drop images </p>
 
                                                 
