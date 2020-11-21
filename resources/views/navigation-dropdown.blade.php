@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-indigo-300  h-24 border-b border-gray-400">
+<nav x-data="{ open: false }" class="bg-teal-300 h-24 border-b border-gray-400">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between   h-16">
@@ -681,20 +681,20 @@
                 </div>
 
 
-  {{-- The Good Exchange --}}
-                 {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+  <!-- {{-- The Good Exchange --}}
+                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('messages') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Find Helpmates near you ') }}
                     </x-jet-nav-link>
-                </div>
---}}
-                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                </div> -->
+
+                <!-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('Authmessages', Auth::id()) }}" :active="request()->routeIs('dashboard')">
                         {{ __('Messages') }}
                     </x-jet-nav-link>
-                </div>  
+                </div> -->
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <!-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Users') }}
                     </x-jet-nav-link>
@@ -704,7 +704,7 @@
                     <x-jet-nav-link class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('newpost') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Create a Post') }}
                     </x-jet-nav-link>
-                </div>
+                </div> -->
 
 
 {{-- 

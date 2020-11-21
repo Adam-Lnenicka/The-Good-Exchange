@@ -56,8 +56,6 @@ class Handyhands extends Seeder
             $u->password = $item->password;
             $u->profile_photo_path = $item->profile_photo_path;
             $u->handy_points = $item->handy_points;
-            $u->hopefuls_helpmates = $item->hopefuls_helpmates;
-            $u->service = $item->service;
             $u->save();
 
 

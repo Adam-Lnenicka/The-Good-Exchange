@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+@extends('layouts.app') 
+ @section('content')
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            
+        </h2>
+    </x-slot>
+     
+    <div id="show"></div>
+
+       <script src="{{asset('js/app.js')}}" ></script>
+
+   <p>Show post here </p>
+
+@endsection  
+=======
 @extends('layouts.app')
 @section('content')
 <div class="py-12">
@@ -44,3 +61,4 @@
 
    
  
+>>>>>>> b329453e601d3261a7d5ffd7f04845ab2cd8d1a6

@@ -24,8 +24,6 @@ class CreateUsersTable extends Migration
             $table->string('about')->nullable();
             $table->string('need_help')->nullable();
             $table->string('provide_help')->nullable();
-            $table->string('hopefuls_helpmates')->nullable();
-            $table->string('service')->nullable();
 
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
