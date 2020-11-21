@@ -20,6 +20,19 @@ class UserController extends Controller
         return view('users/index', compact('users'));
     }
 
+    public function helpmate()
+    {
+        
+        $users = User::where('hopefuls_helpmates','=','helpmate') ->get();
+
+
+        if($users->count() === 0){
+            return 'no users';
+        }
+
+        return view('users/index', compact('users'));
+    }
+
     public function show($id)
     {
         $users = User::findOrFail($id);

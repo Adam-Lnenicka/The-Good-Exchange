@@ -5,11 +5,7 @@
 
     <div class="background">
         <div class="picture">
-<<<<<<< HEAD
-            <img src="{{ $users->profile_photo_path }}">
-=======
         <img src="{{ $users->profile_photo_path }}"> 
->>>>>>> 0a73f866dded632d0684c6edf90224d155d0dd0a
         </div>
     </div>
     <form action ="upload.php" method="post" enctype="multipart/form-data">

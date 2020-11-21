@@ -24,6 +24,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/users', 'UserController@index')->name('users');
 Route::get('/users/create', 'UserController@create');
 
+Route::get('/users', 'UserController@helpmate');
+
 
 Route::post('/users', 'UserController@store');
 Route::get('/users/{id}', 'UserController@show')->name('profile');
@@ -47,6 +49,7 @@ Route::get('/home-redirect', function(){return redirect()->action('UserControlle
 //-------React Application --------------------
 Route::get('/newpost','UserPostController@create')->name('newpost');
 Route::get('/post','UserPostController@create')->name('post');
+
 
 
 Route::get('/api','UserPostController@api');
