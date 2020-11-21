@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Map, GoogleApiWrapper, Marker  } from 'google-maps-react';
 
-import ShowLocation from './ShowLocation';
 
 export default function ShowPost(props){
   const [{loading, loaded, data}, setDataState] = useState({
