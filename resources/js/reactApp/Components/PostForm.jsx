@@ -34,7 +34,7 @@ export default function PostForm(){
         <form className=" flex-1" action="" method="post" encType="multipart/form-data">
                
               <Location />
-              <DragnDrop />
+              {/* <DragnDrop /> */}
               <TextContent />
               
           
