@@ -33865,150 +33865,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _ShowPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ShowPost */ "./resources/js/reactApp/Components/ShowPost.jsx");
-/* harmony import */ var _PostForm__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PostForm */ "./resources/js/reactApp/Components/PostForm.jsx");
 
 
-
+ // import PostForm from './PostForm';
 
 function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
     path: "/dashboard",
     children: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowPost__WEBPACK_IMPORTED_MODULE_2__["default"], null)
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    exact: true,
-    path: "/newpost",
-    children: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PostForm__WEBPACK_IMPORTED_MODULE_3__["default"], null)
   }))));
-}
-
-/***/ }),
-
-/***/ "./resources/js/reactApp/Components/DragnDrop.jsx":
-/*!********************************************************!*\
-  !*** ./resources/js/reactApp/Components/DragnDrop.jsx ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Web\\TGE\\resources\\js\\reactApp\\Components\\DragnDrop.jsx: JSX attributes must only be assigned a non-empty expression (45:102)\n\n\u001b[0m \u001b[90m 43 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 44 | \u001b[39m                                              {\u001b[90m/* This get =>  getInputProps must be  in the input tag  */\u001b[39m}\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 | \u001b[39m                                                \u001b[33m<\u001b[39m\u001b[33minput\u001b[39m type\u001b[33m=\u001b[39m\u001b[32m\"file\"\u001b[39m  name\u001b[33m=\u001b[39m\u001b[32m\"uploadedm_photo_path\"\u001b[39m value\u001b[33m=\u001b[39m{ } {\u001b[33m...\u001b[39mgetInputProps()}  \u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                                                                                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 46 | \u001b[39m                                                \u001b[33m<\u001b[39m\u001b[33mp\u001b[39m \u001b[36mclass\u001b[39m\u001b[33m=\u001b[39m\u001b[32m\"text-center\"\u001b[39m\u001b[33m>\u001b[39m\u001b[33mClick\u001b[39m or \u001b[33mDrag\u001b[39m \u001b[32m'n'\u001b[39m \u001b[33mDrop\u001b[39m images \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mp\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 47 | \u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 48 | \u001b[39m                                                \u001b[0m\n    at Object._raise (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:790:17)\n    at Object.raiseWithData (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:783:17)\n    at Object.raise (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:777:17)\n    at Object.jsxParseAttributeValue (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4580:16)\n    at Object.jsxParseAttribute (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4628:44)\n    at Object.jsxParseOpeningElementAfterName (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4648:28)\n    at Object.jsxParseOpeningElementAt (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4641:17)\n    at Object.jsxParseElementAt (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4673:33)\n    at Object.jsxParseElementAt (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4689:32)\n    at Object.jsxParseElementAt (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4689:32)\n    at Object.jsxParseElement (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4747:17)\n    at Object.parseExprAtom (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4754:19)\n    at Object.parseExprSubscripts (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10094:23)\n    at Object.parseUpdate (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10074:21)\n    at Object.parseMaybeUnary (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10063:17)\n    at Object.parseExprOps (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:9933:23)\n    at Object.parseMaybeConditional (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:9907:23)\n    at Object.parseMaybeAssign (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:9870:21)\n    at C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:9837:39\n    at Object.allowInAnd (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:11510:12)\n    at Object.parseMaybeAssignAllowIn (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:9837:17)\n    at Object.parseParenAndDistinguishExpression (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10706:28)\n    at Object.parseExprAtom (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10424:21)\n    at Object.parseExprAtom (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4759:20)\n    at Object.parseExprSubscripts (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10094:23)\n    at Object.parseUpdate (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10074:21)\n    at Object.parseMaybeUnary (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10063:17)\n    at Object.parseExprOps (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:9933:23)\n    at Object.parseMaybeConditional (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:9907:23)\n    at Object.parseMaybeAssign (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:9870:21)\n    at Object.parseFunctionBody (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:11177:24)\n    at Object.parseArrowExpression (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:11156:10)\n    at Object.parseParenAndDistinguishExpression (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10729:12)\n    at Object.parseExprAtom (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10424:21)\n    at Object.parseExprAtom (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:4759:20)\n    at Object.parseExprSubscripts (C:\\Web\\TGE\\node_modules\\@babel\\parser\\lib\\index.js:10094:23)");
-
-/***/ }),
-
-/***/ "./resources/js/reactApp/Components/Location.jsx":
-/*!*******************************************************!*\
-  !*** ./resources/js/reactApp/Components/Location.jsx ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Location; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function Location(_ref) {
-  var handlePosition = _ref.handlePosition;
-  var options = {
-    enableHighAccuracy: true,
-    timeout: 50
-  };
-
-  function success(pos) {
-    var lat = pos.coords.latitude;
-    var lng = pos.coords.longitude;
-    handlePosition(lat, lng);
-    console.log(lat);
-    console.log(lng);
-  }
-
-  function error(err) {
-    console.warn("ERROR(".concat(err.code, "): ").concat(err.message));
-  }
-
-  navigator.geolocation.getCurrentPosition(success, error, options);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null);
-}
-
-/***/ }),
-
-/***/ "./resources/js/reactApp/Components/PostForm.jsx":
-/*!*******************************************************!*\
-  !*** ./resources/js/reactApp/Components/PostForm.jsx ***!
-  \*******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PostForm; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _DragnDrop__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DragnDrop */ "./resources/js/reactApp/Components/DragnDrop.jsx");
-/* harmony import */ var _DragnDrop__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_DragnDrop__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Location__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Location */ "./resources/js/reactApp/Components/Location.jsx");
-/* harmony import */ var _TextContent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TextContent */ "./resources/js/reactApp/Components/TextContent.jsx");
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-function PostForm() {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])({
-    lat: '',
-    "long": '',
-    file: '',
-    description: ''
-  }),
-      _useState2 = _slicedToArray(_useState, 2),
-      value = _useState2[0],
-      setValues = _useState2[1]; //  -> value of uploaded image ->file[0].path
-  //  const handleChange = (event) => {
-  //     const allowed_values = ['description','lat', 'long','file'],
-  //     uploadedm_photo_path = event.file[0].path,
-  //     description = event.target.value
-  //  }
-  // const handleSubmit = (e) => {
-  //   const allowed_fields = [ 'file' , 'text ','location' ]
-  // }
-
-
-  console.log(value);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-    className: " flex-1",
-    action: "",
-    method: "post",
-    encType: "multipart/form-data"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Location__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    handlePosition: function handlePosition(lat, lng) {
-      setValues({
-        latitude: lat,
-        longitude: lng
-      });
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DragnDrop__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    handleFile: function handleFile(file) {
-      setValues({
-        uploadFile: file
-      });
-    }
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_TextContent__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "bg-purple-400 m-3 w-11/12 p-2 rounded-xl ring-pink-100 ",
-    type: "submit",
-    value: "submit"
-  }, " Post "))); // out function on submit button -  onSubmit={}
 }
 
 /***/ }),
@@ -34129,11 +33995,16 @@ function ShowPost(props) {
         className: "bg-white overflow-hidden shadow-xl sm:rounded-lg p-2.5 m-2.5",
         key: id.id
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+        className: "",
         src: id.uploadedm_photo_path,
         alt: "profile pic"
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, id.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", null, "Cost:", id.cost), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-        "class": " bg-purple-600 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out",
-        href: ""
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+        className: " p-2.5"
+      }, id.description), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+        className: ""
+      }, "Cost:", id.cost), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, "maplocation"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+        className: " bg-purple-600 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out",
+        href: "/users/create\r "
       }, "Send a message"));
     }), ")");
   }
@@ -34143,33 +34014,6 @@ function ShowPost(props) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "max-w-xl mx-auto sm:px-6 lg:px-8"
   }, content)));
-}
-
-/***/ }),
-
-/***/ "./resources/js/reactApp/Components/TextContent.jsx":
-/*!**********************************************************!*\
-  !*** ./resources/js/reactApp/Components/TextContent.jsx ***!
-  \**********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return TextContent; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-function TextContent(_ref) {
-  var handleChange = _ref.handleChange;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("textarea", {
-    name: "description",
-    value: "",
-    cols: "20",
-    wrap: "hard",
-    placeholder: "Insert description here ",
-    className: "bg-orange-200 rounded-lg h-20 w-11/12 mx-3 break-words text-center pr-2"
-  }));
 }
 
 /***/ }),

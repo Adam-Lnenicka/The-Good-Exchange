@@ -64,7 +64,7 @@ class User extends Authenticatable
     ];
 
    public function UserPost() {
-       return $this->hasMany(UserPost::class );
+       return $this->hasMany(UserPost::class,'user_id','id' );
    }
 
     public function Message() {

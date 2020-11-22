@@ -682,17 +682,17 @@
 
 
   {{-- The Good Exchange --}}
-                 {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('messages') }}" :active="request()->routeIs('dashboard')">
+                  {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('messages'), [$post_id] }}" :active="request()->routeIs('dashboard')">
                         {{ __('Find Helpmates near you ') }}
                     </x-jet-nav-link>
-                </div>
---}}
-                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('Authmessages', Auth::id()) }}" :active="request()->routeIs('dashboard')">
+                </div> --}}
+-
+                 {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('Authmessages',$post_id) }}" :active="request()->routeIs('dashboard')">
                         {{ __('Messages') }}
                     </x-jet-nav-link>
-                </div>  
+                </div>   --}}
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
@@ -882,5 +882,7 @@ The good Exchange --}}
                 @endif
             </div>
         </div>
+
+        
     </div>
 </nav>

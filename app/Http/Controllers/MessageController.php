@@ -34,4 +34,18 @@ class MessageController extends Controller
         $message->save();
       return redirect(action('MessageController@index', $post_id));
     }
+
+    public function indexx($post_id)
+    {
+
+        $post = UserPost::findOrFail($post_id); 
+        $user = Auth::user();
+
+        $messages = Message::where('post_id', $post_id)->with('fromUser')->get();
+     
+        // dd($messages);
+
+        return view('messages/index', compact('post_id', 'messages'));
+    }
+
 }
