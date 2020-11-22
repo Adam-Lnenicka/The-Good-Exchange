@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="py-12">
-    <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
+    
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
            
         <div id="app"></div>
@@ -14,6 +14,6 @@
                     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZUsMAE6-pDVlWR_vyGJj-N_B_0HLFoks&callback=initMap"
                     type="text/javascript"></script>
                 </div>
-    </div>
+   
 </div>
 @endsection

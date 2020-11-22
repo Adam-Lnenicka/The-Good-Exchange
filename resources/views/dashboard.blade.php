@@ -33,15 +33,6 @@
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
           
           
-          <div>
-            <a class="bg-purple-600 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out" href=" {{ route('filter-helpmate')}}">Find a Helpmate</a>
-            <br>
-            <a  class="bg-purple-600 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"href="">Help a Hopeful</a>
-          </div>
-        <div id="app"></div>
-
-
-        
         <script src="{{asset('js/app.js')}}"></script>
         </div>
     </div>
