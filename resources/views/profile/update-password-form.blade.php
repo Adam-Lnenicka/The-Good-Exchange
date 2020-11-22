@@ -1,3 +1,8 @@
+@extends('layouts.app')
+
+@section('content')
+
+
 <x-jet-form-section submit="updatePassword">
     <x-slot name="title">
         {{ __('Update Password') }}
@@ -37,3 +42,5 @@
         </x-jet-button>
     </x-slot>
 </x-jet-form-section>
+
+@endsection

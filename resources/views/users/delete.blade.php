@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <h1>Delete Profile {{ $users->name }}</h1>
 
 <a href="{{ action('UserController@index') }}">Back to index</a>
@@ -6,3 +10,5 @@
     @method('DELETE')
     <input type="submit" value="Delete">
 </form>
+
+@endsection

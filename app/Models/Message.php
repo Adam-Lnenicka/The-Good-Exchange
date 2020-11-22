@@ -29,7 +29,7 @@ class Message extends Model
 
     public function UserPost()
     {
-        return $this->belongsTo(UserPost::class);
+        return $this->belongsTo(UserPost::class, 'post_id', 'id');
 
         // carry id of the user_poster  & person replying to message 
 

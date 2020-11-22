@@ -3,7 +3,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 
 import ShowPost from './ShowPost';
-import PostForm from './PostForm';
+// import PostForm from './PostForm';
 
 
 
@@ -19,7 +19,7 @@ export default function App(){
       <Switch>
 
           <Route  exact path="/dashboard" children={<ShowPost />} /> 
-          <Route  exact path="/newpost" children={<PostForm />} />
+          {/* <Route  exact path="/newpost" children={<PostForm />} /> */}
          
        </Switch>
 
