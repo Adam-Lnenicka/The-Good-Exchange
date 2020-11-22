@@ -6,6 +6,7 @@ use App\Models\UserPost;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Location;
+use Illuminate\Support\Facades\DB;
 
 class UserPostController extends Controller
 {
@@ -57,6 +58,8 @@ class UserPostController extends Controller
     public function store($user_id, Request $request)
     {
         $user =User::findOrFail($user_id);
+
+
 
         $post = New UserPost;
         // $post->= $user->id Auth::id();
@@ -113,8 +116,14 @@ class UserPostController extends Controller
     public function api(){
 
         //with location data and service category info 
-        $postdata = UserPost::get();
-        return($postdata);
+        // $postdata = UserPost::get();
+
+
+        $postdata =  DB::table('user_posts')->get();
+        $locations = DB::table('locations')->select('lat','long','id')->get();
+                         
+
+        return($locations . $postdata );
 
     }
     // public function query(){
