@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -33829,28 +33829,6 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./resources/css/app.css":
-/*!*******************************!*\
-  !*** ./resources/css/app.css ***!
-  \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/css/welcomePage.css":
-/*!***************************************!*\
-  !*** ./resources/css/welcomePage.css ***!
-  \***************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ "./resources/js/reactApp/Components/App.jsx":
 /*!**************************************************!*\
   !*** ./resources/js/reactApp/Components/App.jsx ***!
@@ -34039,16 +34017,14 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 
 /***/ }),
 
-/***/ 0:
-/*!*******************************************************************************************************!*\
-  !*** multi ./resources/js/reactApp/index.jsx ./resources/css/app.css ./resources/css/welcomePage.css ***!
-  \*******************************************************************************************************/
+/***/ 1:
+/*!***********************************************!*\
+  !*** multi ./resources/js/reactApp/index.jsx ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Web\TGE\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
-__webpack_require__(/*! C:\Web\TGE\resources\css\app.css */"./resources/css/app.css");
-module.exports = __webpack_require__(/*! C:\Web\TGE\resources\css\welcomePage.css */"./resources/css/welcomePage.css");
+module.exports = __webpack_require__(/*! C:\Web\TGE\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
 
 
 /***/ })
