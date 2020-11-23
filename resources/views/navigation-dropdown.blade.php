@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-indigo-400  h-24 heading-custom">
+<nav x-data="{ open: false }" class="bg-indigo-300  h-24 border-b border-gray-400">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between   h-16">
@@ -682,9 +682,12 @@
 
 
   {{-- The Good Exchange --}}
-                  {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class=""  href="{{ route('messages'), [$post_id] }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Find Helpmates near you ') }}
+               {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link 
+                    class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+                    href="{{ route('messages'), [$post_id] }}" 
+                    :active="request()->routeIs('dashboard')">
+                        {{ __('My Posts ') }}
                     </x-jet-nav-link>
                 </div>  --}}
 -
@@ -702,13 +705,6 @@
                     class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
                     href="{{ route('users') }}" 
                     :active="request()->routeIs('dashboard')">
-                        {{ __('Messages') }}
-                    </x-jet-nav-link>
-                </div> -->
-
-                <!-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
->>>>>>> 1f17ae122ac87f49ed283e90c382157b6beb73f3
                         {{ __('Users') }}
                     </x-jet-nav-link>
                 </div>
@@ -720,7 +716,7 @@
                     :active="request()->routeIs('dashboard')">
                         {{ __('Create a Post') }}
                     </x-jet-nav-link>
-                </div> -->
+                </div>
 
 
 {{-- 
@@ -733,7 +729,7 @@ The good Exchange --}}
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                            <button class="mt-8  h-10 ml-2 px-2 py-2flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                            <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
                                 <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                             </button>
                         @else
@@ -767,7 +763,7 @@ The good Exchange --}}
 
                         <div class="border-t border-gray-100"></div>
 
-
+                        
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
@@ -811,7 +807,7 @@ The good Exchange --}}
                 </div>
 
                 <div class="ml-3">
-                    <div class="mt-8  h-10 ml-2 px-2 py-2 font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                     <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
                 </div>
             </div>
@@ -839,36 +835,7 @@ The good Exchange --}}
                     </x-jet-responsive-nav-link>
                 </form>
 
-                <!-- Team Management -->
-                @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                    <div class="border-t border-gray-200"></div>
-
-                    <div class="block px-4 py-2 text-xs text-gray-400">
-                        {{ __('Manage Team') }}
-                    </div>
-
-                    <!-- Team Settings -->
-                    <x-jet-responsive-nav-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}" :active="request()->routeIs('teams.show')">
-                        {{ __('Team Settings') }}
-                    </x-jet-responsive-nav-link>
-
-                    <x-jet-responsive-nav-link href="{{ route('teams.create') }}" :active="request()->routeIs('teams.create')">
-                        {{ __('Create New Team') }}
-                    </x-jet-responsive-nav-link>
-
-                    <div class="border-t border-gray-200"></div>
-
-                    <!-- Team Switcher -->
-                    <div class="block px-4 py-2 text-xs text-gray-400">
-                        {{ __('Switch Teams') }}
-                    </div>
-
-                    @foreach (Auth::user()->allTeams() as $team)
-                        <x-jet-switchable-team :team="$team" component="jet-responsive-nav-link" />
-                    @endforeach
-                @endif
-            </div>
-        </div>
+                
 
         
     </div>
