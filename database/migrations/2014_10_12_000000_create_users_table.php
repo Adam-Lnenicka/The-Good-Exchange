@@ -22,8 +22,6 @@ class CreateUsersTable extends Migration
 
             $table->string('phone_number')->nullable();
             $table->string('about')->nullable();
-            $table->string('need_help')->nullable();
-            $table->string('provide_help')->nullable();
             $table->string('hopefuls_helpmates')->nullable();
             $table->string('service')->nullable();
 

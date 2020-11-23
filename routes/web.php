@@ -24,7 +24,16 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/users', 'UserController@index')->name('users');
 Route::get('/users/create', 'UserController@create');
 
-Route::get('/users', 'UserController@helpmate');
+Route::get('/helpmate', 'UserController@helpmate');
+Route::get('/helpmate_food', 'UserController@helpmate_food');
+Route::get('/helpmate_handy', 'UserController@helpmate_handy');
+Route::get('/helpmate_medicine', 'UserController@helpmate_medicine');
+
+Route::get('/hopeful', 'UserController@hopeful');
+
+Route::get('/hopeful_food', 'UserController@hopeful_food');
+Route::get('/hopeful_handy', 'UserController@hopeful_handy');
+Route::get('/hopeful_medicine', 'UserController@hopeful_medicine');
 
 
 Route::post('/users', 'UserController@store');

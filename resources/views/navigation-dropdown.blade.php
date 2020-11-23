@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<nav x-data="{ open: false }" class="bg-indigo-300 h-24 border-b border-gray-400">
-=======
-<nav x-data="{ open: false }" class="bg-indigo-300  h-24 border-b border-gray-400">
->>>>>>> b329453e601d3261a7d5ffd7f04845ab2cd8d1a6
+<nav x-data="{ open: false }" class="bg-indigo-400  h-24 heading-custom">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between   h-16">
@@ -687,25 +683,25 @@
 
   {{-- The Good Exchange --}}
                   {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('messages'), [$post_id] }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link class=""  href="{{ route('messages'), [$post_id] }}" :active="request()->routeIs('dashboard')">
                         {{ __('Find Helpmates near you ') }}
                     </x-jet-nav-link>
                 </div> --}}
 -
                  <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('Authmessages', Auth::id()) }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-900 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('Authmessages', Auth::id()) }}" :active="request()->routeIs('dashboard')">
                         {{ __('Messages') }}
                     </x-jet-nav-link>
                 </div>  
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-900 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Users') }}
                     </x-jet-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('newpost') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-900 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('newpost') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Create a Post') }}
                     </x-jet-nav-link>
                 </div>
@@ -721,7 +717,7 @@ The good Exchange --}}
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                            <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                            <button class="mt-8  h-10 ml-2 px-2 py-2flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
                                 <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                             </button>
                         @else
@@ -757,7 +753,7 @@ The good Exchange --}}
 
                         <!-- Team Management -->
                         @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                            <div class="block px-4 py-2 text-xs text-gray-400">
+                            <div class="block px-4 py-2 text-xs ">
                                 {{ __('Manage Team') }}
                             </div>
 
@@ -828,7 +824,7 @@ The good Exchange --}}
                 </div>
 
                 <div class="ml-3">
-                    <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
+                    <div class="mt-8  h-10 ml-2 px-2 py-2 font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                     <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
                 </div>
             </div>
