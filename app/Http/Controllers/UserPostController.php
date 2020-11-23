@@ -38,21 +38,19 @@ class UserPostController extends Controller
    // how to get the auth ID from the user
     // $user =User::findOrFail($user_id);
 
-    var_dump($request);
 
-       $file = $request->file('uploadedm_photo_path');
-       $file->storeAs('images', $file->getClientOriginalName(), 'images');
-       $relative_url_to_uploaded_file 
-       = '/images/ ' . $file->getClientOriginalName();
+       $file = $request->file('uploadedm_file_path');
+       $file->storeAs('public/images', $file->getClientOriginalName());
+       $relative_url_to_uploaded_file = '/images/ ' . $file->getClientOriginalName();
             
 
             $post = New UserPost;
             $post->user_id= Auth::id();
             $post->uploadedm_photo_path = $relative_url_to_uploaded_file;
-            $post->description =$request->input('description');
+            $post->description =$request->input('description', 'default');
             $post->save();
 
-            return redirect( view('/dashboard'));
+            return redirect(action('UserPostController@index'));
 }
             
 
@@ -92,9 +90,11 @@ class UserPostController extends Controller
     public function api(){
 
         //with location data and service category info 
-        $postdata = UserPost::orderBy('created_at' , 'desc')->get();
+
+        $postdata = UserPost::orderBy('created_at' , 'desc')->with('Location')->get();
         return($postdata);
 
+        
     }
     
     
