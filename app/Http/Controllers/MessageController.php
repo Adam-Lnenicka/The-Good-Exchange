@@ -41,7 +41,7 @@ class MessageController extends Controller
         $post = UserPost::findOrFail($post_id); 
         $user = Auth::user();
 
-        $messages = Message::where('post_id', $post_id)->with('fromUser')->get();
+        $messages = Message::where('post_id', $post_id)->with('toUser')->get();
      
         // dd($messages);
 

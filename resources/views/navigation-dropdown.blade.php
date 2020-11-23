@@ -18,7 +18,7 @@
                 <div class="hidden space-x-8  no-underline sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link class=" mt-8  " href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         <div>
-                            <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                             width="200.000000pt" height="170.000000pt" viewBox="1 2 2000.000000 2000.000000"
                             preserveAspectRatio="xMidYMid meet">
                            
@@ -682,26 +682,38 @@
 
 
   {{-- The Good Exchange --}}
-                  {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('messages'), [$post_id] }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Find Helpmates near you ') }}
+               {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link 
+                    class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+                    href="{{ route('messages'), [$post_id] }}" 
+                    :active="request()->routeIs('dashboard')">
+                        {{ __('My Posts ') }}
                     </x-jet-nav-link>
-                </div> --}}
+                </div>  --}}
 -
-                 {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('Authmessages',$post_id) }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Messages') }}
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link 
+                    class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out" 
+                    href="{{ route('Authmessages' , Auth::id()) }}" 
+                    :active="request()->routeIs('dashboard')">
+                        {{ __('My Messages') }}
                     </x-jet-nav-link>
-                </div>   --}}
+                </div>   
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('users') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link 
+                    class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+                    href="{{ route('users') }}" 
+                    :active="request()->routeIs('dashboard')">
                         {{ __('Users') }}
                     </x-jet-nav-link>
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  href="{{ route('newpost') }}" :active="request()->routeIs('dashboard')">
+                    <x-jet-nav-link 
+                    class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+                    href="{{ route('newpost') }}" 
+                    :active="request()->routeIs('dashboard')">
                         {{ __('Create a Post') }}
                     </x-jet-nav-link>
                 </div>
@@ -751,36 +763,7 @@ The good Exchange --}}
 
                         <div class="border-t border-gray-100"></div>
 
-                        <!-- Team Management -->
-                        @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Team') }}
-                            </div>
-
-                            <!-- Team Settings -->
-                            <x-jet-dropdown-link href="{{ route('teams.show', Auth::user()->currentTeam->id) }}">
-                                {{ __('Team Settings') }}
-                            </x-jet-dropdown-link>
-
-                            @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
-                                <x-jet-dropdown-link href="{{ route('teams.create') }}">
-                                    {{ __('Create New Team') }}
-                                </x-jet-dropdown-link>
-                            @endcan
-
-                            <div class="border-t border-gray-100"></div>
-
-                            <!-- Team Switcher -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Switch Teams') }}
-                            </div>
-
-                            @foreach (Auth::user()->allTeams() as $team)
-                                <x-jet-switchable-team :team="$team" />
-                            @endforeach
-
-                            <div class="border-t border-gray-100"></div>
-                        @endif
+                        
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
