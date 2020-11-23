@@ -32,8 +32,12 @@ return (
                                
                                       <div className="h-20 w-11/12 mx-3 pr-6"
                                         {...getRootProps({
+<<<<<<< HEAD
+                                          onDrop: event => event.preventDefault();
+=======
                                           onDrop: event => event.preventDefault()
 
+>>>>>>> b2bee94f9cdbd4daf53abef7f7f16cb1bd33b633
                                          
                                         })}
                                       >

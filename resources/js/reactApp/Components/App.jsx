@@ -7,25 +7,32 @@ import ShowPost from './ShowPost';
 
 
 
-export default function App(){
+// export default function App(){
 
 
 
-    return (
-  <>
-  <Router>
+//     return (
+//   <>
+//   {/* <Router>
 
 
-      <Switch>
+//       <Switch> */}
+        
+//            {/* <Route path="/createpost" children={<PostForm />} />
+//            <Route path="/newpost" children={<ShowPost />} /> */}
+          
 
-          <Route  exact path="/dashboard" children={<ShowPost />} /> 
-          {/* <Route  exact path="/newpost" children={<PostForm />} /> */}
+//            {/* <PostForm  />
+
+
+//           <Route  exact path="/dashboard" children={<ShowPost />} /> 
+//           { <Route  exact path="/newpost" children={<PostForm />} /> }
          
-       </Switch>
+//        </Switch> */}
 
 
- </Router> 
-  </>
+// {/* /* </Router> /}
+//   </> */
 
-    );
-}
+//     // ); */}
+// }

@@ -30,7 +30,8 @@ class User extends Authenticatable
         'about',
        'phone_number',
         'need_help',
-        'provide_help'
+        'provide_help',
+        'profile_photo_path'
     ];
 
     /**

@@ -12,8 +12,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('css/welcomePage.css') }}">
-
-        
+ 
     </head>
 
     <body class="">
@@ -743,8 +742,8 @@
     </section> 
 
 <h2>Whats next?</h2> 
-<p>Whether you need help or are willing to help, register below to join our community!</p>
-<a class ='btn' href="{{ route('register') }}">Learn More</a>
+<p><strong>Whether you need help or are willing to help, register below to join our community!</strong></p>
+<a class ='btn' href="{{ route('register') }}">Register Now</a>
 
     <!--footer-->
 

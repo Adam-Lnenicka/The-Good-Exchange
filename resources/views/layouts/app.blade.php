@@ -19,18 +19,19 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.js" defer></script>
     </head>
 
-    <body class="font-sans antialiased">
-        <div class="mx-40  my-0  max-w-4xl bg-white bg-transparent  ">
+
+        <div class=" bg-white bg-opacity-90 ">
         <div class=" bg-gray-100">
             @livewire('navigation-dropdown') 
           
         </div>
+    <body class="font-sans antialiased">
+        
 
             <!-- Page Content -->
             <main>
 
                 @yield('content')
-                
             </main>
         </div>
 
@@ -41,6 +42,5 @@
         <div>
         @livewire('footer')
         </div>
-    </div>
     </body>
 </html>
