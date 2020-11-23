@@ -7,14 +7,11 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Location;
 use Illuminate\Support\Facades\DB;
+use Auth;  
 
 class UserPostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index()
     {  
          $allpost = UserPost::get();
@@ -25,67 +22,46 @@ class UserPostController extends Controller
 
     public function helpmates(){
         $user = User::where('hopefuls_helpmates','helpmate')
-              ->UserPost::where('user_id','id')
+            //   ->UserPost::where('user_id','id')
               ->get();
                 
- dd($user);
         return view('post.Helpmates-Post', compact('user'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
-    //create a post in react 
+
     {
-        return view('post.reactApp');
+        return view('post.postForm');
     }
 
-
-    // public function showpost(){
-    //     return view('post.showpost');
-    // }
-
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store($user_id, Request $request)
+    public function store( Request $request)
     {
-        $user =User::findOrFail($user_id);
+   // how to get the auth ID from the user
+    // $user =User::findOrFail($user_id);
 
+    var_dump($request);
 
+       $file = $request->file('uploadedm_photo_path');
+       $file->storeAs('images', $file->getClientOriginalName(), 'images');
+       $relative_url_to_uploaded_file 
+       = '/images/ ' . $file->getClientOriginalName();
+            
 
-        $post = New UserPost;
-        // $post->= $user->id Auth::id();
-        $post->cost=$request->input('text');
-        $post->description =$request->input('text');
-        $post->uploadedm_photo_path =$request->input('file');
+            $post = New UserPost;
+            $post->user_id= Auth::id();
+            $post->uploadedm_photo_path = $relative_url_to_uploaded_file;
+            $post->description =$request->input('description');
+            $post->save();
 
-    }
+            return redirect( view('/dashboard'));
+}
+            
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\UserPost  $userPost
-     * @return \Illuminate\Http\Response
-     */
     public function show(UserPost $userPost)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\UserPost  $userPost
-     * @return \Illuminate\Http\Response
-     */
     public function edit(UserPost $userPost)
     {
         //
@@ -111,8 +87,9 @@ class UserPostController extends Controller
      */
     public function destroy(UserPost $userPost)
     {
-        //
+    
     }
+
     public function api(){
 
         //with location data and service category info 
@@ -124,12 +101,10 @@ class UserPostController extends Controller
                          
 
         return($locations . $postdata );
+        $postdata = UserPost::orderBy('created_at' , 'desc')->get();
+        return($postdata);
 
     }
-    // public function query(){
-    //      $data = UserPost::query()
-    //      ->// specfic quey parameters
-    // }
-
+    
     
 }
