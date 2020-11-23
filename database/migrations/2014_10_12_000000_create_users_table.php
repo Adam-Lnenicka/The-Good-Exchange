@@ -22,8 +22,13 @@ class CreateUsersTable extends Migration
 
             $table->string('phone_number')->nullable();
             $table->string('about')->nullable();
+<<<<<<< HEAD
             $table->string('need_help')->nullable();
             $table->string('provide_help')->nullable();
+=======
+            $table->string('hopefuls_helpmates')->nullable();
+            $table->string('service')->nullable();
+>>>>>>> 435baccb28713ee36400f3f6d9cac1e02b4ac4a5
 
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();

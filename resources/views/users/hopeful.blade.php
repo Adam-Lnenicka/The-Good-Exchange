@@ -1,12 +1,16 @@
 @extends('layouts.app') 
 @section('content')
 <div class="center">
-    <h1>Top Helpmates</h1>
-    <div id="root"></div>
+    <h1>Hopefuls List</h1>
+    <h2>Find a Hopeful seeking for help</h2>
 
     <div class="middle">
         <a class ="link" href="{{ action('UserController@hopeful') }}">Find hopefuls</a>
         <a class ="link" href="{{ action('UserController@helpmate') }}">Find helpmates</a>
+
+        <a class ="link2" href="{{ action('UserController@hopeful_food') }}">Food Delivery</a>
+        <a class ="link2" href="{{ action('UserController@hopeful_medicine') }}">Medicine Delivery</a>
+        <a class ="link2" href="{{ action('UserController@hopeful_handy') }}">Handy Man Services</a>
     </div>
         <table class="table1">
 
@@ -53,6 +57,4 @@
         </table>
 
 </div>
-<script src="{{asset('js/search.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
     @endsection

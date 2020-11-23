@@ -1,12 +1,21 @@
 @extends('layouts.app') 
 @section('content')
 <div class="center">
-    <h1>Top Helpmates</h1>
-    <div id="root"></div>
+    <h1>Helpmates List</h1>
+    <h2>Find a Helpmate to help you out</h2>
 
     <div class="middle">
-        <a class ="link" href="{{ action('UserController@hopeful') }}">Find hopefuls</a>
-        <a class ="link" href="{{ action('UserController@helpmate') }}">Find helpmates</a>
+        <div class="flex">
+            <div>
+                <a class ="link" href="{{ action('UserController@hopeful') }}">Find hopefuls</a>
+                <a class ="link" href="{{ action('UserController@helpmate') }}">Find helpmates</a>
+            </div>  
+            <div>
+                <a class ="link2" href="{{ action('UserController@helpmate_food') }}">Food Delivery</a>
+                <a class ="link2" href="{{ action('UserController@helpmate_medicine') }}">Medicine Delivery</a>
+                <a class ="link2" href="{{ action('UserController@helpmate_handy') }}">Handy Man Services</a>
+            </div>  
+        </div>
     </div>
         <table class="table1">
 
@@ -53,6 +62,4 @@
         </table>
 
 </div>
-<script src="{{asset('js/search.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
     @endsection
