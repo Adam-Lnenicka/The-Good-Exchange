@@ -1,1 +1,1 @@
-{"version":3,"sources":["webpack:///./resources/css/C:/Web/TGE/resources/css/welcomePage.css"],"names":[],"mappings":";AACA;IACI,4BAA2B;CAC/B","file":"/css/welcomePage.css","sourcesContent":["\r\nh2{\r\n    background-color: cadetblue;\r\n}\r\n"],"sourceRoot":""}
+{"version":3,"sources":["webpack:///./resources/css/C:/web/bootcamp/coding-exc/HelenAdam-HandyHands/resources/css/welcomePage.css"],"names":[],"mappings":";AACA;IACI,4BAA2B;CAC/B","file":"/css/welcomePage.css","sourcesContent":["\r\nh2{\r\n    background-color: cadetblue;\r\n}\r\n"],"sourceRoot":""}
