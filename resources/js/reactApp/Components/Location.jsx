@@ -17,8 +17,9 @@ export default function Location({handlePosition}){
   handlePosition(lat, lng);
    console.log(lat);
    console.log(lng);
-   
+  
   }
+
   
   function error(err) {
     console.warn(`ERROR(${err.code}): ${err.message}`);

@@ -4,17 +4,19 @@ import Dropzone, {useDropzone} from 'react-dropzone';
 
 
 
-export default function DragnDrop({handleFile}){
+export default function DragnDrop({handleFile , onDrop }){
 
   
   const {acceptedFiles, getRootProps, getInputProps} = useDropzone();
 
-  // files is the name of the target in the event so that is why you console.log files to check
-const GetFile =( files) => {
-  const file = files.name.value; 
-  
-  console.log(file);
 
+  
+
+  // files is the name of the target in the event so that is why you console.log files to check
+
+
+const Getfile =(e) => {
+  console.log(e.target.file[0]);
 }
 
 // In this example I used dropzone wrapper and put the on Drop function within the Dropzone component.
@@ -22,17 +24,20 @@ const GetFile =( files) => {
 
 return (
               <>
-       <Dropzone onDrop={handleFile }  >
-
-            {/* This in a way setting the State is also wrapped around the entire component  */}
+       <Dropzone onDrop={acceptedFiles => console.log(acceptedFiles)} >
                 {({getRootProps, getInputProps}) => (
-                  <div className="container mt-3  mb-3 border-dashed border-gray-400  ">
+                  <section className="container mt-3  mb-3 border-dashed border-gray-400  ">
 
 
-                               {/* The div below has the rootprops and is set to prevent the default action of opening another window */}
+                               
                                       <div className="h-20 w-11/12 mx-3 pr-6"
                                         {...getRootProps({
+<<<<<<< HEAD
                                           onDrop: event => event.preventDefault();
+=======
+                                          onDrop: event => event.preventDefault()
+
+>>>>>>> b2bee94f9cdbd4daf53abef7f7f16cb1bd33b633
                                          
                                         })}
                                       >
@@ -41,14 +46,17 @@ return (
                                         </svg>
 
 
+<<<<<<< HEAD
                                               {/* This get =>  getInputProps must be  in the input tag  */}
-                                                <input type="image"  name="uploadedm_photo_path" value={image.uploadedm_photo_path} {...getInputProps()}  />
+                                                <input type="file"  name="uploadedm_photo_path" value={ } {...getInputProps()}  />
+=======
+                                              
+                                                <input type="file" value="value" name="uploadedm_photo_path" {...getInputProps()}  />
+>>>>>>> 2ec8ef3247fe821b567fadb7c8d960ffb2eae49b
                                                 <p class="text-center">Click or Drag 'n' Drop images </p>
-
-                                                
+         
                                       </div>
-
-                </div>
+                </section>
               )}
       </Dropzone>
             
@@ -56,3 +64,16 @@ return (
 
                 );
             }
+
+
+         /*  comments ------------------------
+        
+
+          {/* 
+            1.This in a way setting the State is also wrapped around the entire component 
+            
+            2.The div below has the rootprops and is set to prevent the default action of opening another window 
+            
+            3.This get =>  getInputProps must be  in the input tag  
+        
+         */

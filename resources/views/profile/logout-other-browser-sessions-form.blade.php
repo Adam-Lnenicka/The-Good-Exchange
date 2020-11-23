@@ -1,3 +1,8 @@
+@extends('layouts.app')
+
+@section('content')
+
+
 <x-jet-action-section>
     <x-slot name="title">
         {{ __('Browser Sessions') }}
@@ -92,3 +97,4 @@
         </x-jet-dialog-modal>
     </x-slot>
 </x-jet-action-section>
+ @endsection

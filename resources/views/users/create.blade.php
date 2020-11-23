@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+@section('content')
+
 <h1>New User</h1>
 
 @if ($errors->any())
@@ -26,3 +30,5 @@
     <br/>
     <input type="submit" value="submit">
 </form>
+
+@endsection

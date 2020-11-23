@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserPost;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Location;
 
 class UserPostController extends Controller
 {
@@ -21,9 +23,12 @@ class UserPostController extends Controller
     }
 
     public function helpmates(){
-        $helpmates = UserPost::where('handy_point', !null )->get();
-
-        return view('dashboard', compact('helpmates'));
+        $user = User::where('hopefuls_helpmates','helpmate')
+              ->UserPost::where('user_id','id')
+              ->get();
+                
+ dd($user);
+        return view('post.Helpmates-Post', compact('user'));
     }
 
     /**
@@ -43,9 +48,16 @@ class UserPostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store($user_id, Request $request)
     {
-        //
+        $user =User::findOrFail($user_id);
+
+        $post = New UserPost;
+        // $post->= $user->id Auth::id();
+        $post->cost=$request->input('text');
+        $post->description =$request->input('text');
+        $post->uploadedm_photo_path =$request->input('file');
+
     }
 
     /**
@@ -94,6 +106,7 @@ class UserPostController extends Controller
     }
     public function api(){
         $postdata = UserPost::get();
+<<<<<<< HEAD
 
 <<<<<<< HEAD
         $jsonData=  json_encode($postdata);
@@ -107,6 +120,9 @@ class UserPostController extends Controller
 
 
 >>>>>>> b329453e601d3261a7d5ffd7f04845ab2cd8d1a6
+=======
+        return($postdata);
+>>>>>>> b2bee94f9cdbd4daf53abef7f7f16cb1bd33b633
 
     }
 }

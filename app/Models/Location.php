@@ -14,4 +14,9 @@ class Location extends Model
         return $this->belongsTo(User::class, 'user_id', 'id');
 
     }
+
+    public function UserPost()
+    {
+        return $this->hasMany(UserPost::class);
+    }
 }
