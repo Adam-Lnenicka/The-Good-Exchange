@@ -21,12 +21,6 @@
     <p>
             <strong>{{ $message->text }}</strong>
 
-<<<<<<< HEAD
-            @if ($message->aUser)
-            <p>{{ $message->aUser->name }}</p>
-            @endif
-    </p>
-=======
 <div class="py-12">
     <div class=" sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
@@ -41,7 +35,6 @@
         </div>
     </div>
 
->>>>>>> 435baccb28713ee36400f3f6d9cac1e02b4ac4a5
 @endforeach
 @endsection
 
