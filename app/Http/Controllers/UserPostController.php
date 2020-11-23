@@ -38,15 +38,23 @@ class UserPostController extends Controller
    // how to get the auth ID from the user
     // $user =User::findOrFail($user_id);
 
-        $post = New UserPost;
-        $post->user_id= Auth::id();
-        // $post->cost=$request->input('text');
-        $post->description =$request->input('description');
-        $post->uploadedm_photo_path =$request->input('uploadedm_photo_path');
-        $post->save;
+    var_dump($request);
 
-        return redirect(route('dashboard'));
-    }
+       $file = $request->file('uploadedm_photo_path');
+       $file->storeAs('images', $file->getClientOriginalName(), 'images');
+       $relative_url_to_uploaded_file 
+       = '/images/ ' . $file->getClientOriginalName();
+            
+
+            $post = New UserPost;
+            $post->user_id= Auth::id();
+            $post->uploadedm_photo_path = $relative_url_to_uploaded_file;
+            $post->description =$request->input('description');
+            $post->save();
+
+            return redirect( view('/dashboard'));
+}
+            
 
     public function show(UserPost $userPost)
     {
