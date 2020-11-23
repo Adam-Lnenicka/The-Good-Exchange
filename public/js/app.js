@@ -33833,33 +33833,26 @@ module.exports = g;
 /*!**************************************************!*\
   !*** ./resources/js/reactApp/Components/App.jsx ***!
   \**************************************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return App; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _ShowPost__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ShowPost */ "./resources/js/reactApp/Components/ShowPost.jsx");
 
 
- // import PostForm from './PostForm';
-// export default function App(){
-//     return (
-//   <>
-//   {/* <Router>
-//       <Switch> */}
-//            {/* <Route path="/createpost" children={<PostForm />} />
-//            <Route path="/newpost" children={<ShowPost />} /> */}
-//            {/* <PostForm  />
-//           <Route  exact path="/dashboard" children={<ShowPost />} /> 
-//           { <Route  exact path="/newpost" children={<PostForm />} /> }
-//        </Switch> */}
-// {/* /* </Router> /}
-//   </> */
-//     // ); */}
-// }
+
+function App() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/dashboard",
+    children: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowPost__WEBPACK_IMPORTED_MODULE_2__["default"], null)
+  }))));
+}
 
 /***/ }),
 

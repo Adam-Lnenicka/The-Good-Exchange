@@ -5,13 +5,13 @@
 <div class="center">
 <h1>Messages</h1>
 
-<form action="{{ action('MessageController@store') }}" method="POST">
+<form action="{{ action('MessageController@store', [$id ]) }}" method="POST">
     @csrf
     <label for="text">Type your message</label>
     <input type="text" name="text" id="text"/>
 
     <label for="postId">Realted to Post </label>
-    <input type="number" name="post_id" id="post_id"/>
+<input type="number" name="post_id" value={{ $id}}/>
   <button>reply</button>
     {{-- for testing i am adding a post id  --}}
     <br/>

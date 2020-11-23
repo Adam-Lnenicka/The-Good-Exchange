@@ -31,7 +31,7 @@ class UserPostController extends Controller
     public function create()
 
     {
-        return view('post.createpost');
+        return view('post.postForm');
     }
 
     

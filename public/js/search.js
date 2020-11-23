@@ -30011,10 +30011,10 @@ var SearchResults = function SearchResults(props) {
 
 /***/ }),
 
-/***/ "./resources/js/userSearch/index.jsx":
-/*!*******************************************!*\
-  !*** ./resources/js/userSearch/index.jsx ***!
-  \*******************************************/
+/***/ "./resources/js/userSearch/index.js":
+/*!******************************************!*\
+  !*** ./resources/js/userSearch/index.js ***!
+  \******************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -30037,13 +30037,13 @@ reportWebVitals();
 /***/ }),
 
 /***/ 0:
-/*!*********************************************************************************************************!*\
-  !*** multi ./resources/js/userSearch/index.jsx ./resources/css/app.css ./resources/css/welcomePage.css ***!
-  \*********************************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** multi ./resources/js/userSearch/index.js ./resources/css/app.css ./resources/css/welcomePage.css ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Web\TGE\resources\js\userSearch\index.jsx */"./resources/js/userSearch/index.jsx");
+__webpack_require__(/*! C:\Web\TGE\resources\js\userSearch\index.js */"./resources/js/userSearch/index.js");
 __webpack_require__(/*! C:\Web\TGE\resources\css\app.css */"./resources/css/app.css");
 module.exports = __webpack_require__(/*! C:\Web\TGE\resources\css\welcomePage.css */"./resources/css/welcomePage.css");
 

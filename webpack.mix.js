@@ -19,7 +19,7 @@ if (!mix.inProduction()) {
     .sourceMaps()
 }
 
-mix.react('resources/js/userSearch/index.jsx', 'public/js/search.js')
+mix.react('resources/js/userSearch/index.js', 'public/js/search.js')
     .react('resources/js/reactApp/index.jsx', 'public/js/app.js')
     .postCss('resources/css/app.css', 'public/css',
     [require('postcss-import'),require('tailwindcss'),

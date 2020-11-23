@@ -45,11 +45,13 @@ Route::put('/users/{id}', 'UserController@update');
 Route::get('/users/{id}/delete', 'UserController@delete'); // will show message "really want to delete?
 Route::delete('/users/{id}', 'UserController@destroy');
 
-Route::get('/post/{post_id}/message', 'MessageController@index')->name('Allmessages');
-// Route::get('/post/{post_id}/mymessages', 'MessageController@indexx')->name('Authmessages');
-// Route::get('/message', 'MessageController@index')->name('messages');
-Route::post('/post/{post_id}/message', 'MessageController@store');
+ Route::get('/message', 'MessageController@index')->name('messages');
+// Route::get('/post/{post_id}/message', 'MessageController@indexx')->name('Allmessages');
+Route::get('/post/{post_id}/Mymessages', 'MessageController@indexx')->name('SingleUserMsgs');
+// Route::post('/post/{post_id}/message', 'MessageController@store');
 Route::get('/home-redirect', function(){return redirect()->action('UserController@edit', Auth::id());});
+
+Route::get('sendMessage/{id}', 'MessageContoller@create');
 
 
 Route::get('/newpost','UserPostController@create')->name('newpost');

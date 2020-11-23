@@ -12,16 +12,24 @@ class MessageController extends Controller
     //
     public function index()
     {
-        $messages = Message::with('aUser')->get();
-        //dd($messages);
-        return view('messages/index', compact('messages'));
+        $messages = Message::where('to_users_id' ,'=', Auth::id())->get();
+        $post_id = Message::select('post_id')->get();
+        return view('messages/index', compact('messages', 'post_id'));
     }
 
-    public function create()
+    public function Allmessages(){
+
+    
+    }
+
+    public function create($id)
     {
 
+        $id = UserPost::select('id');
+        return view('messages.index', compact('id'));
+
     }
-    public function store(Request $request)
+    public function store( $post_id , Request $request)
     {
         $message = new Message;
         $message->text = $request->input('text');
@@ -36,7 +44,7 @@ class MessageController extends Controller
         return redirect(action('MessageController@index'));
     }
 
-    public function indexx($post_id)
+    public function indexx()
     {
 
         $post = UserPost::findOrFail($post_id); 
