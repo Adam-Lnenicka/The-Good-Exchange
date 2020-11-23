@@ -46,7 +46,7 @@
         <label for ="hopeful">I would like to be a Helpmate (offer help) </label>
         <input type="checkbox" name="hopeful" id="hopeful" value="{{ $users->hopeful }}"/>
         <label for ="hopeful">I am Hopeful  (need help)</label>
-        <input type="checkbox" name="hopeful" id="hopeful" value="{{ $users->hopeful }}"/>
+        <input type="checkbox" name="helpmate" id="helpmate" value="{{ $users->helpmate }}"/>
         </br>
 
         <label for ="email">Services </label>

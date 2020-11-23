@@ -1,4 +1,3 @@
-import './App.css';
 import React, { useEffect, useState } from 'react';
 import SearchBar from './Components/SearchBar';
 import SearchResults from './Components/SearchResults';
@@ -34,11 +33,14 @@ const App = () => {
   }
 
   return (
+
     <div className="App">
       {console.log(searchResults)}
       <SearchBar setSearchValue={setSearchValue} />
       <SearchResults searchValue={searchValue} searchResults={searchResults} />
+      <h1>Hi there</h1>
     </div>
+    
   );
 }
 
