@@ -1,4 +1,11 @@
 
+.logo{
+    position:relative; 
+  right:35em;
+    height:200px;
+    bottom:20px;
+}
+
 h1{
     font-size: 2rem;
     color: rgb(5, 5, 48);
@@ -14,7 +21,6 @@ h1{
 /* .bg-image-logo{background-image: url("./images/TGE.png");
     width:500px;
     height:500px;
-
 } */
 
 h2{
@@ -31,12 +37,6 @@ body {
     margin:0;
     font-family: 'Nunito';
     text-align: center; 
-}
-.logo{
-    position:relative; 
-  right:35em;
-    height:200px;
-    bottom:20px;
 }
 
 strong{

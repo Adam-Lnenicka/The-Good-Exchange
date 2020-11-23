@@ -1,8 +1,10 @@
 {
-    "/js/app.js": "/js/app.js?id=299a8348ad5152815ab0",
-    "/css/app.css": "/css/app.css?id=d5c1b04234296f12b6d2",
-    "/css/welcomePage.css": "/css/welcomePage.css?id=12093b741bf7ec982b4a",
-    "/js/app.js.map": "/js/app.js.map?id=b2e6ab0b1327360a55cb",
-    "/css/app.css.map": "/css/app.css.map?id=8775a73e11a026daecbd",
-    "/css/welcomePage.css.map": "/css/welcomePage.css.map?id=5eb611d3d4e16c7b21df"
+    "/js/app.js": "/js/app.js?id=1c0d91c8ae8081ff3188",
+    "/js/app.js.map": "/js/app.js.map?id=ec6e44fcb1db326b00e5",
+    "/js/search.js": "/js/search.js?id=c4553eb68229d1a58424",
+    "/css/app.css": "/css/app.css?id=f6d388e9b7e7875d1f8d",
+    "/css/welcomePage.css": "/css/welcomePage.css?id=8428103e0fa4fb49cc91",
+    "/js/search.js.map": "/js/search.js.map?id=380f63ec55cb04603fc4",
+    "/css/app.css.map": "/css/app.css.map?id=a4980dc2841631f87cf3",
+    "/css/welcomePage.css.map": "/css/welcomePage.css.map?id=f3aa980e46eb25c51baf"
 }

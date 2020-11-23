@@ -1,3 +1,4 @@
+  
 <?php
 
 namespace App\Http\Controllers;
@@ -104,11 +105,8 @@ class UserController extends Controller
     {
         $users = User::findOrFail($id);
 
-<<<<<<< HEAD
-=======
  
 
->>>>>>> 435baccb28713ee36400f3f6d9cac1e02b4ac4a5
 
         return view('users/show', compact('users'));
 
@@ -188,5 +186,3 @@ class UserController extends Controller
         return redirect(action('UserController@index'));
     }
 }
-
-

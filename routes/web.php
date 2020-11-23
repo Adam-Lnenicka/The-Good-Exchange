@@ -61,6 +61,4 @@ Route::get('/Helpmates','UserPostController@helpmates')->name('filter-helpmate')
 
 Route::get('/post','UserPostController@create')->name('post');
 
-
-
 Route::get('/api','UserPostController@api');

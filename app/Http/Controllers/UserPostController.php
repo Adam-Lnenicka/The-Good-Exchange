@@ -34,18 +34,29 @@ class UserPostController extends Controller
         return view('post.createpost');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store($user_id, Request $request)
+    
+    public function store( Request $request)
     {
-        $user =User::findOrFail($user_id);
+   // how to get the auth ID from the user
+    // $user =User::findOrFail($user_id);
+
+    var_dump($request);
+
+       $file = $request->file('uploadedm_photo');
+       $file->storeAs('images', $file->getClientOriginalName());
+       $relative_url_to_uploaded_file 
+       = '/images/ ' . $file->getClientOriginalName();
+            
+
+            $post = New UserPost;
+            $post->user_id= Auth::id();
+            $post->uploadedm_photo_path = $relative_url_to_uploaded_file;
+            $post->description =$request->input('description');
+            $post->save();
 
             return redirect( view('/dashboard'));
 }
+            
             
 
     public function show(UserPost $userPost)

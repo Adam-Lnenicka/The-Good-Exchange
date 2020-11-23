@@ -46,7 +46,7 @@
   
               <input  
                 type="file" 
-                name="uploadedm_file_path" id="uploadedm_file_path"/>  
+                name="uploadedm_file_path" id="uploadedm_file"/>  
               </div>
    </div>
 

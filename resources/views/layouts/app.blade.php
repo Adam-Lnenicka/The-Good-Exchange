@@ -32,6 +32,7 @@
             <main>
 
                 @yield('content')
+                
             </main>
         </div>
 
@@ -42,5 +43,6 @@
         <div>
         @livewire('footer')
         </div>
+    </div>
     </body>
 </html>
