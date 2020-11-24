@@ -23,13 +23,7 @@
             <div class=" bgh">
                 <x-jet-nav-link class=" mt-8  " href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                                         
-                                                                       
-                                        
-                                        
-                                        
-                                        
-
-                                       
+                                                                                                               
                                     <img  class=""src="{{ Croppa::url('/images/logo.png','1000', '800') }}" alt="Logo">
                                     </div>
                                         @if (Route::has('login'))
@@ -53,14 +47,9 @@
      
 
     <div class =' bg-image-logo'>
-        <div class="section-animated ">
-            <h1>
-                  
-             exchnage of the gift of human potential 
-                
-            {{-- <img  class=""src="{{ Croppa::url('/images/welcomepage1.png','4000', "700") }}" alt="Logo"> --}}
-            </h1>
+        <div class="background-pic">
 
+            <h1>exchnage of the gift of human potential </h1>
 
             <a class ='btn' href="{{ route('register') }}">Join Us Now</a>
         </div>
@@ -75,16 +64,19 @@
     <section class ='section2'>
         <h2>Key services that our network facilitates</h2> 
         <div class ='benefits-flexbox'>
+            
             <div class ='benefit'>
-
+                <img  class=""src="{{ Croppa::url('/images/food.jpg','300', '300') }}" alt="food"> 
                 <h3>Food Delivery</h3>
                 <p>Do you need help with your food supplies or able to deliver food?</p>
             </div>
             <div  class ='benefit'>
+                <img  class=""src="{{ Croppa::url('/images/medicine.jpg','300', '300') }}" alt="medicine">
                 <h3>Medicine Delivery</h3>
                 <p>Getting medicine is essential especially for older citizens. Register if you need help here, or able to provide help.</p>
             </div>
             <div class ='benefit'>
+                <img  class=""src="{{ Croppa::url('/images/handyman.jpg','300', '300') }}" alt="handyman">
                 <h3>Handy Man</h3>
                 <p>Even during quarrantine times things can break in your house. We also facilitate plumbing and handyman services.</p>
             </div>
@@ -93,6 +85,7 @@
 
 <h2>Whats next?</h2> 
 <p><strong>Whether you need help or are willing to help, register below to join our community!</strong></p>
+<br>
 <a class ='btn' href="{{ route('register') }}">Register Now</a>
 
     <!--footer-->

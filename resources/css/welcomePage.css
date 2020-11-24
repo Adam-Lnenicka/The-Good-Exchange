@@ -1,4 +1,16 @@
+.background-pic{
 
+background-color: rgb(147, 174, 231);
+background-image: url('../../storage/images/finalDraft-bgimage.png');
+background-repeat: no-repeat;
+background-size: cover; 
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top:0;
+flex-direction: column;
+height: 80vh;
+}
 .logo{
     position:relative; 
   right:35em;
@@ -10,11 +22,16 @@ h1{
     font-size: 2rem;
     color: rgb(5, 5, 48);
     font-weight: 800;
-    padding: 1em 0;
+    padding: 0.2em 1.5em;
     text-align: center;
     text-transform:uppercase;
     font-weight: 900;
     letter-spacing: 1px;
+    background-color: white;
+    border-radius: 1em;
+   
+
+
     
 }
 
@@ -99,6 +116,10 @@ strong{
     font-size: 1.4rem;
 }
 
+.section2{
+    background-color:rgb(145, 173, 226);
+}
+
 footer{
     background-color: black;
     color: white;
@@ -110,13 +131,14 @@ footer{
 @media (max-width: 1000px) {
     .benefits-flexbox{
         display:flex;
-        justify-content: center;
-        
-        
-        
+        justify-content: center;  
     }
     .benefit{
         padding:1em;
         width:33%
     }
 } 
+h1.background-pic{
+    height:600px;
+    width: 100%; 
+}
