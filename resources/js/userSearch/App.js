@@ -16,9 +16,13 @@ const App = () => {
 
   const fetchData = async () => {
     const url = 
+<<<<<<< HEAD
       "/api/users?search=";
+=======
+    "http://www.handy-hands2.test/users/";
+>>>>>>> 60d5c1432d51bbf6e70b176ee9d12350f5395f02
       //string concatigation to use our searchValue and wikipedia url to fetch data
-    const response = await fetch(url + searchValue);
+    const response = await fetch(url + searchValue); 
     // const resp = await fetch(
     // `https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&origin=*&srsearch=${searchValue}`
     // )

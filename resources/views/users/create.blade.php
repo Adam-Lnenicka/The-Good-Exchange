@@ -21,6 +21,7 @@
     <br/>
     <label for="last_name">Last Name</label>
     <input type="text" name="last_name" id="last_name"/>
+<<<<<<< HEAD
     <br/>
     <label for="email">Email</label>
     <input type="text" name="email" id="email"/>
@@ -32,3 +33,7 @@
 </form>
 
 @endsection
+=======
+  
+</form>
+>>>>>>> 60d5c1432d51bbf6e70b176ee9d12350f5395f02

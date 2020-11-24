@@ -91,12 +91,27 @@ class UserPostController extends Controller
 
     public function api(){
         
+<<<<<<< HEAD
       //with location data and service category info 
       //Location below is the referenceing the exactly relationship  from the model 
+=======
+        return $postdata;
+
+>>>>>>> 60d5c1432d51bbf6e70b176ee9d12350f5395f02
 
       $postdata = UserPost::orderBy('created_at' , 'desc')->with('Location')->get();
       return($postdata);
 
 }}
 
+<<<<<<< HEAD
 
+=======
+    }
+    // public function query(){
+    //      $data = UserPost::query()
+    //      ->// specfic quey parameters
+    // }
+    
+}
+>>>>>>> 60d5c1432d51bbf6e70b176ee9d12350f5395f02
