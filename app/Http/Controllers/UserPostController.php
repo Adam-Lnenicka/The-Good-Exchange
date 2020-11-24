@@ -106,7 +106,6 @@ class UserPostController extends Controller
         
         return $postdata;
 
-        // return view('api.postApi' , compact('jsonData'));
 
 
 
@@ -115,6 +114,5 @@ class UserPostController extends Controller
     //      $data = UserPost::query()
     //      ->// specfic quey parameters
     // }
-
     
 }

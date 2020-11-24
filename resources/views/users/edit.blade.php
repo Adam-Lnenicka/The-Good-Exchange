@@ -20,7 +20,7 @@
     <div class="picture">
         <img src="{{ $users->profile_photo_path }}"> 
     </div>
-    <input class="custom-file-input" type="file" name="profile_photo_path" >
+    <input class="custom-file-input" type="file" name="profile_photo" >
 
     <h2>Tell us more about yourself</h2>
     <main>

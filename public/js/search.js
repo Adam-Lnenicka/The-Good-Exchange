@@ -30969,7 +30969,7 @@ var App = function App() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              url = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&origin=*&srsearch="; //string concatigation to use our searchValue and wikipedia url to fetch data
+              url = "http://www.handy-hands2.test/users/"; //string concatigation to use our searchValue and wikipedia url to fetch data
 
               _context.next = 3;
               return fetch(url + searchValue);
@@ -31094,7 +31094,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var SearchResults = function SearchResults(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.searchResults.map(function (result) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, result.title);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, result.name);
   }));
 };
 

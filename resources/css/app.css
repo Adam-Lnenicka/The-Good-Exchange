@@ -226,7 +226,6 @@ textarea{
 @media (max-width: 800px) {
     .row5{
         display:none;
-        background-color: green;
         
     }
 } 
@@ -234,7 +233,6 @@ textarea{
 @media (max-width: 700px) {
     .row4{
         display:none;
-        background-color: green;
         
     }
 } 
