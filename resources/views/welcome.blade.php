@@ -700,8 +700,9 @@
      
 
     <div class =' bg-image-logo'>
-        <div class="section-animated ">
-            <h1>
+        <div >
+
+            <h1  class="background-pic">
                   
              exchnage of the gift of human potential 
                 

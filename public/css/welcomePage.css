@@ -1,4 +1,10 @@
+.background-pic{
 
+background-color: cyan;
+background-image: url(/images/finalDraft-bgimage.png?d96ca7c993639f7feeaa9d690db8cc35);
+background-repeat: no-repeat;
+background-size: cover; 
+}
 .logo{
     position:relative; 
   right:35em;
@@ -106,4 +112,8 @@ footer{
         width:33%
     }
 } 
+h1.background-pic{
+    height:600px;
+    width: 100%; 
+}
 /*# sourceMappingURL=welcomePage.css.map*/
