@@ -14,6 +14,8 @@ class UserPostController extends Controller
     
     public function index()
     {  
+
+        // this is currently rendered in React
          $allpost = UserPost::get();
 
          return view('dashboard', compact('allpost'));
@@ -40,21 +42,19 @@ class UserPostController extends Controller
    // how to get the auth ID from the user
     // $user =User::findOrFail($user_id);
 
-    var_dump($request);
+      
+    $file = $request->file('uploadedm_file_path');
+    $file->storeAs('public/images', $file->getClientOriginalName());
+    $relative_url_to_uploaded_file = '/images/ ' . $file->getClientOriginalName();
+         
 
-       $file = $request->file('uploadedm_photo');
-       $file->storeAs('images', $file->getClientOriginalName());
-       $relative_url_to_uploaded_file 
-       = '/images/ ' . $file->getClientOriginalName();
-            
+         $post = New UserPost;
+         $post->user_id= Auth::id();
+         $post->uploadedm_photo_path = $relative_url_to_uploaded_file;
+         $post->description =$request->input('description', 'default');
+         $post->save();
 
-            $post = New UserPost;
-            $post->user_id= Auth::id();
-            $post->uploadedm_photo_path = $relative_url_to_uploaded_file;
-            $post->description =$request->input('description');
-            $post->save();
-
-            return redirect( view('/dashboard'));
+         return redirect(action('UserPostController@create'));
 }
             
             
@@ -93,16 +93,12 @@ class UserPostController extends Controller
     }
 
     public function api(){
-        //with location data and service category info 
-        // $postdata = UserPost::get();
+        
+      //with location data and service category info 
+      //Location below is the referenceing the exactly relationship  from the model 
 
-
-        $postdata =  DB::table('user_posts')->get();
-        $locations = DB::table('locations')->select('lat','long','id')->get();
-                         
-
-        return($locations . $postdata );
-        $postdata = UserPost::orderBy('created_at' , 'desc')->get();
+      $postdata = UserPost::orderBy('created_at' , 'desc')->with('Location')->get();
+      return($postdata);
 
 }}
 
