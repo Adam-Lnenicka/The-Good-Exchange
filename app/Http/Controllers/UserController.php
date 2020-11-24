@@ -126,31 +126,10 @@ class UserController extends Controller
         $user->phone_number = $request->input('phone_number');
         $user->save();
 
-        if($file = $request->file('profile_photo_path')) {
-
-            foreach ($file as $one_file) {
-
-                // store the file onto disk 'uploads'
-                // as /covers/original-name.jpg 
-                // absolute: /public/uploads/covers/original-name.jpg
-                // where original-name.jpg is the original name of the uploaded file
-                $one_file->storeAs('covers', $one_file->getClientOriginalName(), 'uploads');
-
-            }
-
-            $relative_url_to_uploaded_file = '/uploads/covers/' . $one_file->getClientOriginalName();
-
-            $book->image = $relative_url_to_uploaded_file;
-
-            $book->save();
-        }
-
- 
         User::create($request);
 
         return redirect(action('UserController@show'));
         
-
 
     }
 
@@ -165,7 +144,13 @@ class UserController extends Controller
     {
         $users = User::findOrFail($id);
         $users->update($request->all());
-
+        if($file = $request->file('profile_photo')) {
+                
+                $file->storeAs('public/covers', $file->getClientOriginalName());
+                $users->profile_photo_path = '/storage/covers/' . $file->getClientOriginalName();
+                $users->save();
+            
+        }
         return redirect(action('UserController@index'));
     }
 
