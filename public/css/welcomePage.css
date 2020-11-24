@@ -19,7 +19,7 @@ height: 80vh;
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: rgb(5, 5, 48);
     font-weight: 800;
     padding: 0.2em 1.5em;
@@ -118,6 +118,7 @@ strong{
 
 .section2{
     background-color:rgb(145, 173, 226);
+    padding: 1.5em;
 }
 
 footer{
@@ -128,18 +129,18 @@ footer{
     height: 40px;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
+    h1{
+        font-size:2em;
+    }
     .benefits-flexbox{
         display:flex;
         justify-content: center;  
+        
     }
     .benefit{
-        padding:1em;
         width:33%
     }
 } 
-h1.background-pic{
-    height:600px;
-    width: 100%; 
-}
-/*# sourceMappingURL=welcomePage.css.map*/
+
+
