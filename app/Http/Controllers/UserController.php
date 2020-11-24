@@ -126,14 +126,16 @@ class UserController extends Controller
         $user->phone_number = $request->input('phone_number');
         $user->save();
 
+<<<<<<< HEAD
 
 
  
+=======
+>>>>>>> aabaa200e9721e9ab70cdc3fe0fc1fe949368cc3
         User::create($request);
 
         return redirect(action('UserController@show'));
         
-
 
     }
 
@@ -148,6 +150,7 @@ class UserController extends Controller
     {
         $users = User::findOrFail($id);
         $users->update($request->all());
+<<<<<<< HEAD
 
         if($file = $request->file('profile_photo')) {
 
@@ -168,6 +171,15 @@ class UserController extends Controller
         }
 
 
+=======
+        if($file = $request->file('profile_photo')) {
+                
+                $file->storeAs('public/covers', $file->getClientOriginalName());
+                $users->profile_photo_path = '/storage/covers/' . $file->getClientOriginalName();
+                $users->save();
+            
+        }
+>>>>>>> aabaa200e9721e9ab70cdc3fe0fc1fe949368cc3
         return redirect(action('UserController@index'));
     }
 
@@ -187,5 +199,8 @@ class UserController extends Controller
         return redirect(action('UserController@index'));
     }
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> aabaa200e9721e9ab70cdc3fe0fc1fe949368cc3

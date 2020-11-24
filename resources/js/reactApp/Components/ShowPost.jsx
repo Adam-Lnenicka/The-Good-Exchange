@@ -63,8 +63,8 @@ let content = '';
                      <span className="">Cost:{id.cost}</span>  
                      <br/>
                      <div>maplocation</div>
-                     <a className=" bg-purple-600 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"href="/users/create
-                     ">Send a message</a> 
+                     <a className=" bg-purple-600 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"
+                     href={"/post/" + id.id + "/message"}>Send a message</a> 
                     </div>
                   ))
 

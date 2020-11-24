@@ -2,18 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\UserPost;
 use Illuminate\Http\Request;
 use App\Models\Message;
-use App\Http\Controllers\UserPost;
 use Auth;  
 
 class MessageController extends Controller
 {
     //
-    public function index()
+    public function index($post_id)
     {
-        $messages = Message::where('to_users_id' ,'=', Auth::id())->get();
-        $post_id = Message::select('post_id')->get();
+        $messages = Message::where('post_id' , $post_id)->get();
+
         return view('messages/index', compact('messages', 'post_id'));
     }
 
@@ -22,18 +22,18 @@ class MessageController extends Controller
     
     }
 
-    public function create($id)
+    public function create($post_id)
     {
 
-        $id = UserPost::select('id');
-        return view('messages.index', compact('id'));
+        $post_id = UserPost::find($post_id);
+        return view('messages.index', compact('post_id'));
 
     }
     public function store( $post_id , Request $request)
     {
         $message = new Message;
         $message->text = $request->input('text');
-        $message->post_id= UserPost::id();
+        $message->post_id= $post_id;
         $message->from_users_id = Auth::id();
         $message->to_users_id = Auth::id();
 
@@ -41,10 +41,10 @@ class MessageController extends Controller
         
         $message->save();
 
-        return redirect(action('MessageController@index'));
+        return redirect(action('MessageController@index', compact('post_id')));
     }
 
-    public function indexx()
+    public function indexx($post_id )
     {
 
         $post = UserPost::findOrFail($post_id); 
