@@ -40,6 +40,8 @@ h2{
     
 }
 body {
+    background-color: rgb(4, 221, 221);
+    background-image: url(/images/magicpattern-eHH_5rn3xnU-unsplash.jpg?7e2a45b19dc28739b582ce221880c029);
     margin:0;
     font-family: 'Nunito';
     text-align: center; 
