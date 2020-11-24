@@ -4,7 +4,7 @@ const SearchResults = (props) => {
   return(
     <div>
       {props.searchResults.map(result => (
-        <h2>{result.title}</h2>
+        <h2>{result.name}</h2>
       ))}
     </div>
   )

@@ -29878,7 +29878,7 @@ var App = function App() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              url = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&origin=*&srsearch="; //string concatigation to use our searchValue and wikipedia url to fetch data
+              url = "/api/users?search="; //string concatigation to use our searchValue and wikipedia url to fetch data
 
               _context.next = 3;
               return fetch(url + searchValue);
@@ -29893,9 +29893,9 @@ var App = function App() {
               // first before I set search results I need to check if the results actually exists and if the data structure is returning something
               // if ( data && data.query && data.query.search) {
               //   setSearchResults(data.query.search);
-              // }
+              setSearchResults(data); // }
               // if statement can be written inline in react like this:
-              data && data.query && data.query.search && setSearchResults(data.query.search);
+              // data && data.query && data.query.search && setSearchResults(data.query.search);
 
             case 8:
             case "end":
@@ -30003,7 +30003,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var SearchResults = function SearchResults(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.searchResults.map(function (result) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, result.title);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, result.name);
   }));
 };
 
