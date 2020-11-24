@@ -36,6 +36,7 @@ class UserPostController extends Controller
     
     public function store( Request $request)
     {
+        
    // Below code store  new post into database  with uploaded file   
     $file = $request->file('uploadedm_file_path');
     $file->storeAs('public/images', $file->getClientOriginalName());
@@ -45,12 +46,12 @@ class UserPostController extends Controller
          $post = New UserPost;
          $post->user_id= Auth::id();
          $post->uploadedm_photo_path = $relative_url_to_uploaded_file;
-         $post->description =$request->input('description', 'default');
+         $post->description =$request->input('description');
 
          //$croppa = 'Croppa::url('   . $relative_url_to_uploaded_file  .  ')';
          $post->save();
       
-         return redirect(action('UserPostController@index'));
+         return redirect(action('UserPostController@create'));
 }
             
             
