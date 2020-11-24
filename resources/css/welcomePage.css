@@ -23,6 +23,20 @@ h1{
     height:500px;
 } */
 
+.searchbar2{
+    
+    display: flex;
+    justify-content:space-between;
+    padding:0.5em 4em;
+    background-color:rgb(145, 173, 226);
+    align-items:center;
+    color:black;
+    letter-spacing:1px;
+    font-size: 1,3rem;
+    font-weight:bold;
+    text-decoration:none;
+}
+
 h2{
     font-size: 1.5rem;
     color: rgb(5, 5, 48);
