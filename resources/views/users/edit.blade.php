@@ -1,12 +1,7 @@
 @extends('layouts.app')
  @section('content')
-<<<<<<< HEAD
-<h1 class="" >Update profile {{ $users->name }}</h1>
-<h2>Tell us more about yourself</h2>
-=======
 <h3 class="" >Update profile: {{ $users->name }}</h3>
 
->>>>>>> 435baccb28713ee36400f3f6d9cac1e02b4ac4a5
 
 @if ($errors->any())
     <div class="alert alert-danger">

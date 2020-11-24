@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
+import '../../../css/app.css';
+
 
 export default function ShowPost(props){
   const [{loading, loaded, data}, setDataState] = useState({
@@ -40,12 +42,14 @@ let content = '';
 
     if (loading) {
         content = (
-            <div className="message">
-                <div className="animate-spin">
-                <svg className="animate-spin h-1 w-1 mr-3 ..." viewBox="0 0 24 24">
-                </svg>
-                Loading
-                </div>
+            <div >
+              <div className="loading">
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+             </div>
+
             </div>
         )
     } else if (loaded) {
