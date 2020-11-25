@@ -3,14 +3,14 @@
     
 <div class="profile">
 
-    <div class="background">
+    <div class="background 2">
         <div class="picture">
         <img src="{{ $users->profile_photo_path }}"> 
         </div>
     </div>
-    <form action ="upload.php" method="post" enctype="multipart/form-data">
+    {{-- <form action ="upload.php" method="post" enctype="multipart/form-data">
         <input class="link profile-img-btn" type="file" name="profile-img" style="">
-    </form> 
+    </form>  --}}
 </br>
 
 <h1>{{ $users->name }}</h1>

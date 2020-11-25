@@ -37,11 +37,10 @@ class MessageController extends Controller
         $message->from_users_id = Auth::id();
         $message->to_users_id = Auth::id();
 
-    //    $message->user_id = 3;
-        
+    
         $message->save();
 
-        return redirect(action('MessageController@index', compact('post_id')));
+        return redirect(action('MessageController@index', compact('post_id' , 'postimage')));
     }
 
     public function indexx($post_id )

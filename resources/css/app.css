@@ -111,7 +111,11 @@ tbody td{
 main{
     padding:2em;
 }
+
 .background{
+  background-image: url('../../storage/images/dominik.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
     background-color: rgb(111, 115, 129);
     height: 350px;
     border-radius: 1em;
