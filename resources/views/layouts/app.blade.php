@@ -20,7 +20,7 @@
     </head>
 
 
-        <div class=" bg-white bg-opacity-90 ">
+        <div class=" bg-white min-h-screen bg-opacity-90 ">
         <div class=" bg-gray-100">
             @livewire('navigation-dropdown') 
           

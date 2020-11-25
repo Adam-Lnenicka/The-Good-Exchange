@@ -1,6 +1,11 @@
 import React, {useState, useEffect} from 'react';
 
+<<<<<<< HEAD
+=======
+import SimpleMap from './SimpleMap.jsx';
+>>>>>>> 2be54dfd6358c543a2e5efc21c65362af37662b6
 import '../../../css/app.css';
+import Marker from './Marker';
 
 
 export default function ShowPost(props){
@@ -63,8 +68,13 @@ let content = '';
                     <div className=" p-2.5" >{id.description}</div>
                      <span className="">Cost:{id.cost}</span>  
                      <br/>
-                     <div>maplocation</div>
-                     <a className=" bg-purple-600 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"
+                     <SimpleMap/>
+                     <Marker
+                      lat={id.lat}
+                      lng={id.long}
+                      text="My Marker"
+                    />
+                     <a className=" bg-purple-600 mt-2.5 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"
                      href={"/post/" + id.id + "/message"}>Send a message</a> 
                     </div>
                   ))

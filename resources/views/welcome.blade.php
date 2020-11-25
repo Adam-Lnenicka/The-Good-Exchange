@@ -49,7 +49,7 @@
     <div class =' bg-image-logo'>
         <div class="background-pic">
 
-            <h1>exchnage of the gift of human potential </h1>
+            <h1>exchange the gift of human potential </h1>
 
             <a class ='btn' href="{{ route('register') }}">Join Us Now</a>
         </div>
