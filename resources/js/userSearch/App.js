@@ -36,10 +36,12 @@ const App = () => {
   return (
 
     <div className="App">
+      <a href ="
       {console.log(searchResults)}
       <SearchBar setSearchValue={setSearchValue} />
       <SearchResults searchValue={searchValue} searchResults={searchResults} />
-      <h1>Hi there</h1>
+      ">
+      </a>
     </div>
     
   );

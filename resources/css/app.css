@@ -230,26 +230,19 @@ textarea{
 } 
 @media (max-width: 800px) {
     .row5{
-        display:none;
-<<<<<<< HEAD
-    
-=======
->>>>>>> 60d5c1432d51bbf6e70b176ee9d12350f5395f02
-        
+        display:none;  
     }
 } 
 
 @media (max-width: 700px) {
     .row4{
         display:none;
-<<<<<<< HEAD
+    
         
-=======
->>>>>>> 60d5c1432d51bbf6e70b176ee9d12350f5395f02
         
     }
 } 
-}
+  }
 
 
 
