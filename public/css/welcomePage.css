@@ -118,7 +118,8 @@ strong{
 }
 
 .section2{
-    background-color:rgb(145, 173, 226);
+    background-color:rgb(178, 199, 240);
+    padding: 2em;
 }
 
 footer{
@@ -129,7 +130,7 @@ footer{
     height: 40px;
 }
 
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
     .benefits-flexbox{
         display:flex;
         justify-content: center;  

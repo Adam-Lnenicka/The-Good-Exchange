@@ -1,9 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-<<<<<<< HEAD
-=======
 import SimpleMap from './SimpleMap.jsx';
->>>>>>> 2be54dfd6358c543a2e5efc21c65362af37662b6
 import '../../../css/app.css';
 import Marker from './Marker';
 
