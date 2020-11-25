@@ -751,7 +751,11 @@ The good Exchange --}}
                             {{ __('Manage Account') }}
                         </div>
 
-                        <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                        {{-- <x-jet-dropdown-link href="{{ route('') }}">
+                            {{ __('Security Settings') }}
+                        </x-jet-dropdown-link> --}}
+
+                        <x-jet-dropdown-link href="{{ route('fingersCrossed') }}">
                             {{ __('Profile') }}
                         </x-jet-dropdown-link>
 

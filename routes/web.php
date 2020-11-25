@@ -53,7 +53,7 @@ Route::post('/post/{post_id}/message', 'MessageController@store');
 Route::get('/post/{post_id}/message', 'MessageController@indexx')->name('Allmessages');
 Route::get('/post/{post_id}/Mymessages', 'MessageController@indexx')->name('SingleUserMsgs');
 
-Route::get('/home-redirect', function(){return redirect()->action('UserController@edit', Auth::id());});
+Route::get('/profile', function(){return redirect()->action('UserController@edit', Auth::id());})->name('fingersCrossed');
 
 Route::get('sendMessage/{id}', 'MessageContoller@create');
 
