@@ -50,6 +50,7 @@
               for="uploadedm_file_path"></label> 
   
               <input  
+                class="post-btn"
                 type="file" 
                 name="uploadedm_file_path" />  
               </div>

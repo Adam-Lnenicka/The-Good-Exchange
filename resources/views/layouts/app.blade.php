@@ -19,13 +19,13 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.js" defer></script>
     </head>
 
-
+    <body class="font-sans antialiased">
         <div class=" bg-white min-h-screen bg-opacity-90 ">
         <div class=" bg-gray-100">
             @livewire('navigation-dropdown') 
           
         </div>
-    <body class="font-sans antialiased">
+
         
 
             <!-- Page Content -->

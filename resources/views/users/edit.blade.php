@@ -17,8 +17,10 @@
     @csrf
 
     @method('PUT')
-    <div class="picture">
-        <img src="{{ $users->profile_photo_path }}"> 
+    <div class="background 2">
+        <div class="picture">
+            <img src="{{ $users->profile_photo_path }}"> 
+        </div>
     </div>
     <input class="custom-file-input" type="file" name="profile_photo" >
 

@@ -8,9 +8,7 @@
         <img src="{{ $users->profile_photo_path }}"> 
         </div>
     </div>
-    {{-- <form action ="upload.php" method="post" enctype="multipart/form-data">
-        <input class="link profile-img-btn" type="file" name="profile-img" style="">
-    </form>  --}}
+    
 </br>
 
 <h1>{{ $users->name }}</h1>

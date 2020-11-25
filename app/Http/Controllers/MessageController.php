@@ -12,6 +12,10 @@ class MessageController extends Controller
     //
     public function index($post_id)
     {
+
+
+
+
         $messages = Message::where('post_id' , $post_id)->get();
 
         return view('messages/index', compact('messages', 'post_id'));
@@ -31,28 +35,25 @@ class MessageController extends Controller
     }
     public function store( $post_id , Request $request)
     {
+
         $message = new Message;
         $message->text = $request->input('text');
         $message->post_id= $post_id;
         $message->from_users_id = Auth::id();
         $message->to_users_id = Auth::id();
-
-    
         $message->save();
 
-        return redirect(action('MessageController@index', compact('post_id' , 'postimage')));
+        return redirect(action('MessageController@index', compact('post_id')));
     }
 
     public function indexx($post_id )
     {
 
-        $post = UserPost::findOrFail($post_id); 
-        $user = Auth::user();
+        //$post = UserPost::findOrFail($post_id); 
+       
+        $messages = Message::where('post_id', $post_id)->with('UserPost')->with('toUser')->with('fromUser')->get();
 
-        $messages = Message::where('post_id', $post_id)->with('toUser')->get();
-     
-        // dd($messages);
-
+    //    dd($messages);
         return view('messages/index', compact('post_id', 'messages'));
     }
 

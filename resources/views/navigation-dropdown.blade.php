@@ -1,12 +1,12 @@
 <nav x-data="{ open: false }" class="bg-indigo-300  h-24 border-b border-gray-400">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between   h-16">
-            <div class="flex  ">
+    <div class="max-w-7xl mx-auto px-4  lg:px-8  ">
+        <div class="flex h-16">
+            <div class="flex ">
                 <!-- Logo -->
                  
 
-                <div class="flex-shrink-0  flex items-center">
+                <div class="flex-shrink-0 md:p-0 flex items-center">
 
                     <a href="{{ route('dashboard') }}">
                         {{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
@@ -15,7 +15,7 @@
                 </div>
 
                 <!-- Navigation Links  logo in first link -->
-                <div class="hidden space-x-8  no-underline sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden space-x-8  md:p-0  sm:-my-px  sm:flex">
                     <x-jet-nav-link class=" mt-8  " href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         <div>
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -690,8 +690,20 @@
                         {{ __('My Messages ') }}
                     </x-jet-nav-link>
                 </div> 
+
 - --}}
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+
+                <div class="hidden  md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                        <x-jet-nav-link 
+                        class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+                        href="{{ route('newpost') }}" 
+                        :active="request()->routeIs('dashboard')">
+                            {{ __('Create a Post') }}
+                        </x-jet-nav-link>
+                 </div>
+
+
+                <div class="hidden md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link 
                     class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out" 
                     href="" 
@@ -700,7 +712,7 @@
                     </x-jet-nav-link>
                 </div>   
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden  md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link 
                     class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
                     href="{{ route('users') }}" 
@@ -709,20 +721,13 @@
                     </x-jet-nav-link>
                 </div>
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link 
-                    class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
-                    href="{{ route('newpost') }}" 
-                    :active="request()->routeIs('dashboard')">
-                        {{ __('Create a Post') }}
-                    </x-jet-nav-link>
-                </div>
+                
 
 
 {{-- 
 The good Exchange --}}
 
-            </div>
+        </div>
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">

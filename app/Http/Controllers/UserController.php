@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Location;
 use App\Models\User;
+use App\Models\Message;
+use App\Models\UserPost;
 
 class UserController extends Controller
 {
     public function index()
     {
         
-        $users = User::orderBy('handy_points', 'desc')->get();
+        $users = User::orderBy('handy_points' , 'asc')->get();
 
 
         if($users->count() === 0){

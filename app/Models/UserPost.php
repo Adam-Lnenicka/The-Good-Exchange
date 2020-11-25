@@ -5,6 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Location;
+use App\Models\User;
+use App\Models\Message;
 
 class UserPost extends Model
 {
@@ -27,7 +29,7 @@ class UserPost extends Model
 
     public function Message()
     {
-        return $this->hasMany(Message::class );
+        return $this->hasMany(Message::class, 'id','post_id');
 
     }
     

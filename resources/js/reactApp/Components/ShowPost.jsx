@@ -60,8 +60,13 @@ let content = '';
             <>
                 {
                   data.map(id => (
+
+                     
                     <div  className="bg-white overflow-hidden shadow-xl sm:rounded-lg p-2.5 m-2.5" key={id.id}>
-                    <img className=""  src={id.uploadedm_photo_path} alt="profile pic"/>
+                    <div>
+                      <img className="h-10  w-10" src={id.profile_photo_path} alt="profile pic" />
+                    </div>
+                    <img className=""  src={id.uploadedm_photo_path} alt="post pic"/>
                     <div className=" p-2.5" >{id.description}</div>
                      <span className="">Cost:{id.cost}</span>  
                      <br/>

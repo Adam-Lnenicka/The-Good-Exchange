@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\UserPost;
 use App\Models\User;
-use Illuminate\Http\Request;
 use App\Models\Location;
+use App\Models\Message;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Auth;  
 
@@ -94,7 +95,7 @@ class UserPostController extends Controller
       //with location data and service category info 
       //Location below is the referenceing the exactly relationship  from the model 
 
-      $postdata = UserPost::orderBy('created_at' , 'desc')->with('Location')->get();
+      $postdata = UserPost::orderBy('created_at' , 'desc')->with('Location')->with('User')->get();
       return($postdata);
 
 }}

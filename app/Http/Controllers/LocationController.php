@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Location;
 use Illuminate\Http\Request;
+use App\Models\UserPost;
+use App\Models\User;
+use App\Models\Message;
 
 class LocationController extends Controller
 {
