@@ -54,7 +54,11 @@ class UserPostController extends Controller
       
          return redirect(action('UserPostController@create'));
 }
-            
+         
+public function MyPost()
+{
+    
+}
             
 
     public function show(UserPost $userPost)
