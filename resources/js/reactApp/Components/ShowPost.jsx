@@ -60,7 +60,6 @@ let content = '';
             <>
                 {
                   data.map(id => (
-
                      
                     <div  className="bg-white overflow-hidden shadow-xl sm:rounded-lg p-2.5 m-2.5" key={id.id}>
                     <div>

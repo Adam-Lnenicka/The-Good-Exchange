@@ -18,7 +18,9 @@ class UserPost extends Model
         'helpmate',
         'cost',
         'description',
-        'user_id'
+        'user_id',
+        'lat',
+        'long'
     ];
 
     public function User()
@@ -35,7 +37,7 @@ class UserPost extends Model
     
     public function Location()
     {
-        return $this->belongsTo(Location::class,'locations_id' ,'id' );
-
+        return $this->belongsTo(Location::class,'lat' ,'&' ,'long','id' );
+        
     }
 }

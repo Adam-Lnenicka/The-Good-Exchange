@@ -96,6 +96,7 @@ class UserPostController extends Controller
       //Location below is the referenceing the exactly relationship  from the model 
 
       $postdata = UserPost::orderBy('created_at' , 'desc')->with('Location')->with('User')->get();
+  
       return($postdata);
 
 }}
