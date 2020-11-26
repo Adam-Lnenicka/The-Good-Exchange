@@ -45,18 +45,25 @@
         </br>
 
         <p>Check options that apply</p>
-        <label for ="hopeful">I would like to be a Helpmate (offer help) </label>
-        <input type="checkbox" name="hopeful" id="hopeful" value="{{ $users->hopeful }}"/>
-        <label for ="hopeful">I am Hopeful  (need help)</label>
-        <input type="checkbox" name="helpmate" id="helpmate" value="{{ $users->helpmate }}"/>
+        <label for ="hopeful">I am Hopeful  (need help) </label>
+        <input type="checkbox" name="hopeful" id="hopeful" value="hopeful"/>
+        <label for ="hopeful">I would like to be a Helpmate (offer help)</label>
+        <input type="checkbox" name="helpmate" id="helpmate" value="helpmate"/>
         </br>
 
-        <label for ="email">Services </label>
-        <input  class="input"type="text" name="provide_help" value="{{ $users->provide_help }}"/>
-        </br>
+        <p>Is there anything that you specialise in/need primarily help with?</p>
+            <label for ="food">Food Delivery</label>
+            <input type="radio" name="hopefuls_helpmates" id="food" value="food-delivery"/>
 
-        <input class="link" type="submit" value="submit">
-        </div>
+            <label for ="medicine-delivery">Medicine Delivery </label>
+            <input type="radio" name="hopefuls_helpmates" id="medicine-delivery" value="medicine delivery"/>
+
+            <label for ="handy-man ">Handy man services</label>
+            <input type="radio" name="hopefuls_helpmates" id="handy-man " value="handy man"/>
+            
+            <label for ="other">Other</label>
+            <input type="radio" name="hopefuls_helpmates" id="other" value="other"/>
+        </br>
     </main>
 <br/>
 </form>
