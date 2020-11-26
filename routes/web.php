@@ -45,7 +45,7 @@ Route::get('/hopeful_medicine', 'UserController@hopeful_medicine');
 Route::post('/users', 'UserController@store');// not sure what this does 
 Route::get('/users/{id}', 'UserController@show')->name('profile');
 
-
+Route::get('/myposts/{id}', 'UserController@mypost', ['id'])->name('myposts'); //display user posts 
 Route::get('/users/{id}/edit', 'UserController@edit');//edit user with specfic id
 Route::put('/users/{id}', 'UserController@update'); //update user
 Route::get('/users/{id}/delete', 'UserController@delete'); // display deletion form will show message "really want to delete?
@@ -58,7 +58,7 @@ Route::get('/post/{post_id}/message', 'MessageController@indexx')->name('Allmess
 Route::get('/post/{post_id}/Mymessages', 'MessageController@indexx')->name('SingleUserMsgs');
 
 Route::get('/profile', function(){return redirect()->action('UserController@edit', Auth::id());})->name('fingersCrossed');//sends user to profile page 
-
+Route::get('email', 'UserContoller@email')->name('forty');
 
 Route::get('sendMessage/{id}', 'MessageContoller@create');
 
@@ -66,6 +66,7 @@ Route::get('/newpost','UserPostController@create')->name('newpost'); //display f
 Route::post('/newpost','UserPostController@store'); //adds new post to database
 Route::get('/Helpmates','UserPostController@helpmates')->name('filter-helpmate');
 
+Route::get('/post/{post_id}/mymessages', 'MessageController@indexx', ['user_id'])->name('Authmessages');
 
 Route::get('sendMail','MailController@index');
 

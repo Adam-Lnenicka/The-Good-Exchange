@@ -21,9 +21,9 @@
                     <td class="row2">
                         Name
                     </td>
-                    {{-- <td class="row3">
+                    <td class="row3">
                         Handy points
-                    </td> --}}
+                    </td>  
                     <td class="row4">
                         Hopeful/Helpmate
                     </td>
@@ -43,7 +43,7 @@
                         <td></td>
                         <td class="row1"><img src="{{ $user->profile_photo_path }}"></td>
                         <td class="row2"style=""><a class="link" href="{{ action('UserController@show', [$user->id]) }}">{{ $user->name }}</a></td>
-                        {{-- <td class="row3"style="">{{ $user->handy_points }}</td> --}}
+                        <td class="row3"style="">{{ $user->handy_points }}</td>
                         <td class="row4">{{ $user->hopefuls_helpmates }}</td>
                         <td class="row5">{{ $user->service}}</td>
                         <td class="row6">{{ $user->email }}</td>

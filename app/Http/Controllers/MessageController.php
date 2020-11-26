@@ -13,9 +13,6 @@ class MessageController extends Controller
     public function index($post_id)
     {
 
-
-
-
         $messages = Message::where('post_id' , $post_id)->get();
 
         return view('messages/index', compact('messages', 'post_id'));

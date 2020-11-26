@@ -35032,7 +35032,7 @@ function ShowPost(props) {
         key: id.id
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
         className: "h-10  w-10",
-        src: id.profile_photo_path,
+        src: id.user.profile_photo_path,
         alt: "profile pic"
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
         className: "",
