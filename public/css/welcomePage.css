@@ -18,35 +18,15 @@ height: 80vh;
     bottom:20px;
 }
 
-.logo{
-    position:relative; 
-  right:35em;
-    height:200px;
-    bottom:20px;
-}
-
 h1{
     font-size: 2rem;
     color: rgb(5, 5, 48);
     font-weight: 800;
-<<<<<<< HEAD
-    padding: 1em 0;
-=======
     padding: 0.2em 1.5em;
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
     text-align: center;
     text-transform:uppercase;
     font-weight: 900;
     letter-spacing: 1px;
-<<<<<<< HEAD
-    
-}
-
-/* .bg-image-logo{background-image: url("./images/TGE.png");
-    width:500px;
-    height:500px;
-} */
-=======
     background-color: white;
     border-radius: 1em;
    
@@ -80,7 +60,6 @@ h1{
 }
 
 
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 
 h2{
     font-size: 1.5rem;
@@ -158,11 +137,7 @@ footer{
     height: 40px;
 }
 
-<<<<<<< HEAD
-@media (max-width: 1000px) {
-=======
 @media (min-width: 1000px) {
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
     .benefits-flexbox{
         display:flex;
         justify-content: center;  
@@ -172,13 +147,10 @@ footer{
         width:33%
     }
 } 
-<<<<<<< HEAD
-=======
 h1.background-pic{
     height:600px;
     width: 100%; 
 }
 
 
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 /*# sourceMappingURL=welcomePage.css.map*/

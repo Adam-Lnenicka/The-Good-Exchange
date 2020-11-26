@@ -29878,11 +29878,7 @@ var App = function App() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-<<<<<<< HEAD
-              url = "https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&origin=*&srsearch="; //string concatigation to use our searchValue and wikipedia url to fetch data
-=======
               url = "/api/users?search="; //string concatigation to use our searchValue and wikipedia url to fetch data
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 
               _context.next = 3;
               return fetch(url + searchValue);
@@ -29897,15 +29893,9 @@ var App = function App() {
               // first before I set search results I need to check if the results actually exists and if the data structure is returning something
               // if ( data && data.query && data.query.search) {
               //   setSearchResults(data.query.search);
-<<<<<<< HEAD
-              // }
-              // if statement can be written inline in react like this:
-              data && data.query && data.query.search && setSearchResults(data.query.search);
-=======
               setSearchResults(data); // }
               // if statement can be written inline in react like this:
               // data && data.query && data.query.search && setSearchResults(data.query.search);
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 
             case 8:
             case "end":
@@ -29922,18 +29912,9 @@ var App = function App() {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "App"
-<<<<<<< HEAD
-  }, console.log(searchResults), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_SearchBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    setSearchValue: setSearchValue
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_SearchResults__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    searchValue: searchValue,
-    searchResults: searchResults
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, "Hi there"));
-=======
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "\r {console.log(searchResults)}\r <SearchBar setSearchValue={setSearchValue} />\r <SearchResults searchValue={searchValue} searchResults={searchResults} />\r "
   }));
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -30019,11 +30000,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var SearchResults = function SearchResults(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.searchResults.map(function (result) {
-<<<<<<< HEAD
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, result.title);
-=======
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, result.name);
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
   }));
 };
 
@@ -30031,17 +30008,10 @@ var SearchResults = function SearchResults(props) {
 
 /***/ }),
 
-<<<<<<< HEAD
-/***/ "./resources/js/userSearch/index.jsx":
-/*!*******************************************!*\
-  !*** ./resources/js/userSearch/index.jsx ***!
-  \*******************************************/
-=======
 /***/ "./resources/js/userSearch/index.js":
 /*!******************************************!*\
   !*** ./resources/js/userSearch/index.js ***!
   \******************************************/
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -30064,27 +30034,15 @@ reportWebVitals();
 /***/ }),
 
 /***/ 0:
-<<<<<<< HEAD
-/*!*********************************************************************************************************!*\
-  !*** multi ./resources/js/userSearch/index.jsx ./resources/css/app.css ./resources/css/welcomePage.css ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! C:\Web\TGE\resources\js\userSearch\index.jsx */"./resources/js/userSearch/index.jsx");
-__webpack_require__(/*! C:\Web\TGE\resources\css\app.css */"./resources/css/app.css");
-module.exports = __webpack_require__(/*! C:\Web\TGE\resources\css\welcomePage.css */"./resources/css/welcomePage.css");
-=======
 /*!********************************************************************************************************!*\
   !*** multi ./resources/js/userSearch/index.js ./resources/css/app.css ./resources/css/welcomePage.css ***!
   \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\web\bootcamp\coding-exc\finalwednesday\handy-hands\resources\js\userSearch\index.js */"./resources/js/userSearch/index.js");
-__webpack_require__(/*! C:\web\bootcamp\coding-exc\finalwednesday\handy-hands\resources\css\app.css */"./resources/css/app.css");
-module.exports = __webpack_require__(/*! C:\web\bootcamp\coding-exc\finalwednesday\handy-hands\resources\css\welcomePage.css */"./resources/css/welcomePage.css");
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
+__webpack_require__(/*! C:\Web\TGE\resources\js\userSearch\index.js */"./resources/js/userSearch/index.js");
+__webpack_require__(/*! C:\Web\TGE\resources\css\app.css */"./resources/css/app.css");
+module.exports = __webpack_require__(/*! C:\Web\TGE\resources\css\welcomePage.css */"./resources/css/welcomePage.css");
 
 
 /***/ })

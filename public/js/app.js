@@ -34830,8 +34830,6 @@ module.exports = g;
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
 /***/ "./resources/css/app.css":
 /*!*******************************!*\
   !*** ./resources/css/app.css ***!
@@ -34843,7 +34841,6 @@ module.exports = g;
 
 /***/ }),
 
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 /***/ "./resources/js/reactApp/Components/App.jsx":
 /*!**************************************************!*\
   !*** ./resources/js/reactApp/Components/App.jsx ***!
@@ -35160,11 +35157,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\Web\TGE\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
-=======
-module.exports = __webpack_require__(/*! C:\web\bootcamp\coding-exc\finalwednesday\handy-hands\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
->>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 
 
 /***/ })
