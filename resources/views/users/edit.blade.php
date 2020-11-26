@@ -50,6 +50,7 @@
         <label for ="hopeful">I would like to be a Helpmate (offer help)</label>
         <input type="radio" name="helpmate" id="helpmate" value="helpmate"/>
         </br>
+        </br>
 
         <p>Is there anything that you specialise in/need primarily help with?</p>
             <label for ="food">Food Delivery</label>
@@ -64,6 +65,7 @@
             <label for ="other">Other</label>
             <input type="radio" name="hopefuls_helpmates" id="other" value="other"/>
         </br>
+        <button class ="link" type="submit">Submit</button>
     </main>
 <br/>
 </form>
