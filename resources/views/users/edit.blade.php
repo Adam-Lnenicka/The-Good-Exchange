@@ -46,9 +46,9 @@
 
         <p>Check options that apply</p>
         <label for ="hopeful">I am Hopeful  (need help) </label>
-        <input type="checkbox" name="hopeful" id="hopeful" value="hopeful"/>
+        <input type="radio" name="hopeful" id="hopeful" value="hopeful"/>
         <label for ="hopeful">I would like to be a Helpmate (offer help)</label>
-        <input type="checkbox" name="helpmate" id="helpmate" value="helpmate"/>
+        <input type="radio" name="helpmate" id="helpmate" value="helpmate"/>
         </br>
 
         <p>Is there anything that you specialise in/need primarily help with?</p>
