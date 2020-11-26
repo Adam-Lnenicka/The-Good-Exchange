@@ -35157,7 +35157,7 @@ react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\web\bootcamp\coding-exc\finalwednesday\handy-hands\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
+module.exports = __webpack_require__(/*! C:\Web\TGE\resources\js\reactApp\index.jsx */"./resources/js/reactApp/index.jsx");
 
 
 /***/ })
