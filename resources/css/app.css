@@ -124,6 +124,10 @@ main{
     align-items:flex-end;
 }
 
+img{
+  border-radius: 10px;
+}
+
 .picture{
     height:250px;
     width:200px;
