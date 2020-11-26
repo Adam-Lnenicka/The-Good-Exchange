@@ -1,12 +1,12 @@
 <nav x-data="{ open: false }" class="bg-indigo-300  h-24 border-b border-gray-400">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4  lg:px-8  ">
+    <div class=" px-4  lg:px-8  ">
         <div class="flex h-16">
             <div class="flex ">
                 <!-- Logo -->
                  
 
-                <div class="flex-shrink-0 md:p-0 flex items-center">
+                <div class="">
 
                     <a href="{{ route('dashboard') }}">
                         {{-- <x-jet-application-mark class="block h-9 w-auto" /> --}}
@@ -15,7 +15,7 @@
                 </div>
 
                 <!-- Navigation Links  logo in first link -->
-                <div class="hidden space-x-8  md:p-0  sm:-my-px  sm:flex">
+                <div class="hidden space-x-8  md:p-0  lg:-my-px  lg:flex">
                     <x-jet-nav-link class=" mt-8  " href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         <div>
                         <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -682,9 +682,9 @@
 
 
   {{-- The Good Exchange --}}
-               {{-- <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+               {{-- <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
                     <x-jet-nav-link 
-                    class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+                    class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
                     href="{{ route('messages') }}" 
                     :active="request()->routeIs('dashboard')">
                         {{ __('My Messages ') }}
@@ -693,9 +693,9 @@
 
 - --}}
 
-                <div class="hidden  md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
                         <x-jet-nav-link 
-                        class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+                        class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
                         href="{{ route('newpost') }}" 
                         :active="request()->routeIs('dashboard')">
                             {{ __('Create a Post') }}
@@ -703,18 +703,18 @@
                  </div>
 
 
-                <div class="hidden md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
                     <x-jet-nav-link 
-                    class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out" 
+                    class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out" 
                     href="" 
                     :active="request()->routeIs('dashboard')">
                         {{ __('My Posts') }}
                     </x-jet-nav-link>
                 </div>   
 
-                <div class="hidden  md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
                     <x-jet-nav-link 
-                    class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+                    class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
                     href="{{ route('users') }}" 
                     :active="request()->routeIs('dashboard')">
                         {{ __('Users') }}
@@ -730,15 +730,15 @@ The good Exchange --}}
         </div>
 
             <!-- Settings Dropdown -->
-            <div class="hidden sm:flex sm:items-center sm:ml-6">
+            <div class="hidden lg:flex lg:items-center lg:ml-6">
                 <x-jet-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                            <button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                            <button class="flex text-lg border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
                                 <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
                             </button>
                         @else
-                            <button class="flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
+                            <button class="flex items-center text-lg font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:outline-none focus:text-gray-700 focus:border-gray-300 transition duration-150 ease-in-out">
                                 <div>{{ Auth::user()->name }}</div>
 
                                 <div class="ml-1">
@@ -791,7 +791,7 @@ The good Exchange --}}
             </div>
 
             <!-- Hamburger -->
-            <div class="-mr-2 flex items-center sm:hidden">
+            <div class="-mr-2 flex items-center lg:hidden">
                 <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{'hidden': open, 'inline-flex': ! open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -803,12 +803,12 @@ The good Exchange --}}
     </div>
 
     <!-- Responsive Navigation Menu -->
-    <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
+    <div :class="{'block': open, 'hidden': ! open}" class="hidden absolute z-50 lg:hidden bg-indigo-300" >
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('The Good Exchange') }}
             </x-jet-responsive-nav-link>
-        </div>
+        </div>s
 
         <div class="hidden  md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
             <x-jet-nav-link 
@@ -847,7 +847,7 @@ The good Exchange --}}
 
                 <div class="ml-3">
                     <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                    <div class="font-medium text-lg text-gray-500">{{ Auth::user()->email }}</div>
                 </div>
             </div>
 

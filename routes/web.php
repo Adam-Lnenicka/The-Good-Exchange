@@ -67,6 +67,9 @@ Route::post('/newpost','UserPostController@store'); //adds new post to database
 Route::get('/Helpmates','UserPostController@helpmates')->name('filter-helpmate');
 
 
+Route::get('sendMail','MailController@index');
+
+
 //-------React Application --------------------
 
 Route::get('/post','UserPostController@create')->name('post');
