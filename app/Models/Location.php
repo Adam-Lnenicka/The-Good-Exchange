@@ -4,6 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\UserPost;
+use App\Models\User;
+use App\Models\Message;
 
 class Location extends Model
 {
@@ -17,6 +20,6 @@ class Location extends Model
 
     public function UserPost()
     {
-        return $this->hasMany(UserPost::class);
+        return $this->belongTo(UserPost::class);
     }
 }

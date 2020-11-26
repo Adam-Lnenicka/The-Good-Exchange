@@ -7,8 +7,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
+use Laravel\Fortify\Features;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Location;
+use App\Models\UserPost;
+use App\Models\Message;
 
 class User extends Authenticatable
 {
@@ -17,6 +21,10 @@ class User extends Authenticatable
     use HasProfilePhoto;
     use Notifiable;
     use TwoFactorAuthenticatable;
+    // use ResetPasswords;
+    // use UpdateProfileInformation;
+    // use UpdatePasswords;
+    
 
     /**
      * The attributes that are mass assignable.
@@ -30,7 +38,8 @@ class User extends Authenticatable
         'about',
        'phone_number',
         'need_help',
-        'provide_help'
+        'provide_help',
+        'profile_photo_path'
     ];
 
     /**
@@ -64,7 +73,7 @@ class User extends Authenticatable
     ];
 
    public function UserPost() {
-       return $this->hasMany(UserPost::class,'user_id','id' );
+       return $this->hasMany(UserPost::class );
    }
 
     public function Message() {
@@ -72,6 +81,3 @@ class User extends Authenticatable
     }
 
 }
-
-
-

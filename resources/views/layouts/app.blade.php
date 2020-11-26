@@ -20,16 +20,19 @@
     </head>
 
     <body class="font-sans antialiased">
-        <div class="mx-40  my-0  max-w-4xl bg-white bg-transparent  ">
+        <div class=" bg-white min-h-screen bg-opacity-90 ">
         <div class=" bg-gray-100">
             @livewire('navigation-dropdown') 
           
         </div>
 
+        
+
             <!-- Page Content -->
             <main>
 
                 @yield('content')
+                
                 
             </main>
         </div>

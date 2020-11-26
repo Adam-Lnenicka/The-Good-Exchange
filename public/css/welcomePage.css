@@ -1,3 +1,22 @@
+.background-pic{
+
+background-color: rgb(147, 174, 231);
+background-image: url(/images/finalDraft-bgimage.png?d96ca7c993639f7feeaa9d690db8cc35);
+background-repeat: no-repeat;
+background-size: cover; 
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top:0;
+flex-direction: column;
+height: 80vh;
+}
+.logo{
+    position:relative; 
+  right:35em;
+    height:200px;
+    bottom:20px;
+}
 
 .logo{
     position:relative; 
@@ -10,11 +29,16 @@ h1{
     font-size: 2rem;
     color: rgb(5, 5, 48);
     font-weight: 800;
+<<<<<<< HEAD
     padding: 1em 0;
+=======
+    padding: 0.2em 1.5em;
+>>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
     text-align: center;
     text-transform:uppercase;
     font-weight: 900;
     letter-spacing: 1px;
+<<<<<<< HEAD
     
 }
 
@@ -22,6 +46,41 @@ h1{
     width:500px;
     height:500px;
 } */
+=======
+    background-color: white;
+    border-radius: 1em;
+   
+
+
+    
+}
+
+/* .bg-image-logo{background-image: url("./images/TGE.png");
+    width:500px;
+    height:500px;
+} */
+
+.searchbar2{
+    
+    display: flex;
+    justify-content:space-between;
+    padding:0.5em 4em;
+    background-color:rgb(145, 173, 226);
+    align-items:center;
+    color:black;
+    letter-spacing:1px;
+    font-size: 1,3rem;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.searchbar-link{
+    color: black;
+    padding: 2em;
+}
+
+
+>>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 
 h2{
     font-size: 1.5rem;
@@ -34,6 +93,7 @@ h2{
     
 }
 body {
+   
     margin:0;
     font-family: 'Nunito';
     text-align: center; 
@@ -85,6 +145,11 @@ strong{
     font-size: 1.4rem;
 }
 
+.section2{
+    background-color:rgb(177, 195, 228);
+    padding: 1em;
+}
+
 footer{
     background-color: black;
     color: white;
@@ -93,17 +158,27 @@ footer{
     height: 40px;
 }
 
+<<<<<<< HEAD
 @media (max-width: 1000px) {
+=======
+@media (min-width: 1000px) {
+>>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
     .benefits-flexbox{
         display:flex;
-        justify-content: center;
-        
-        
-        
+        justify-content: center;  
     }
     .benefit{
         padding:1em;
         width:33%
     }
 } 
+<<<<<<< HEAD
+=======
+h1.background-pic{
+    height:600px;
+    width: 100%; 
+}
+
+
+>>>>>>> ec39dd5fa6189e4abf4d3df0a9028e4403aeafda
 /*# sourceMappingURL=welcomePage.css.map*/

@@ -21,7 +21,9 @@ class Handyhands extends Seeder
         'handy_points',
         'email',
         'name',
-        'user_id'
+        'user_id',
+        'service',
+        'hopefuls_helpmates'
 
 
  ];

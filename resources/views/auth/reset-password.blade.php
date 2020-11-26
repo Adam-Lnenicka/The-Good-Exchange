@@ -2,7 +2,7 @@
     <x-jet-authentication-card>
         <x-slot name="logo">
             
-            <svg   class="logo" version="1.0" xmlns="http://www.w3.org/2000/svg"
+     <svg   class="logo" version="1.0" xmlns="http://www.w3.org/2000/svg"
             width="200.000000pt" height="170.000000pt" viewBox="1 2 2000.000000 2000.000000"
             preserveAspectRatio="xMidYMid meet">
         

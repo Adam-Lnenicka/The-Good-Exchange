@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Location;
 use App\Models\User;
+use App\Models\Message;
+use App\Models\UserPost;
 
 class UserController extends Controller
 {
     public function index()
     {
         
-        $users = User::orderBy('handy_points', 'desc')->get();
+        $users = User::orderBy('handy_points' , 'asc')->get();
 
 
         if($users->count() === 0){
@@ -20,13 +23,91 @@ class UserController extends Controller
         return view('users/index', compact('users'));
     }
 
+    public function helpmate()
+    {
+        
+        $users = User::where('hopefuls_helpmates','=','helpmate') ->get();
+        if($users->count() === 0){
+            return 'no users';
+        }
+        return view('users/helpmate', compact('users'));
+    }
+
+    public function helpmate_food()
+    {
+        
+        $users = User::where('hopefuls_helpmates','=','helpmate')->where ('service','=','food delivery')->get();
+        if($users->count() === 0){
+            return 'no users';
+        }
+        return view('users/helpmate', compact('users'));
+    }
+
+    public function helpmate_medicine()
+    {
+        
+        $users = User::where('hopefuls_helpmates','=','hopeful')->where('service','=','medicine delivery')->get();
+        if($users->count() === 0){
+            return 'no users';
+        }
+        return view('users/helpmate', compact('users'));
+    }
+
+    public function helpmate_handy()
+    {
+        
+        $users = User::where('hopefuls_helpmates','=','hopeful')->where('service','=','handy man')->get();
+        if($users->count() === 0){
+            return 'no users';
+        }
+        return view('users/helpmate', compact('users'));
+    }
+
+    public function hopeful()
+    {
+        
+        $users = User::where('hopefuls_helpmates','=','hopeful') ->get();
+        if($users->count() === 0){
+            return 'no users';
+        }
+        return view('users/hopeful', compact('users'));
+    }
+
+    public function hopeful_food()
+    {
+        
+        $users = User::where('hopefuls_helpmates','=','hopeful')->where ('service','=','food delivery')->get();
+        if($users->count() === 0){
+            return 'no users';
+        }
+        return view('users/hopeful', compact('users'));
+    }
+
+    public function hopeful_medicine()
+    {
+        
+        $users = User::where('hopefuls_helpmates','=','hopeful')->where('service','=','medicine delivery')->get();
+        if($users->count() === 0){
+            return 'no users';
+        }
+        return view('users/hopeful', compact('users'));
+    }
+
+    public function hopeful_handy()
+    {
+        
+        $users = User::where('hopefuls_helpmates','=','hopeful')->where('service','=','handy man')->get();
+        if($users->count() === 0){
+            return 'no users';
+        }
+        return view('users/hopeful', compact('users'));
+    }
+
     public function show($id)
     {
         $users = User::findOrFail($id);
 
-   //     if($file = $request->file('profile-img')) {
-     //       $file->storeAs('profile-imgs', $file->getClientOriginalName(), 'uploads');
-       // }
+ 
 
 
         return view('users/show', compact('users'));
@@ -48,12 +129,10 @@ class UserController extends Controller
         $user->phone_number = $request->input('phone_number');
         $user->save();
 
-
         User::create($request);
 
         return redirect(action('UserController@show'));
         
-
 
     }
 
@@ -68,7 +147,13 @@ class UserController extends Controller
     {
         $users = User::findOrFail($id);
         $users->update($request->all());
-
+        if($file = $request->file('profile_photo')) {
+                
+                $file->storeAs('public/covers', $file->getClientOriginalName());
+                $users->profile_photo_path = '/storage/covers/' . $file->getClientOriginalName();
+                $users->save();
+            
+        }
         return redirect(action('UserController@index'));
     }
 
@@ -88,5 +173,3 @@ class UserController extends Controller
         return redirect(action('UserController@index'));
     }
 }
-
-

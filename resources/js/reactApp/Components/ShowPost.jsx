@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from 'react';
 
+import SimpleMap from './SimpleMap.jsx';
+import '../../../css/app.css';
+import Marker from './Marker';
+
 
 export default function ShowPost(props){
   const [{loading, loaded, data}, setDataState] = useState({
     loading: false,
+    
     loaded: false,
     data: null
 })
@@ -40,12 +45,14 @@ let content = '';
 
     if (loading) {
         content = (
-            <div className="message">
-                <div className="animate-spin">
-                <svg className="animate-spin h-1 w-1 mr-3 ..." viewBox="0 0 24 24">
-                </svg>
-                Loading
-                </div>
+            <div >
+              <div className="loading">
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+             </div>
+
             </div>
         )
     } else if (loaded) {
@@ -53,14 +60,23 @@ let content = '';
             <>
                 {
                   data.map(id => (
+                     
                     <div  className="bg-white overflow-hidden shadow-xl sm:rounded-lg p-2.5 m-2.5" key={id.id}>
-                    <img className=""  src={id.uploadedm_photo_path} alt="profile pic"/>
+                    <div>
+                      <img className="h-10  w-10" src={id.profile_photo_path} alt="profile pic" />
+                    </div>
+                    <img className=""  src={id.uploadedm_photo_path} alt="post pic"/>
                     <div className=" p-2.5" >{id.description}</div>
                      <span className="">Cost:{id.cost}</span>  
                      <br/>
-                     <div>maplocation</div>
-                     <a className=" bg-purple-600 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"href="/users/create
-                     ">Send a message</a> 
+                     <SimpleMap/>
+                     <Marker
+                      lat={id.lat}
+                      lng={id.long}
+                      text="My Marker"
+                    />
+                     <a className=" bg-purple-600 mt-2.5 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"
+                     href={"/post/" + id.id + "/message"}>Send a message</a> 
                     </div>
                   ))
 
@@ -69,7 +85,6 @@ let content = '';
             </>
         )
     }
-
    return (
   <>
 <div className="py-12 ">
@@ -77,14 +92,10 @@ let content = '';
        
            
           {content}
-
            
         
     </div>
 </div>  
-
-
   </>
-
     );
 }

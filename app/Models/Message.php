@@ -26,7 +26,7 @@ class Message extends Model
         return $this->belongsTo(User::class, 'to_users_id', 'id');
 
     }
-
+    
     public function UserPost()
     {
         return $this->belongsTo(UserPost::class, 'post_id', 'id');

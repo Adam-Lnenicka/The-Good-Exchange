@@ -1,7 +1,7 @@
 <div>
     
     
-    <div class="text-center text-pink-50 bg-gray-900 h-20  mx-40  my-0  max-w-4xl  ">
+    <div class="text-center text-pink-50 bg-gray-900 h-20  my-0 p-3  ">
         
         &copy;    
         <span>The Good Exchange  </span>
