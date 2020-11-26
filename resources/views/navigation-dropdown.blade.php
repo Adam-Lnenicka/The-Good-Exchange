@@ -154,6 +154,34 @@ The good Exchange --}}
             </x-jet-responsive-nav-link>
         </div>
 
+        <div class="hidden  md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
+            <x-jet-nav-link 
+            class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+            href="{{ route('newpost') }}" 
+            :active="request()->routeIs('dashboard')">
+                {{ __('Create a Post') }}
+            </x-jet-nav-link>
+     </div>
+
+
+    <div class="hidden md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
+        <x-jet-nav-link 
+        class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out" 
+        href="" 
+        :active="request()->routeIs('dashboard')">
+            {{ __('My Posts') }}
+        </x-jet-nav-link>
+    </div>   
+
+    <div class="hidden  md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
+        <x-jet-nav-link 
+        class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
+        href="{{ route('users') }}" 
+        :active="request()->routeIs('dashboard')">
+            {{ __('Users') }}
+        </x-jet-nav-link>
+    </div>
+
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="flex items-center px-4">
