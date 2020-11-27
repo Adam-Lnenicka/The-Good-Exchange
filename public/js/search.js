@@ -29878,8 +29878,7 @@ var App = function App() {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              url = "/api/users?search="; //string concatigation to use our searchValue and wikipedia url to fetch data
-
+              url = "/api/users?search=";
               _context.next = 3;
               return fetch(url + searchValue);
 
@@ -29890,12 +29889,7 @@ var App = function App() {
 
             case 6:
               data = _context.sent;
-              // first before I set search results I need to check if the results actually exists and if the data structure is returning something
-              // if ( data && data.query && data.query.search) {
-              //   setSearchResults(data.query.search);
               setSearchResults(data); // }
-              // if statement can be written inline in react like this:
-              // data && data.query && data.query.search && setSearchResults(data.query.search);
 
             case 8:
             case "end":
@@ -29912,8 +29906,11 @@ var App = function App() {
 
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "App"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: "\r {console.log(searchResults)}\r <SearchBar setSearchValue={setSearchValue} />\r <SearchResults searchValue={searchValue} searchResults={searchResults} />\r "
+  }, console.log(searchResults), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_SearchBar__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    setSearchValue: setSearchValue
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_Components_SearchResults__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    searchValue: searchValue,
+    searchResults: searchResults
   }));
 };
 
@@ -29947,38 +29944,35 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var SearchBar = function SearchBar(props) {
-  // useState has to be imported from React using destructure of the object import React, { useState } from 'react'
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(''),
       _useState2 = _slicedToArray(_useState, 2),
       value = _useState2[0],
       setValue = _useState2[1];
 
   var handleSubmit = function handleSubmit(e) {
-    // prevents the form from redirecting to the url that you want to submit
     e.preventDefault(); // assigns the targeted inputs value as a searchValue from App.js
 
     props.setSearchValue(value);
   };
 
-  return (
-    /*#__PURE__*/
-    // simple form with input type text, onChange event and onSubmit
-    react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-      onSubmit: function onSubmit(e) {
-        return handleSubmit(e);
-      }
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-      htmlFor: "search"
-    }, "Search input:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-      name: "search",
-      type: "text",
-      onChange: function onChange(e) {
-        return setValue(e.target.value);
-      }
-    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      type: "submit"
-    }, "Search"))
-  );
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+    onSubmit: function onSubmit(e) {
+      return handleSubmit(e);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "",
+    htmlFor: "search"
+  }, "Search user:"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "bg",
+    name: "search",
+    type: "text",
+    onChange: function onChange(e) {
+      return setValue(e.target.value);
+    }
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "link",
+    type: "submit"
+  }, "Search"));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SearchBar);
@@ -30000,7 +29994,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var SearchResults = function SearchResults(props) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.searchResults.map(function (result) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, result.name);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "userInfo"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "picture"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: result.profile_photo_path
+    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, result.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      "class": "link",
+      href: "users"
+    }, result.hopefuls_helpmates)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, result.handy_points), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, result.service), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, result.email));
   }));
 };
 

@@ -2,26 +2,27 @@
 import React, { useState } from 'react';
 
 const SearchBar = (props) => {
-  // useState has to be imported from React using destructure of the object import React, { useState } from 'react'
+ 
   const [value, setValue] = useState('');
 
   const handleSubmit = (e) => {
-    // prevents the form from redirecting to the url that you want to submit
+ 
     e.preventDefault();
     // assigns the targeted inputs value as a searchValue from App.js
     props.setSearchValue(value);
   }
 
   return(
-    // simple form with input type text, onChange event and onSubmit
+    
     <form onSubmit={(e) => handleSubmit(e)}>
-      <label htmlFor="search">Search input:</label> 
+      <label className ="" htmlFor="search">Search user:</label> 
       <input 
+        className="bg"
         name="search"
         type="text" 
         onChange={(e) => setValue(e.target.value)}
       />
-      <button type="submit">Search</button>
+      <button className ="link" type="submit">Search</button>
     </form>
   )
 }

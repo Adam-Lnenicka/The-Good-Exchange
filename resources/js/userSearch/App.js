@@ -17,31 +17,25 @@ const App = () => {
   const fetchData = async () => {
     const url = 
       "/api/users?search=";
-      //string concatigation to use our searchValue and wikipedia url to fetch data
     const response = await fetch(url + searchValue); 
-    // const resp = await fetch(
-    // `https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&origin=*&srsearch=${searchValue}`
-    // )
+
     const data = await response.json();
 
-    // first before I set search results I need to check if the results actually exists and if the data structure is returning something
-    // if ( data && data.query && data.query.search) {
-    //   setSearchResults(data.query.search);
+   
     setSearchResults(data); 
     // }
-    // if statement can be written inline in react like this:
-   // data && data.query && data.query.search && setSearchResults(data.query.search);
+  
   }
 
   return (
 
     <div className="App">
-      <a href ="
+    
       {console.log(searchResults)}
       <SearchBar setSearchValue={setSearchValue} />
       <SearchResults searchValue={searchValue} searchResults={searchResults} />
-      ">
-      </a>
+      
+    
     </div>
     
   );

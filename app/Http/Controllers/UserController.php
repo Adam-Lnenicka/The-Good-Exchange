@@ -76,7 +76,7 @@ class UserController extends Controller
     public function hopeful_food()
     {
         
-        $users = User::where('hopefuls_helpmates','=','hopeful')->where ('service','=','food delivery')->get();
+        $users = User::where('hopefuls_helpmates','=','helpmate')->where ('service','=','food delivery')->get();
         if($users->count() === 0){
             return 'no users';
         }
@@ -86,7 +86,7 @@ class UserController extends Controller
     public function hopeful_medicine()
     {
         
-        $users = User::where('hopefuls_helpmates','=','hopeful')->where('service','=','medicine delivery')->get();
+        $users = User::where('hopefuls_helpmates','=','helpmate')->where('service','=','medicine delivery')->get();
         if($users->count() === 0){
             return 'no users';
         }
@@ -96,7 +96,7 @@ class UserController extends Controller
     public function hopeful_handy()
     {
         
-        $users = User::where('hopefuls_helpmates','=','hopeful')->where('service','=','handy man')->get();
+        $users = User::where('hopefuls_helpmates','=','helpmate')->where('service','=','handy man')->get();
         if($users->count() === 0){
             return 'no users';
         }

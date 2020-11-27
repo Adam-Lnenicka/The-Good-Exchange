@@ -2,7 +2,7 @@
 @section('content')
 <div class="center">
     <h1>Top Helpmates</h1>
-    <div id="root"></div>
+    
 
     <div class="middle">
         <a class ="link" href="{{ action('UserController@hopeful') }}">Find hopefuls</a>
@@ -55,6 +55,5 @@
         </table>
 
 </div>
-<script src="{{asset('js/search.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>
+
     @endsection

@@ -63,7 +63,17 @@
                     class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
                     href="{{ route('users') }}" 
                     :active="request()->routeIs('dashboard')">
-                        {{ __('Users') }}
+                        {{ __('Find a contact') }}
+                    </x-jet-nav-link>
+                </div>
+
+                
+                <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
+                    <x-jet-nav-link 
+                    class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
+                    href="{{ route('user-search') }}" 
+                    :active="request()->routeIs('dashboard')">
+                        {{ __('User search') }}
                     </x-jet-nav-link>
                 </div>
 
