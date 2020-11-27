@@ -87,3 +87,5 @@ Route::get('/post','UserPostController@create')->name('post');
 
 Route::get('/api','UserPostController@api');
 Route::get('/api/users','UserApiController@search');
+
+Route::get('/user-search','UserSearchController@search');
