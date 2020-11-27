@@ -21,7 +21,7 @@
         <div class="searchbar2">
             
             <div class=" bgh">
-                <x-jet-nav-link class=" mt-8  " href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                <x-jet-nav-link class=" mt-8 searchbar-link " href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                                         
                                                                                                                
                                     <img  class=""src="{{ Croppa::url('/images/logo.png','1000', '800') }}" alt="Logo">
@@ -29,12 +29,12 @@
                                         @if (Route::has('login'))
                                         <div class=" links">
                                             @auth
-                                                <a href="{{ url('/dashboard') }}" class=" ">Dashboard</a>
+                                                <a href="{{ url('/dashboard') }}" class="searchbar-link ">Dashboard</a>
                                             @else
-                                                <a href="{{ route('login') }}" class="">Login</a>
+                                                <a href="{{ route('login') }}" class="searchbar-link">Login</a>
                         
                                                 @if (Route::has('register'))
-                                                    <a href="{{ route('register') }}" class=" ">Register</a>
+                                                    <a href="{{ route('register') }}" class="searchbar-link ">Register</a>
                                                 @endif
                                             @endif
                                         </div>

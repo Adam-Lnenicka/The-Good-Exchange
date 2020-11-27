@@ -30,24 +30,23 @@
   {{-- The Good Exchange --}}
                 
 
-                <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
+                 <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
                     <x-jet-nav-link 
                     class="mt-8 h-10 ml-2 px-0 py-0 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
                     href="{{ route('myposts', Auth::id()) }}" 
                     :active="request()->routeIs('dashboard')">
                         {{ __('My Posts ') }}
                     </x-jet-nav-link>
-             </div>
+             </div>  
    
-
-                <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
+         <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
                     <x-jet-nav-link 
                     class="mt-8 h-10 ml-2 px-0 py-0 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
-                    href="{{ route('Authmessages' , Auth::id()) }}" 
+                    href="{{ route('Mymessages') }}" 
                     :active="request()->routeIs('dashboard')">
                     {{ __('Messages') }}
                     </x-jet-nav-link>
-             </div>
+             </div>  
 
 
                 <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
@@ -158,13 +157,13 @@ The good Exchange --}}
             </x-jet-responsive-nav-link>
         </div>
 
-        <x-jet-dropdown-link  href="{{ route('newpost') }}" >
+        <x-jet-dropdown-link  href="{{ route('newpost', Auth::id()) }}" >
             {{ __('Create A Post') }}
         </x-jet-dropdown-link>
 
-        <x-jet-dropdown-link  href="{{ route('Authmessages' , Auth::id()) }}" >
+        {{-- <x-jet-dropdown-link  href="{{ route('Mymessages') }}" >
             {{ __('Messages') }}
-        </x-jet-dropdown-link>
+        </x-jet-dropdown-link> --}}
 
         <x-jet-dropdown-link href="{{ route('forty') }}">
             {{ __('Security Settings') }}

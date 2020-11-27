@@ -62,9 +62,12 @@ let content = '';
                   data.map(id => (
                      
                     <div  className="bg-white overflow-hidden shadow-xl sm:rounded-lg p-2.5 m-2.5" key={id.id}>
-                    <div>
-                      
-                      <img className="h-10  w-10" src={id.user.profile_photo_path} alt="profile pic" />
+                    <div className="flex space-x-56  ">
+                      <img className="h-14 rounded-2xl mb-2.5 w-14" src={id.user.profile_photo_path} alt="profile pic" />
+                      <div>
+                      <a className="  mt-2.5 -m-2mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white  hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"
+                     href={"/post/" + id.id + "/edit"}>Edit</a>
+                      </div>
                     </div>
                     <img className=""  src={id.uploadedm_photo_path} alt="post pic"/>
                     <div className=" p-2.5" >{id.description}</div>

@@ -169,16 +169,7 @@ class UserController extends Controller
 
         return redirect(action('UserController@index'));
     }
-    public function mypost($id)
-{
-    $my = User::findOrFail($id);
-     
-    $myposts = UserPost::orderBy('created_at' , 'desc')->with('User')->get();
-   //dd($myposts);
 
-    return view('post.mypost', compact('myposts'));
-
-}
 public function email(){
     return view('profile.show');
 }

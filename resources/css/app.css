@@ -27,9 +27,27 @@ max-width: 66%;
 }
 
 .user-photo{
-  max-height:100%;
-  max-width: 100%; 
+  
   object-fit: cover;}
+
+
+
+  .picture{
+    height:250px;
+    width:200px;
+    background-color: rgb(182, 193, 253);
+    border-radius: 1em;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    color: white;
+    border: 1px solid white;
+    margin: 0.3em;
+    object-fit: cover;
+    overflow:hidden;
+   
+ 
+}
 
 .profile{
     /* max-width: 900px; */
@@ -76,6 +94,12 @@ strong{
 
 .middle .link, .link2{
     margin: 1em 2em; 
+}
+.link.object1{
+  float: right;
+}
+.link.object2{
+  float: left;
 }
 .center{
     margin: 0 auto;
@@ -127,25 +151,9 @@ main{
     align-items:flex-end;
 }
 
-img{
-  border-radius: 10px;
-}
 
-.picture{
-    height:250px;
-    width:200px;
-    background-color: rgb(182, 193, 253);
-    border-radius: 1em;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    color: white;
-    border: 1px solid white;
-    margin: 1em;
-    object-fit: cover;
-   
-    
-}
+
+
 
 .info{
     background-color: rgb(218, 218, 218);
@@ -205,7 +213,7 @@ textarea{
     color: white;
     margin: 1em 0;
     border: none;
-    cursor:pointer;
+    
 }
 
 .link:hover{
@@ -252,13 +260,13 @@ textarea{
     border: none;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 11000px) {
     table{
         font-size: 0.85em;
     }
   
 
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     table{
         font-size: 0.85em;
     }

@@ -5,10 +5,9 @@
 
     <div class="background 2">
         <div class="picture">
-        <img style="width: 100%; height: 150px" src="{{ $users->profile_photo_path }}"> 
+        <img style="user-photo" src="{{ $users->profile_photo_path }}"> 
         </div>
-    </div>
-    
+    </div> 
 </br>
 
 <h1>{{ $users->name }}</h1>
@@ -22,7 +21,7 @@
     <p><strong>Email:</strong> {{ $users->email }}</p>
     <p><strong>Phone number:</strong> {{ $users->phone_number }}</p>
     <p><strong>About me:</strong> {{ $users->about }}</p>
-    <p><strong>Are you Hopeful (need help) or Helpmate (want to help) ?</strong>{{ $users->hopefuls_helpmates }}</h2>
+    <p><strong>Are you Hopeful (need help) or Helpmate (want to help)?</strong>{{ $users->hopefuls_helpmates }}</h2>
     <p><strong>What do you focus on? </strong>{{ $users->service }}</p>
 </div>
 

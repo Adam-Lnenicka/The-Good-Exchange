@@ -13,13 +13,7 @@ use Auth;
 class UserPostController extends Controller
 {
     
-    public function index()
-    {  
-        // this is currently rendered in React
     
-         return view('dashboard');
-        //
-    }
 
     public function helpmates(){
         $user = User::where('hopefuls_helpmates','helpmate')
@@ -52,19 +46,16 @@ class UserPostController extends Controller
          //$croppa = 'Croppa::url('   . $relative_url_to_uploaded_file  .  ')';
          $post->save();
       
-         return redirect(action('UserPostController@create'));
+         return redirect(action('UserPostController@indexy'));
 }
          
      
 
-    public function show(UserPost $userPost)
+    public function edit($id)
     {
-        //
-    }
+        $post = UserPost::findOrFail($id);
 
-    public function edit(UserPost $userPost)
-    {
-        //
+        return view('post.updatePost', compact('post'));
     }
 
     /**
@@ -74,9 +65,19 @@ class UserPostController extends Controller
      * @param  \App\Models\UserPost  $userPost
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, UserPost $userPost)
+    public function update(Request $request, $post_id)
     {
-        //
+        $post = User::findOrFail($post_id);
+        $post->update($request->all());
+        if($file = $request->file('uploadedm_file_path')) {
+                
+            $file->storeAs('public/covers', $file->getClientOriginalName());
+            $post->profile_photo_path = '/storage/covers/' . $file->getClientOriginalName();
+            $post->save();
+        
+         }
+         return redirect(route('dashboard'));
+       
     }
 
     /**
@@ -99,5 +100,18 @@ class UserPostController extends Controller
   
       return($postdata);
 
-}}
+    }
+
+      public function mypost( )
+      {
+          //$my = User::findOrFail($id);
+           
+          $myposts = UserPost::where('user_id',Auth::id())->with('User')->get();
+         //dd($myposts);
+      
+          return view('post.mypost', compact('myposts'));
+  
+      }
+
+}
 
