@@ -58,7 +58,7 @@ Route::post('/post/{post_id}/message', 'MessageController@store'); // save that 
 Route::get('/mymessages', 'MessageController@mymessages')->name('Mymessages'); //display all messages connected to a post
 
 Route::get('/post/{post_id}/message', 'MessageController@indexx')->name('Allmessages'); //display all messages connected to a post
-Route::get('/post/{post_id}/mymessages', 'MessageController@indexx')->name('SingleUserMsgs');
+//Route::get('/post/{post_id}/mymessages', 'MessageController@indexx')->name('SingleUserMsgs');
 
 Route::get('/profile', function(){return redirect()->action('UserController@edit', Auth::id());})->name('fingersCrossed');//sends user to profile page 
 Route::get('email', 'UserContoller@email')->name('forty');
