@@ -28,39 +28,41 @@
 
 
   {{-- The Good Exchange --}}
-               {{-- <div class="hidden space-x-8 lg:-my-px lg:ml-10 lg:flex">
-                    <x-jet-nav-link 
-                    class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
-                    href="{{ route('messages') }}" 
-                    :active="request()->routeIs('dashboard')">
-                        {{ __('My Messages ') }}
-                    </x-jet-nav-link>
-                </div> 
+                
 
-- --}}
+                 <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
+                    <x-jet-nav-link 
+                    class="mt-8 h-10 ml-2 px-0 py-0 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
+                    href="{{ route('myposts', Auth::id()) }}" 
+                    :active="request()->routeIs('dashboard')">
+                        {{ __('My Posts ') }}
+                    </x-jet-nav-link>
+             </div>  
+   
+         <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
+                    <x-jet-nav-link 
+                    class="mt-8 h-10 ml-2 px-0 py-0 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
+                    href="{{ route('Mymessages') }}" 
+                    :active="request()->routeIs('dashboard')">
+                    {{ __('Messages') }}
+                    </x-jet-nav-link>
+             </div>  
+
 
                 <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
                         <x-jet-nav-link 
-                        class="mt-8 h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
+                        class="mt-8 h-10 ml-2 px-0 py-0 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
                         href="{{ route('newpost') }}" 
                         :active="request()->routeIs('dashboard')">
                             {{ __('Create a Post') }}
                         </x-jet-nav-link>
                  </div>
 
-
-                <div class="hidden md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
-                    <x-jet-nav-link 
-                    class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link" 
-                    href="" 
-                    :active="request()->routeIs('dashboard')">
-                        {{ __('My Posts') }}
-                    </x-jet-nav-link>
-                </div>   
+ 
 
                 <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
                     <x-jet-nav-link 
-                    class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
+                    class=" mt-8 h-10 ml-2 px-0 py-0 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
                     href="{{ route('users') }}" 
                     :active="request()->routeIs('dashboard')">
                         {{ __('Find a contact') }}
@@ -112,9 +114,10 @@ The good Exchange --}}
                             {{ __('Manage Account') }}
                         </div>
 
-                        {{-- <x-jet-dropdown-link href="{{ route('') }}">
+                                        
+                       <x-jet-dropdown-link href="{{ route('forty') }}">
                             {{ __('Security Settings') }}
-                        </x-jet-dropdown-link> --}}
+                        </x-jet-dropdown-link> 
 
                         <x-jet-dropdown-link href="{{ route('fingersCrossed') }}">
                             {{ __('Profile') }}
@@ -158,39 +161,30 @@ The good Exchange --}}
 
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden absolute z-50 lg:hidden bg-indigo-300" >
-        <div class="pt-2 pb-3 space-y-1">
+        <div class="pt-1 pb-2 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('The Good Exchange') }}
+                {{ __('TGE') }}
             </x-jet-responsive-nav-link>
         </div>
 
-        <div class="hidden  md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
-            <x-jet-nav-link 
-            class="mt-8  h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
-            href="{{ route('newpost') }}" 
-            :active="request()->routeIs('dashboard')">
-                {{ __('Create a Post') }}
-            </x-jet-nav-link>
-     </div>
+        <x-jet-dropdown-link  href="{{ route('newpost', Auth::id()) }}" >
+            {{ __('Create A Post') }}
+        </x-jet-dropdown-link>
 
+        {{-- <x-jet-dropdown-link  href="{{ route('Mymessages') }}" >
+            {{ __('Messages') }}
+        </x-jet-dropdown-link> --}}
 
-    <div class="hidden md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
-        <x-jet-nav-link 
-        class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out" 
-        href="" 
-        :active="request()->routeIs('dashboard')">
-            {{ __('My Posts') }}
-        </x-jet-nav-link>
-    </div>   
+        <x-jet-dropdown-link href="{{ route('forty') }}">
+            {{ __('Security Settings') }}
+        </x-jet-dropdown-link> 
 
-    <div class="hidden  md:p-0 space-x-8 sm:-my-px sm:ml-10 sm:flex">
-        <x-jet-nav-link 
-        class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-purple-600 focus:outline-none focus:text-black focus:bg-purple-400 transition duration-150 ease-in-out"  
-        href="{{ route('users') }}" 
-        :active="request()->routeIs('dashboard')">
+        <x-jet-dropdown-link href="{{ route('users') }}">
             {{ __('Users') }}
-        </x-jet-nav-link>
-    </div>
+        </x-jet-dropdown-link>
+
+
+
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">

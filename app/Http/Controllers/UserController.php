@@ -107,9 +107,6 @@ class UserController extends Controller
     {
         $users = User::findOrFail($id);
 
- 
-
-
         return view('users/show', compact('users'));
 
     }
@@ -172,4 +169,9 @@ class UserController extends Controller
 
         return redirect(action('UserController@index'));
     }
+
+public function email(){
+    return view('profile.show');
+}
+       
 }

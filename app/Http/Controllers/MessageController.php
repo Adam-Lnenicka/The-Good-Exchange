@@ -13,9 +13,6 @@ class MessageController extends Controller
     public function index($post_id)
     {
 
-
-
-
         $messages = Message::where('post_id' , $post_id)->get();
 
         return view('messages/index', compact('messages', 'post_id'));
@@ -56,5 +53,17 @@ class MessageController extends Controller
     //    dd($messages);
         return view('messages/index', compact('post_id', 'messages'));
     }
+
+public function mymessages( )
+    {
+
+        //$post = UserPost::findOrFail($post_id); 
+       
+        $messages = Message::where('to_users_id', Auth::id())->orWhere('from_users_id', Auth::id())->with('UserPost')->with('toUser')->with('fromUser')->get();
+
+    //    dd($messages);
+        return view('messages/index', compact('messages'));
+    }
+
 
 }

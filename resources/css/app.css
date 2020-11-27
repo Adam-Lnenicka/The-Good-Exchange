@@ -13,7 +13,7 @@ background-image: url('../../storage/images/magicpattern-eHH_5rn3xnU-unsplash.jp
 background-repeat: repeat;
 background-size: auto; 
 margin:0 auto;  
-max-width: 1030px;
+max-width: 66%; 
 
 }
 .msgbtn{
@@ -94,6 +94,12 @@ strong{
 
 .middle .link, .link2{
     margin: 1em 2em; 
+}
+.link.object1{
+  float: right;
+}
+.link.object2{
+  float: left;
 }
 .center{
     margin: 0 auto;

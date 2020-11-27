@@ -26,7 +26,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 //----------------------------------------------------------------------
 
-//Route::get('dashboard','UserPostController@index');
 Route::get('/users', 'UserController@index')->name('users');
 Route::get('/users/create', 'UserController@create');
 
@@ -45,26 +44,36 @@ Route::get('/hopeful_medicine', 'UserController@hopeful_medicine');
 Route::post('/users', 'UserController@store');// not sure what this does 
 Route::get('/users/{id}', 'UserController@show')->name('profile');
 
-
+Route::get('/myposts/{id}', 'UserPostController@mypost', ['id'])->name('myposts'); //display user posts 
 Route::get('/users/{id}/edit', 'UserController@edit');//edit user with specfic id
 Route::put('/users/{id}', 'UserController@update'); //update user
 Route::get('/users/{id}/delete', 'UserController@delete'); // display deletion form will show message "really want to delete?
 Route::delete('/users/{id}', 'UserController@destroy');// deletes user
 
+
+
 Route::get('/{post_id}/message', 'MessageController@index')->name('messages'); //display messages linked to a post
 Route::post('/post/{post_id}/message', 'MessageController@store'); // save that message with the post id 
 
+Route::get('/mymessages', 'MessageController@mymessages')->name('Mymessages'); //display all messages connected to a post
+
 Route::get('/post/{post_id}/message', 'MessageController@indexx')->name('Allmessages'); //display all messages connected to a post
-Route::get('/post/{post_id}/Mymessages', 'MessageController@indexx')->name('SingleUserMsgs');
+Route::get('/post/{post_id}/mymessages', 'MessageController@indexx')->name('SingleUserMsgs');
 
 Route::get('/profile', function(){return redirect()->action('UserController@edit', Auth::id());})->name('fingersCrossed');//sends user to profile page 
-
+Route::get('email', 'UserContoller@email')->name('forty');
 
 Route::get('sendMessage/{id}', 'MessageContoller@create');
+Route::get('/post/{post_id}/mymessages', 'MessageController@indexx', ['user_id'])->name('Authmessages');
 
+
+Route::get('/post', function () {
+    return view('dashboard');
+});
 Route::get('/newpost','UserPostController@create')->name('newpost'); //display form for new page 
 Route::post('/newpost','UserPostController@store'); //adds new post to database
-Route::get('/Helpmates','UserPostController@helpmates')->name('filter-helpmate');
+Route::get('/post/{id}/edit','UserPostController@edit');
+Route::put('/post/{id}','UserPostController@update');
 
 
 Route::get('sendMail','MailController@index');

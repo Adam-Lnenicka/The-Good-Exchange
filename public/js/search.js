@@ -30043,9 +30043,9 @@ reportWebVitals();
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\web\bootcamp\coding-exc\finalwednesday\handy-hands\resources\js\userSearch\index.js */"./resources/js/userSearch/index.js");
-__webpack_require__(/*! C:\web\bootcamp\coding-exc\finalwednesday\handy-hands\resources\css\app.css */"./resources/css/app.css");
-module.exports = __webpack_require__(/*! C:\web\bootcamp\coding-exc\finalwednesday\handy-hands\resources\css\welcomePage.css */"./resources/css/welcomePage.css");
+__webpack_require__(/*! C:\Web\TGE\resources\js\userSearch\index.js */"./resources/js/userSearch/index.js");
+__webpack_require__(/*! C:\Web\TGE\resources\css\app.css */"./resources/css/app.css");
+module.exports = __webpack_require__(/*! C:\Web\TGE\resources\css\welcomePage.css */"./resources/css/welcomePage.css");
 
 
 /***/ })
