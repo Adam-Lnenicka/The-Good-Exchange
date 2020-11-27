@@ -46,7 +46,7 @@ class UserPostController extends Controller
          //$croppa = 'Croppa::url('   . $relative_url_to_uploaded_file  .  ')';
          $post->save();
       
-         return redirect(action('UserPostController@indexy'));
+         return redirect(route('dashboard'));
 }
          
      
