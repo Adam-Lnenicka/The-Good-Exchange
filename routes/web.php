@@ -64,7 +64,7 @@ Route::get('/profile', function(){return redirect()->action('UserController@edit
 Route::get('email', 'UserContoller@email')->name('forty');
 
 Route::get('sendMessage/{id}', 'MessageContoller@create');
-Route::get('/post/{post_id}/mymessages', 'MessageController@indexx', ['user_id'])->name('Authmessages');
+//Route::get('/post/{post_id}/mymessages', 'MessageController@indexx', ['user_id'])->name('Authmessages');
 
 
 Route::get('/post', function () {

@@ -6,7 +6,7 @@
         "framework",
         "laravel"
     ],
-    "license": "MIT",
+    "leicense": "MIT",
     "require": {
         "php": "^7.3|^8.0",
         "bkwld/croppa": "^4.10",

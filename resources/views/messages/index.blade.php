@@ -21,7 +21,7 @@
         </div>
      
         <div>
-            <form  action="{{ action('MessageController@store', [$post_id ]) }}" method="POST">
+            <form  action="{{ action('MessageController@store') }}" method="POST">
                     @csrf
                     <div class="bg-white my-2 shadow-xl sm:rounded-lg w-48">
                         

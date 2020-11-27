@@ -69,7 +69,7 @@
                     </x-jet-nav-link>
                 </div>
 
-                
+{{--                 
                 <div class="hidden  md:p-0 space-x-8 lg:-my-px lg:ml-10 lg:flex">
                     <x-jet-nav-link 
                     class=" mt-8 h-10 ml-2 px-2 py-2 rounded-md text-lg font-medium  hover:bg-purple-600 navbar-link"  
@@ -77,7 +77,7 @@
                     :active="request()->routeIs('dashboard')">
                         {{ __('User search') }}
                     </x-jet-nav-link>
-                </div>
+                </div> --}}
 
                 
 
@@ -113,7 +113,12 @@ The good Exchange --}}
                         <div class="block px-4 py-2 text-xs text-gray-400">
                             {{ __('Manage Account') }}
                         </div>
+{{-- 
+                        <x-jet-dropdown-link href="{{ route('user-search') }}">
+                            {{ __('User Search') }}
+                       </x-jet-dropdown-link>  --}}
 
+                    
                                         
                        <x-jet-dropdown-link href="{{ route('forty') }}">
                             {{ __('Security Settings') }}
@@ -171,9 +176,9 @@ The good Exchange --}}
             {{ __('Create A Post') }}
         </x-jet-dropdown-link>
 
-        {{-- <x-jet-dropdown-link  href="{{ route('Mymessages') }}" >
+        <x-jet-dropdown-link  href="{{ route('Mymessages') }}" >
             {{ __('Messages') }}
-        </x-jet-dropdown-link> --}}
+        </x-jet-dropdown-link> 
 
         <x-jet-dropdown-link href="{{ route('forty') }}">
             {{ __('Security Settings') }}
